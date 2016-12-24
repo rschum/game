@@ -1,5 +1,5 @@
-from source.abstract.chemistry.chemicals import water
-from source.abstract.chemistry.mineral import mineral
+from source.chemistry import mineral
+from source.chemistry import water
 
 
 class Ice(mineral.Mineral):

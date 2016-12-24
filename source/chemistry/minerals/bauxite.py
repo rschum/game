@@ -1,7 +1,6 @@
-from source.abstract.chemistry.chemicals import goethite, gibbsite, ironII_oxide, hematite, kaolinite
-
-from source.abstract.chemistry.chemicals import boehmite
-from source.abstract.chemistry.mineral import mineral
+from source.chemistry import boehmite
+from source.chemistry import goethite, gibbsite, ironII_oxide, hematite, kaolinite
+from source.chemistry import mineral
 
 
 class Bauxite(mineral.Mineral):

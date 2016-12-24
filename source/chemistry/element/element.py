@@ -1,4 +1,5 @@
 class Element:
+    number          = None
     name            = None
     symbol          = None
     mass            = None

@@ -1,4 +1,4 @@
-from source.abstract.chemistry.element.element import Element
+from source.chemistry.element.element import Element
 
 # more values can be found at
 # http://periodictable.com/index.html
@@ -14,6 +14,7 @@ values are probably not all that accurate for Mars.
 
 # 1
 class Hydrogen(Element):
+    number  = 1
     name    = "Hydrogen"
     symbol  = "H"
     mass    = 1.01
@@ -25,6 +26,7 @@ class Hydrogen(Element):
 
 # 2
 class Helium(Element):
+    number  = 2
     name    = "Helium"
     symbol  = "He"
     mass    = 4.00
@@ -36,6 +38,7 @@ class Helium(Element):
 
 # 3
 class Lithium(Element):
+    number  = 3
     name    = "Lithium"
     symbol  = "Li"
     mass    = 6.94
@@ -47,6 +50,7 @@ class Lithium(Element):
 
 # 4
 class Beryllium(Element):
+    number  = 4
     name    = "Beryllium"
     symbol  = "Be"
     mass    = 9.01
@@ -58,6 +62,7 @@ class Beryllium(Element):
 
 # 5
 class Boron(Element):
+    number  = 5
     name    = "Boron"
     symbol  = "B"
     mass    = 10.81
@@ -69,6 +74,7 @@ class Boron(Element):
 
 # 6
 class Carbon(Element):
+    number  = 6
     name    = "Carbon"
     symbol  = "C"
     mass    = 12.01
@@ -80,6 +86,7 @@ class Carbon(Element):
 
 # 7
 class Nitrogen(Element):
+    number  = 7
     name    = "Nitrogen"
     symbol  = "N"
     mass    = 14.01
@@ -91,6 +98,7 @@ class Nitrogen(Element):
 
 # 8
 class Oxygen(Element):
+    number  = 8
     name    = "Oxygen"
     symbol  = "O"
     mass    = 16.00
@@ -102,6 +110,7 @@ class Oxygen(Element):
 
 # 9
 class Fluorine(Element):
+    number  = 9
     name    = "Fluorine"
     symbol  = "F"
     mass    = 19.00
@@ -113,6 +122,7 @@ class Fluorine(Element):
 
 # 10
 class Neon(Element):
+    number  = 10
     name    = "Neon"
     symbol  = "Ne"
     mass    = 20.18
@@ -124,6 +134,7 @@ class Neon(Element):
 
 # 11
 class Sodium(Element):
+    number  = 11
     name    = "Sodium"
     symbol  = "Na"
     mass    = 22.99
@@ -135,6 +146,7 @@ class Sodium(Element):
 
 # 12
 class Magnesium(Element):
+    number  = 12
     name    = "Magnesium"
     symbol  = "Mg"
     mass    = 24.31
@@ -146,6 +158,7 @@ class Magnesium(Element):
 
 # 13
 class Aluminum(Element):
+    number  = 13
     name    = "Aluminum"
     symbol  = "Al"
     mass    = 26.98
@@ -157,6 +170,7 @@ class Aluminum(Element):
 
 # 14
 class Silicon(Element):
+    number  = 14
     name    = "Silicon"
     symbol  = "Si"
     mass    = 28.09
@@ -168,6 +182,7 @@ class Silicon(Element):
 
 # 15
 class Phosphorus(Element):
+    number  = 15
     name    = "Phosphorus"
     symbol  = "P"
     mass    = 30.97
@@ -179,6 +194,7 @@ class Phosphorus(Element):
 
 # 16
 class Sulfur(Element):
+    number  = 16
     name    = "Sulfur"
     symbol  = "S"
     mass    = 32.07
@@ -190,6 +206,7 @@ class Sulfur(Element):
 
 # 17
 class Chlorine(Element):
+    number  = 17
     name    = "Chlorine"
     symbol  = "Cl"
     mass    = 35.45
@@ -201,6 +218,7 @@ class Chlorine(Element):
 
 # 18
 class Argon(Element):
+    number  = 18
     name    = "Argon"
     symbol  = "Ar"
     mass    = 39.95
@@ -212,6 +230,7 @@ class Argon(Element):
 
 # 19
 class Potassium(Element):
+    number  = 19
     name    = "Potassium"
     symbol  = "K"
     mass    = 39.10
@@ -223,6 +242,7 @@ class Potassium(Element):
 
 # 20
 class Calcium(Element):
+    number  = 20
     name    = "Calcium"
     symbol  = "Ca"
     mass    = 40.08
@@ -234,6 +254,7 @@ class Calcium(Element):
 
 # 21
 class Scandium(Element):
+    number  = 21
     name    = "Scandium"
     symbol  = "Sc"
     mass    = 44.96
@@ -245,6 +266,7 @@ class Scandium(Element):
 
 # 22
 class Titanium(Element):
+    number  = 22
     name    = "Titanium"
     symbol  = "Ti"
     mass    = 47.87
@@ -256,6 +278,7 @@ class Titanium(Element):
 
 # 23
 class Vanadium(Element):
+    number  = 23
     name    = "Vanadium"
     symbol  = "V"
     mass    = 50.94
@@ -267,6 +290,7 @@ class Vanadium(Element):
 
 # 24
 class Chromium(Element):
+    number  = 24
     name    = "Chromium"
     symbol  = "Cr"
     mass    = 52.00
@@ -278,6 +302,7 @@ class Chromium(Element):
 
 # 25
 class Manganese(Element):
+    number  = 25
     name    = "Manganese"
     symbol  = "Mn"
     mass    = 54.94
@@ -289,6 +314,7 @@ class Manganese(Element):
 
 # 26
 class Iron(Element):
+    number  = 26
     name    = "Iron"
     symbol  = "Fe"
     mass    = 55.85
@@ -300,6 +326,7 @@ class Iron(Element):
 
 # 27
 class Cobalt(Element):
+    number  = 27
     name    = "Cobalt"
     symbol  = "Co"
     mass    = 58.93
@@ -311,6 +338,7 @@ class Cobalt(Element):
 
 # 28
 class Nickel(Element):
+    number  = 28
     name    = "Nickel"
     symbol  = "Ni"
     mass    = 58.69
@@ -322,6 +350,7 @@ class Nickel(Element):
 
 # 29
 class Copper(Element):
+    number  = 29
     name    = "Copper"
     symbol  = "Cu"
     mass    = 63.55
@@ -333,6 +362,7 @@ class Copper(Element):
 
 # 30
 class Zinc(Element):
+    number  = 30
     name    = "Zinc"
     symbol  = "Zn"
     mass    = 65.41
@@ -344,6 +374,7 @@ class Zinc(Element):
 
 # 31
 class Gallium(Element):
+    number  = 31
     name    = "Gallium"
     symbol  = "Ga"
     mass    = 69.72
@@ -355,6 +386,7 @@ class Gallium(Element):
 
 # 32
 class Germanium(Element):
+    number  = 32
     name    = "Germanium"
     symbol  = "Ge"
     mass    = 72.64
@@ -366,6 +398,7 @@ class Germanium(Element):
 
 # 33
 class Arsenic(Element):
+    number  = 33
     name    = "Arsenic"
     symbol  = "As"
     mass    = 74.92
@@ -377,6 +410,7 @@ class Arsenic(Element):
 
 # 34
 class Selenium(Element):
+    number  = 34
     name    = "Selenium"
     symbol  = "Se"
     mass    = 78.96
@@ -388,6 +422,7 @@ class Selenium(Element):
 
 # 35
 class Bromine(Element):
+    number  = 35
     name    = "Bromine"
     symbol  = "Br"
     mass    = 79.90
@@ -399,6 +434,7 @@ class Bromine(Element):
 
 # 36
 class Krypton(Element):
+    number  = 36
     name    = "Krypton"
     symbol  = "Kr"
     mass    = 83.80
@@ -410,6 +446,7 @@ class Krypton(Element):
 
 # 37
 class Rubidium(Element):
+    number  = 37
     name    = "Rubidium"
     symbol  = "Rb"
     mass    = 85.47
@@ -421,6 +458,7 @@ class Rubidium(Element):
 
 # 38
 class Strontium(Element):
+    number  = 38
     name    = "Strontium"
     symbol  = "Sr"
     mass    = 87.62
@@ -432,6 +470,7 @@ class Strontium(Element):
 
 # 39
 class Yttrium(Element):
+    number  = 39
     name    = "Yttrium"
     symbol  = "Y"
     mass    = 88.91
@@ -443,6 +482,7 @@ class Yttrium(Element):
 
 # 40
 class Zirconium(Element):
+    number  = 40
     name    = "Zirconium"
     symbol  = "Zr"
     mass    = 91.22
@@ -454,6 +494,7 @@ class Zirconium(Element):
 
 #41
 class Niobium(Element):
+    number  = 41
     name    = "Niobium"
     symbol  = "Nb"
     mass    = 92.91
@@ -465,6 +506,7 @@ class Niobium(Element):
 
 #42
 class Molybdenum(Element):
+    number  = 42
     name    = "Molybdenum"
     symbol  = "Mo"
     mass    = 95.94
@@ -476,6 +518,7 @@ class Molybdenum(Element):
 
 #43
 class Technetium(Element):
+    number  = 43
     name    = "Technetium"
     symbol  = "Tc"
     mass    = 98   # Radioactive. Mass is for the longest lived isotope.
@@ -487,6 +530,7 @@ class Technetium(Element):
 
 # 44
 class Ruthenium(Element):
+    number  = 44
     name    = "Ruthenium"
     symbol  = "Ru"
     mass    = 101.07
@@ -498,6 +542,7 @@ class Ruthenium(Element):
 
 # 45
 class Rhodium(Element):
+    number  = 45
     name    = "Rhodium"
     symbol  = "Rh"
     mass    = 102.91
@@ -509,6 +554,7 @@ class Rhodium(Element):
 
 # 46
 class Palladium(Element):
+    number  = 46
     name    = "Palladium"
     symbol  = "Pd"
     mass    = 106.42
@@ -520,6 +566,7 @@ class Palladium(Element):
 
 # 47
 class Silver(Element):
+    number  = 47
     name    = "Silver"
     symbol  = "Ag"
     mass    = 107.87
@@ -531,6 +578,7 @@ class Silver(Element):
 
 # 48
 class Cadmium(Element):
+    number  = 48
     name    = "Cadmium"
     symbol  = "Cd"
     mass    = 112.41
@@ -542,6 +590,7 @@ class Cadmium(Element):
 
 # 49
 class Indium(Element):
+    number  = 49
     name    = "Indium"
     symbol  = "In"
     mass    = 114.82
@@ -553,6 +602,7 @@ class Indium(Element):
 
 # 50
 class Tin(Element):
+    number  = 50
     name    = "Tin"
     symbol  = "Sn"
     mass    = 118.71
@@ -564,6 +614,7 @@ class Tin(Element):
 
 # 51
 class Antimony(Element):
+    number  = 51
     name    = "Antimony"
     symbol  = "Sb"
     mass    = 121.76
@@ -575,6 +626,7 @@ class Antimony(Element):
 
 # 52
 class Tellurium(Element):
+    number  = 52
     name    = "Tellurium"
     symbol  = "Te"
     mass    = 127.6   # Only 1 decimal place was given.
@@ -586,6 +638,7 @@ class Tellurium(Element):
 
 # 53
 class Iodine(Element):
+    number  = 53
     name    = "Iodine"
     symbol  = "I"
     mass    = 126.90
@@ -597,6 +650,7 @@ class Iodine(Element):
 
 # 54
 class Xenon(Element):
+    number  = 54
     name    = "Xenon"
     symbol  = "Xe"
     mass    = 131.29
@@ -608,6 +662,7 @@ class Xenon(Element):
 
 # 55
 class Cesium(Element):
+    number  = 55
     name    = "Cesium"
     symbol  = "Cs"
     mass    = 132.91
@@ -619,6 +674,7 @@ class Cesium(Element):
 
 # 56
 class Barium(Element):
+    number  = 56
     name    = "Barium"
     symbol  = "Ba"
     mass    = 137.33
@@ -630,6 +686,7 @@ class Barium(Element):
 
 # 57
 class Lanthanum(Element):
+    number  = 57
     name    = "Lanthanum"
     symbol  = "La"
     mass    = 138.91
@@ -641,6 +698,7 @@ class Lanthanum(Element):
 
 # 58
 class Cerium(Element):
+    number  = 58
     name    = "Cerium"
     symbol  = "Ce"
     mass    = 140.12
@@ -652,6 +710,7 @@ class Cerium(Element):
 
 # 59
 class Praseodymium(Element):
+    number  = 59
     name    = "Praseodymium"
     symbol  = "Pr"
     mass    = 140.91
@@ -663,6 +722,7 @@ class Praseodymium(Element):
 
 # 60
 class Neodymium(Element):
+    number  = 60
     name    = "Neodymium"
     symbol  = "Nd"
     mass    = 144.24
@@ -674,6 +734,7 @@ class Neodymium(Element):
 
 # 61
 class Promethium(Element):
+    number  = 61
     name    = "Promethium"
     symbol  = "Pm"
     mass    = 145   # Radioactive. Mass is for the longest lived isotope.
@@ -685,6 +746,7 @@ class Promethium(Element):
 
 # 62
 class Samarium(Element):
+    number  = 62
     name    = "Samarium"
     symbol  = "Sm"
     mass    = 150.36
@@ -696,6 +758,7 @@ class Samarium(Element):
 
 # 63
 class Europium(Element):
+    number  = 63
     name    = "Europium"
     symbol  = "Eu"
     mass    = 151.96
@@ -707,6 +770,7 @@ class Europium(Element):
 
 # 64
 class Gadolinium(Element):
+    number  = 64
     name    = "Gadolinium"
     symbol  = "Gd"
     mass    = 157.25
@@ -718,6 +782,7 @@ class Gadolinium(Element):
 
 # 65
 class Terbium(Element):
+    number  = 65
     name    = "Terbium"
     symbol  = "Tb"
     mass    = 158.93
@@ -729,6 +794,7 @@ class Terbium(Element):
 
 # 66
 class Dysprosium(Element):
+    number  = 66
     name    = "Dysprosium"
     symbol  = "Dy"
     mass    = 162.5   # Only 1 decimal place was given.
@@ -740,6 +806,7 @@ class Dysprosium(Element):
 
 # 67
 class Holmium(Element):
+    number  = 67
     name    = "Holmium"
     symbol  = "Ho"
     mass    = 164.93
@@ -751,6 +818,7 @@ class Holmium(Element):
 
 # 68
 class Erbium(Element):
+    number  = 68
     name    = "Erbium"
     symbol  = "Er"
     mass    = 167.26
@@ -762,6 +830,7 @@ class Erbium(Element):
 
 # 69
 class Thulium(Element):
+    number  = 69
     name    = "Thulium"
     symbol  = "Tm"
     mass    = 168.93
@@ -773,6 +842,7 @@ class Thulium(Element):
 
 # 70
 class Ytterbium(Element):
+    number  = 70
     name    = "Ytterbium"
     symbol  = "Yb"
     mass    = 173.04
@@ -784,6 +854,7 @@ class Ytterbium(Element):
 
 # 71
 class Lutetium(Element):
+    number  = 71
     name    = "Lutetium"
     symbol  = "Lu"
     mass    = 174.97
@@ -795,6 +866,7 @@ class Lutetium(Element):
 
 # 72
 class Hafnium(Element):
+    number  = 72
     name    = "Hafnium"
     symbol  = "Hf"
     mass    = 178.49
@@ -806,6 +878,7 @@ class Hafnium(Element):
 
 # 73
 class Tantalum(Element):
+    number  = 73
     name    = "Tantalum"
     symbol  = "Ta"
     mass    = 180.95
@@ -817,6 +890,7 @@ class Tantalum(Element):
 
 # 74
 class Tungsten(Element):
+    number  = 74
     name    = "Tungsten"
     symbol  = "W"
     mass    = 183.84
@@ -828,6 +902,7 @@ class Tungsten(Element):
 
 # 75
 class Rhenium(Element):
+    number  = 75
     name    = "Rhenium"
     symbol  = "Re"
     mass    = 186.21
@@ -839,6 +914,7 @@ class Rhenium(Element):
 
 # 76
 class Osmium(Element):
+    number  = 76
     name    = "Osmium"
     symbol  = "Os"
     mass    = 190.23
@@ -850,6 +926,7 @@ class Osmium(Element):
 
 # 77
 class Iridium(Element):
+    number  = 77
     name    = "Iridium"
     symbol  = "Ir"
     mass    = 192.22
@@ -861,6 +938,7 @@ class Iridium(Element):
 
 # 78
 class Platinum(Element):
+    number  = 78
     name    = "Platinum"
     symbol  = "Pt"
     mass    = 195.08
@@ -872,6 +950,7 @@ class Platinum(Element):
 
 # 79
 class Gold(Element):
+    number  = 79
     name    = "Gold"
     symbol  = "Au"
     mass    = 196.97
@@ -883,6 +962,7 @@ class Gold(Element):
 
 # 80
 class Mercury(Element):
+    number  = 80
     name    = "Mercury"
     symbol  = "Hg"
     mass    = 200.59
@@ -894,6 +974,7 @@ class Mercury(Element):
 
 # 81
 class Thallium(Element):
+    number  = 81
     name    = "Thallium"
     symbol  = "Tl"
     mass    = 204.38
@@ -905,6 +986,7 @@ class Thallium(Element):
 
 # 82
 class Lead(Element):
+    number  = 82
     name    = "Lead"
     symbol  = "Pb"
     mass    = 207.2   # Only 1 decimal place was given.
@@ -916,6 +998,7 @@ class Lead(Element):
 
 # 83
 class Bismuth(Element):
+    number  = 83
     name    = "Bismuth"
     symbol  = "Bi"
     mass    = 208.98
@@ -927,6 +1010,7 @@ class Bismuth(Element):
 
 # 84
 class Polonium(Element):
+    number  = 84
     name    = "Polonium"
     symbol  = "Po"
     mass    = 209   # Radioactive. Mass is for the longest lived isotope.
@@ -938,6 +1022,7 @@ class Polonium(Element):
 
 # 85
 class Astatine(Element):
+    number  = 85
     name    = "Astatine"
     symbol  = "At"
     mass    = 210   # Radioactive. Mass is for the longest lived isotope.
@@ -949,6 +1034,7 @@ class Astatine(Element):
 
 # 86
 class Radon(Element):
+    number  = 86
     name    = "Radon"
     symbol  = "Rn"
     mass    = 222   # Radioactive. Mass is for the longest lived isotope.
@@ -960,6 +1046,7 @@ class Radon(Element):
 
 # 87
 class Francium(Element):
+    number  = 87
     name    = "Francium"
     symbol  = "Fr"
     mass    = 223   # Radioactive. Mass is for the longest lived isotope.
@@ -971,6 +1058,7 @@ class Francium(Element):
 
 # 88
 class Radium(Element):
+    number  = 88
     name    = "Radium"
     symbol  = "Ra"
     mass    = 226   # Radioactive. Mass is for the longest lived isotope.
@@ -982,6 +1070,7 @@ class Radium(Element):
 
 # 89
 class Actinium(Element):
+    number  = 89
     name    = "Actinium"
     symbol  = "Ac"
     mass    = 227   # Radioactive. Mass is for the longest lived isotope.
@@ -993,6 +1082,7 @@ class Actinium(Element):
 
 # 90
 class Thorium(Element):
+    number  = 90
     name    = "Thorium"
     symbol  = "Th"
     mass    = 232.04
@@ -1004,6 +1094,7 @@ class Thorium(Element):
 
 # 91
 class Protactinium(Element):
+    number  = 91
     name    = "Protactinium"
     symbol  = "Pa"
     mass    = 231.04
@@ -1015,6 +1106,7 @@ class Protactinium(Element):
 
 # 92 - This is the last naturally occuring element. The rest are man-made.
 class Uranium(Element):
+    number  = 92
     name    = "Uranium"
     symbol  = "U"
     mass    = 238.03
@@ -1026,6 +1118,7 @@ class Uranium(Element):
 
 # 93
 class Neptunium(Element):
+    number  = 93
     name    = "Neptunium"
     symbol  = "Np"
     mass    = 237   # Radioactive. Mass is for the longest lived isotope.
@@ -1037,6 +1130,7 @@ class Neptunium(Element):
 
 # 94
 class Plutonium(Element):
+    number  = 94
     name    = "Plutonium"
     symbol  = "Pu"
     mass    = 244   # Radioactive. Mass is for the longest lived isotope.
@@ -1048,6 +1142,7 @@ class Plutonium(Element):
 
 # 95 - This is included because it's common in smoke detectors
 class Americium(Element):
+    number  = 95
     name    = "Americium"
     symbol  = "Am"
     mass    = 243   # Radioactive. Mass is for the longest lived isotope.

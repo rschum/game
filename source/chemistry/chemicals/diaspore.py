@@ -1,11 +1,12 @@
-from source.abstract.chemistry.chemical import chemical
-from source.abstract.chemistry.element import elements
+from source.chemistry import elements
+from source.chemistry.chemical import chemical
 
-# Al(OH)3
-class Gibbsite(chemical.Chemical):
-    name = "Gibbsite"
-    mass = 78.01
-    density = 2.35
+
+# α-AlO(OH)
+class Diaspore(chemical.Chemical):
+    name = "Diaspore"
+    mass = 59.99
+    density = 3.25  # 3.1 - 3.4
 
     def __init__(self):
         chemical.Chemical.__init__(self)
@@ -19,3 +20,5 @@ class Gibbsite(chemical.Chemical):
             elements.Hydrogen()
         ]
         pass
+
+
