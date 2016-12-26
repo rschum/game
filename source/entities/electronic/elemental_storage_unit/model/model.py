@@ -13,6 +13,8 @@ class Model(model.Model):
         "Iron"     : None,
         "Oxygen"   : None,
         "Silicon"  : None,
+        "Calcium"  : None,
+        "Titanium" : None,
     }
     
     def __init__(self, parent = None):
@@ -23,6 +25,8 @@ class Model(model.Model):
         self.tanks["Iron"] = elemental_storage_tank.ElementalStorageTank(self, "Iron")
         self.tanks["Oxygen"] = elemental_storage_tank.ElementalStorageTank(self, "Oxygen")
         self.tanks["Silicon"] = elemental_storage_tank.ElementalStorageTank(self, "Silicon")
+        self.tanks["Calcium"] = elemental_storage_tank.ElementalStorageTank(self, "Calcium")
+        self.tanks["Titanium"] = elemental_storage_tank.ElementalStorageTank(self, "Titanium")
         pass
 
     def store_element(self, element):

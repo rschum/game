@@ -2,17 +2,17 @@ from source.chemistry.element import elements
 from source.chemistry.chemical import chemical
 
 
-# FeO
-class IronIIOxide(chemical.Chemical):
+class Anatase(chemical.Chemical):
 
     def __init__(self):
         chemical.Chemical.__init__(self)
-        self.name = "IronII Oxide"
-        self.mass = 71.85
-        self.density = 5.75
+        self.name = "Anatase"
+        self.mass = 79.88
+        self.density = 3.9
         self.elements = [
-            elements.Iron(),
+            elements.Titanium(),
+            elements.Oxygen(),
             elements.Oxygen(),
         ]
-        self.formula = "FeO"
+        self.formula = "TiO2"
         pass

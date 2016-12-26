@@ -2,17 +2,16 @@ from source.chemistry.element import elements
 from source.chemistry.chemical import chemical
 
 
-# FeO
-class IronIIOxide(chemical.Chemical):
+class Calcium_oxide(chemical.Chemical):
 
     def __init__(self):
         chemical.Chemical.__init__(self)
-        self.name = "IronII Oxide"
-        self.mass = 71.85
-        self.density = 5.75
+        self.name = "Calcium_oxide"
+        self.mass = 56.08
+        self.density = 3.34
         self.elements = [
-            elements.Iron(),
+            elements.Calcium(),
             elements.Oxygen(),
         ]
-        self.formula = "FeO"
+        self.formula = "CaO"
         pass

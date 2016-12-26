@@ -1,19 +1,13 @@
 #! /usr/bin/python2.7
 
-from source.abstract.chemistry.minerals import bauxite
-from source.abstract.chemistry.minerals import ice
-#from source.entities.electronic.elemental_storage_unit import elemental_storage_unit
-#from source.entities.electronic.refinery import refinery
-#from source.entities.electronic.replicator import replicator
+from source.chemistry.rocks import bauxite
+from source.chemistry.rocks import ice
 from source.systems.logistics import logistics
 
 if __name__ == "__main__":
     logistics  = logistics.Logistics()
-    #esu        = elemental_storage_unit.ElementalStorageUnit()
-    #refinery   = refinery.Refinery(esu) #Create a refinery and attach the ElementalStorageUnit to it.
-    #replicator = replicator.Replicator(esu) #Create a Replicator and attach the ElementalStorageUnit to it.
 
-    #Create some minerals
+    #Create some rocks
     ice = ice.Ice()
     bauxite = bauxite.Bauxite()
 
@@ -24,7 +18,7 @@ if __name__ == "__main__":
     #Put Minerals in the Refinery
     logistics.refinery.refine_mineral(ice)
     logistics.refinery.refine_mineral(bauxite)
-    
+
     #Print out the status of the ElementalStorageUnit
     logistics.elemental_storage_unit.pretty_print()
 

@@ -3,7 +3,7 @@ class Chemical:
     mass = None         # in g/mol
     density = None      # in g/ml
     elements = [None]
-    formula = [None]
+    formula = None      # String
 
     def __init__(self):
         pass

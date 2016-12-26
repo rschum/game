@@ -1,15 +1,14 @@
-from source.chemistry import elements
+from source.chemistry.element import elements
 from source.chemistry.chemical import chemical
 
 
-# Fe(III)2O3
 class Hematite(chemical.Chemical):
-    name = "Hematite"
-    mass = 159.70
-    density = 5.26
 
     def __init__(self):
         chemical.Chemical.__init__(self)
+        self.name = "Hematite"
+        self.mass = 159.70
+        self.density = 5.26
         self.elements = [
             elements.Iron(),
             elements.Iron(),
@@ -17,4 +16,5 @@ class Hematite(chemical.Chemical):
             elements.Oxygen(),
             elements.Oxygen()
         ]
+        self.formula = "Fe(III)2O3"
         pass
