@@ -1,6 +1,3 @@
-import pygame
-import math
-
 from source.abstract.entities.entity import model
 
 class MoveState():

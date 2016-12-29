@@ -3,12 +3,13 @@ from source.chemistry.chemical import chemical
 
 
 class Ilmenite(chemical.Chemical):
+    name = "Ilmenite"
+    molar_mass = 151.73
+    density = 4.79
+    formula = "FeTiO3"  # FeO.TiO2
 
     def __init__(self):
         chemical.Chemical.__init__(self)
-        self.name = "Ilmenite"
-        self.mass = 151.73
-        self.density = 4.79
         self.elements = [
             elements.Iron(),
             elements.Titanium(),
@@ -16,6 +17,5 @@ class Ilmenite(chemical.Chemical):
             elements.Oxygen(),
             elements.Oxygen()
         ]
-        self.formula = "FeTiO3"  # FeO.TiO2
         pass
 

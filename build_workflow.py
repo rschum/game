@@ -3,21 +3,25 @@
 from source.chemistry.rocks import bauxite
 from source.chemistry.rocks import ice
 from source.systems.logistics import logistics
+from source.entities.inanimate.rock.rock import Rock
 
 if __name__ == "__main__":
     logistics  = logistics.Logistics()
 
     #Create some rocks
-    ice = ice.Ice()
-    bauxite = bauxite.Bauxite()
+    ice_rock = rock.Rock(None, 1.2, ice.Ice().composition)
+    bauxite_rock = rock.Rock(None, 0.95, bauxite.Bauxite().composition)
 
     #Print out the composition of the Minerals
-    ice.pretty_print()
-    bauxite.pretty_print()
+    ice_rock.composition.pretty_print()
+    bauxite_rock.composition.pretty_print()
 
     #Put Minerals in the Refinery
-    logistics.refinery.refine_mineral(ice)
-    logistics.refinery.refine_mineral(bauxite)
+    print("\033[94m"+"Refining ice rock and Storing it's Elements in the Elemental Storage Unit."+"\033[0m")
+    logistics.refinery.refine_mineral(ice_rock)
+
+    print("\033[94m"+"Refining bauxite rock and Storing it's Elements in the Elemental Storage Unit."+"\033[0m")
+    logistics.refinery.refine_mineral(bauxite_rock)
 
     #Print out the status of the ElementalStorageUnit
     logistics.elemental_storage_unit.pretty_print()

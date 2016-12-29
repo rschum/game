@@ -29,14 +29,14 @@ class Model(model.Model):
         self.tanks["Titanium"] = elemental_storage_tank.ElementalStorageTank(self, "Titanium")
         pass
 
-    def store_element(self, element):
-        self.tanks[element.name].add_element()
+    def store_element(self, element, moles):
+        self.tanks[element.name].add_element(moles)
         pass
 
     def check_storage(self, requirements):
         print("\033[92m"+"Checking Storage To See If There Are Enough Elements To Build."+".\033[0m")
         for requirement in requirements:
-            if self.tanks[requirement].units < requirements[requirement]:
+            if self.tanks[requirement].stored < requirements[requirement]:
                 print("\033[91m"+"Storage Tank Does Not Have Enough. "+requirement+"\033[0m")
                 return False
         return True

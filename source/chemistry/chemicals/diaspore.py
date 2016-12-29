@@ -3,12 +3,13 @@ from source.chemistry.chemical import chemical
 
 
 class Diaspore(chemical.Chemical):
+    name = "Diaspore"
+    molar_mass = 59.99
+    density = 3.25  # 3.1 - 3.4
+    formula = "a-AlO(OH)"
 
     def __init__(self):
         chemical.Chemical.__init__(self)
-        self.name = "Diaspore"
-        self.mass = 59.99
-        self.density = 3.25  # 3.1 - 3.4
         self.elements = [
             elements.Aluminum(),
             elements.Oxygen(),
@@ -18,7 +19,6 @@ class Diaspore(chemical.Chemical):
             elements.Hydrogen(),
             elements.Hydrogen()
         ]
-        self.formula = "a-AlO(OH)"
         pass
 
 

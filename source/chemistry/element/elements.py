@@ -5,7 +5,7 @@ from source.chemistry.element.element import Element
 
 """
 Molar Mass (g/mol) is rounded to two decimal points for three reasons.
-1. This is > 0.1% precision - plenty for checking the molar self.mass of compounds.
+1. This is > 0.1% precision - plenty for checking the molar self.molar_mass of compounds.
 2. Molar self.masses are only non-integers because they are the weighted average of the isotopes present on Earth.
 The sources of meteorites are determined by noting that their isotope composition is different than Earth's. So these
 values are probably not all that accurate for Mars.
@@ -14,1045 +14,1995 @@ values are probably not all that accurate for Mars.
 
 # 1
 class Hydrogen(Element):
+    number  = 1
+    name    = "Hydrogen"
+    symbol  = "H"
+    mass    = 1.01
+
+    abundance = {
+        "universe"     : 0.75,
+        "sun"          : 0.75,
+        "meteorite"    : 0.024,
+        "crust"        : 0.0015,
+        "ocean"        : 0.11,
+        "human"        : 0.10
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 1
-        self.name    = "Hydrogen"
-        self.symbol  = "H"
-        self.mass    = 1.01
         pass
 
 
 # 2
 class Helium(Element):
+    number  = 2
+    name    = "Helium"
+    symbol  = "He"
+    mass    = 4.00
+
+    abundance = {
+        "universe"     : 0.23,
+        "sun"          : 0.23,
+        "meteorite"    : 0.0,
+        "crust"        : 5.5e-9,
+        "ocean"        : 7.2e-12,
+        "human"        : 0.0
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 2
-        self.name    = "Helium"
-        self.symbol  = "He"
-        self.mass    = 4.00
         pass
 
 
 # 3
 class Lithium(Element):
+    number  = 3
+    name    = "Lithium"
+    symbol  = "Li"
+    mass    = 6.94
+
+    abundance = {
+        "universe"     : 6e-9,
+        "sun"          : 6e-11,
+        "meteorite"    : 1.7e-6,
+        "crust"        : 1.7e-5,
+        "ocean"        : 1.8e-7,
+        "human"        : 3e-8
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 3
-        self.name    = "Lithium"
-        self.symbol  = "Li"
-        self.mass    = 6.94
         pass
 
 
 # 4
 class Beryllium(Element):
+    number  = 4
+    name    = "Beryllium"
+    symbol  = "Be"
+    mass    = 9.01
+
+    abundance = {
+        "universe"     : 1e-9,
+        "sun"          : 1e-10,
+        "meteorite"    : 2.9e-8,
+        "crust"        : 1.9e-6,
+        "ocean"        : 6e-13,
+        "human"        : 4e-10
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 4
-        self.name    = "Beryllium"
-        self.symbol  = "Be"
-        self.mass    = 9.01
         pass
 
 
 # 5
 class Boron(Element):
+    number  = 5
+    name    = "Boron"
+    symbol  = "B"
+    mass    = 10.81
+
+    abundance = {
+        "universe"     : 1e-9,
+        "sun"          : 2e-9,
+        "meteorite"    : 1.6e-6,
+        "crust"        : 8.6e-6,
+        "ocean"        : 4.4e-6,
+        "human"        : 7e-7
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 5
-        self.name    = "Boron"
-        self.symbol  = "B"
-        self.mass    = 10.81
         pass
 
 
 # 6
 class Carbon(Element):
+    number  = 6
+    name    = "Carbon"
+    symbol  = "C"
+    mass    = 12.01
+
+    abundance = {
+        "universe"     : 5e-3,
+        "sun"          : 3e-3,
+        "meteorite"    : 1.5e-2,
+        "crust"        : 1.8e-3,
+        "ocean"        : 2.8e-5,
+        "human"        : 0.23
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 6
-        self.name    = "Carbon"
-        self.symbol  = "C"
-        self.mass    = 12.01
         pass
 
 
 # 7
 class Nitrogen(Element):
+    number  = 7
+    name    = "Nitrogen"
+    symbol  = "N"
+    mass    = 14.01
+
+    abundance = {
+        "universe"     : 1e-3,
+        "sun"          : 1e-3,
+        "meteorite"    : 1.4e-3,
+        "crust"        : 2e-5,
+        "ocean"        : 5e-7,
+        "human"        : 2.6e-2
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 7
-        self.name    = "Nitrogen"
-        self.symbol  = "N"
-        self.mass    = 14.01
         pass
 
 
 # 8
 class Oxygen(Element):
+    number  = 8
+    name    = "Oxygen"
+    symbol  = "O"
+    mass    = 16.00
+
+    abundance = {
+        "universe"     : 1e-2,
+        "sun"          : 9e-3,
+        "meteorite"    : 0.40,
+        "crust"        : 0.46,
+        "ocean"        : 0.86,
+        "human"        : 0.61
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 8
-        self.name    = "Oxygen"
-        self.symbol  = "O"
-        self.mass    = 16.00
         pass
 
 
 # 9
 class Fluorine(Element):
+    number  = 9
+    name    = "Fluorine"
+    symbol  = "F"
+    mass    = 19.00
+
+    abundance = {
+        "universe"     : 4e-7,
+        "sun"          : 5e-7,
+        "meteorite"    : 8.7e-5,
+        "crust"        : 5.4e-4,
+        "ocean"        : 1.3e-6,
+        "human"        : 3.7e-5
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 9
-        self.name    = "Fluorine"
-        self.symbol  = "F"
-        self.mass    = 19.00
         pass
 
 
 # 10
 class Neon(Element):
+    number  = 10
+    name    = "Neon"
+    symbol  = "Ne"
+    mass    = 20.18
+
+    abundance = {
+        "universe"     : 1.3e-3,
+        "sun"          : 1e-3,
+        "meteorite"    : 0,
+        "crust"        : 3e-9,
+        "ocean"        : 1.2e-10,
+        "human"        : 0
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 10
-        self.name    = "Neon"
-        self.symbol  = "Ne"
-        self.mass    = 20.18
         pass
 
 
 # 11
 class Sodium(Element):
+    number  = 11
+    name    = "Sodium"
+    symbol  = "Na"
+    mass    = 22.99
+
+    abundance = {
+        "universe"     : 2e-5,
+        "sun"          : 4e-5,
+        "meteorite"    : 5.5e-3,
+        "crust"        : 2.3e-2,
+        "ocean"        : 1.1e-2,
+        "human"        : 1.4e-3
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 11
-        self.name    = "Sodium"
-        self.symbol  = "Na"
-        self.mass    = 22.99
         pass
 
 
 # 12
 class Magnesium(Element):
+    number  = 12
+    name    = "Magnesium"
+    symbol  = "Mg"
+    mass    = 24.31
+
+    abundance = {
+        "universe"     : 6e-4,
+        "sun"          : 7e-4,
+        "meteorite"    : 1.2e-1,
+        "crust"        : 2.9e-2,
+        "ocean"        : 1.3e-3,
+        "human"        : 2.7e-4
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 12
-        self.name    = "Magnesium"
-        self.symbol  = "Mg"
-        self.mass    = 24.31
         pass
 
 
 # 13
 class Aluminum(Element):
+    number  = 13
+    name    = "Aluminum"
+    symbol  = "Al"
+    mass    = 26.98
+
+    abundance = {
+        "universe"     : 5e-5,
+        "sun"          : 6e-5,
+        "meteorite"    : 9.1e-3,
+        "crust"        : 8.1e-2,
+        "ocean"        : 5e-9,
+        "human"        : 9e-7
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 13
-        self.name    = "Aluminum"
-        self.symbol  = "Al"
-        self.mass    = 26.98
         pass
 
 
 # 14
 class Silicon(Element):
+    number  = 14
+    name    = "Silicon"
+    symbol  = "Si"
+    mass    = 28.09
+
+    abundance = {
+        "universe"     : 7e-4,
+        "sun"          : 9e-4,
+        "meteorite"    : 0.14,
+        "crust"        : 0.27,
+        "ocean"        : 1e-6,
+        "human"        : 2.6e-4
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 14
-        self.name    = "Silicon"
-        self.symbol  = "Si"
-        self.mass    = 28.09
         pass
 
 
 # 15
 class Phosphorus(Element):
+    number  = 15
+    name    = "Phosphorus"
+    symbol  = "P"
+    mass    = 30.97
+
+    abundance = {
+        "universe"     : 7e-6,
+        "sun"          : 7e-6,
+        "meteorite"    : 1.1e-3,
+        "crust"        : 9.9e-4,
+        "ocean"        : 7e-8,
+        "human"        : 1.1e-2
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 15
-        self.name    = "Phosphorus"
-        self.symbol  = "P"
-        self.mass    = 30.97
         pass
 
 
 # 16
 class Sulfur(Element):
+    number  = 16
+    name    = "Sulfur"
+    symbol  = "S"
+    mass    = 32.07
+
+    abundance = {
+        "universe"     : 5e-4,
+        "sun"          : 4e-4,
+        "meteorite"    : 4e-2,
+        "crust"        : 4.2e-4,
+        "ocean"        : 9.3e-4,
+        "human"        : 2e-3
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 16
-        self.name    = "Sulfur"
-        self.symbol  = "S"
-        self.mass    = 32.07
         pass
 
 
 # 17
 class Chlorine(Element):
+    number  = 17
+    name    = "Chlorine"
+    symbol  = "Cl"
+    mass    = 35.45
+
+    abundance = {
+        "universe"     : 1e-6,
+        "sun"          : 8e-6,
+        "meteorite"    : 3.7e-4,
+        "crust"        : 1.7e-4,
+        "ocean"        : 2e-2,
+        "human"        : 1.2e-3
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 17
-        self.name    = "Chlorine"
-        self.symbol  = "Cl"
-        self.mass    = 35.45
         pass
 
 
 # 18
 class Argon(Element):
+    number  = 18
+    name    = "Argon"
+    symbol  = "Ar"
+    mass    = 39.95
+
+    abundance = {
+        "universe"     : 2e-4,
+        "sun"          : 7e-5,
+        "meteorite"    : 0,
+        "crust"        : 1.5e-6,
+        "ocean"        : 4.5e-7,
+        "human"        : 0
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 18
-        self.name    = "Argon"
-        self.symbol  = "Ar"
-        self.mass    = 39.95
         pass
 
 
 # 19
 class Potassium(Element):
+    number  = 19
+    name    = "Potassium"
+    symbol  = "K"
+    mass    = 39.10
+
+    abundance = {
+        "universe"     : 3e-6,
+        "sun"          : 4e-6,
+        "meteorite"    : 7e-4,
+        "crust"        : 1.5e-2,
+        "ocean"        : 4.2e-4,
+        "human"        : 2e-3
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 19
-        self.name    = "Potassium"
-        self.symbol  = "K"
-        self.mass    = 39.10
         pass
 
 
 # 20
 class Calcium(Element):
+    number  = 20
+    name    = "Calcium"
+    symbol  = "Ca"
+    mass    = 40.08
+
+    abundance = {
+        "universe"     : 7e-5,
+        "sun"          : 7e-5,
+        "meteorite"    : 1.1e-2,
+        "crust"        : 0.05,
+        "ocean"        : 4.2e-6,
+        "human"        : 1.4e-2
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 20
-        self.name    = "Calcium"
-        self.symbol  = "Ca"
-        self.mass    = 40.08
         pass
 
 
 # 21
 class Scandium(Element):
+    number  = 21
+    name    = "Scandium"
+    symbol  = "Sc"
+    mass    = 44.96
+
+    abundance = {
+        "universe"     : 3e-8,
+        "sun"          : 4e-8,
+        "meteorite"    : 6.4e-6,
+        "crust"        : 2.6e-5,
+        "ocean"        : 1.5e-12,
+        "human"        : 0
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 21
-        self.name    = "Scandium"
-        self.symbol  = "Sc"
-        self.mass    = 44.96
         pass
 
 
 # 22
 class Titanium(Element):
+    number  = 22
+    name    = "Titanium"
+    symbol  = "Ti"
+    mass    = 47.87
+
+    abundance = {
+        "universe"     : 3e-6,
+        "sun"          : 4e-6,
+        "meteorite"    : 5.4e-4,
+        "crust"        : 6.6e-3,
+        "ocean"        : 1e-9,
+        "human"        : 0
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 22
-        self.name    = "Titanium"
-        self.symbol  = "Ti"
-        self.mass    = 47.87
         pass
 
 
 # 23
 class Vanadium(Element):
+    number  = 23
+    name    = "Vanadium"
+    symbol  = "V"
+    mass    = 50.94
+
+    abundance = {
+        "universe"     : 1e-6,
+        "sun"          : 4e-7,
+        "meteorite"    : 6.1e-5,
+        "crust"        : 1.9e-4,
+        "ocean"        : 1.5e-9,
+        "human"        : 3e-8
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 23
-        self.name    = "Vanadium"
-        self.symbol  = "V"
-        self.mass    = 50.94
         pass
 
 
 # 24
 class Chromium(Element):
+    number  = 24
+    name    = "Chromium"
+    symbol  = "Cr"
+    mass    = 52.00
+
+    abundance = {
+        "universe"     : 1.5e-5,
+        "sun"          : 2e-5,
+        "meteorite"    : 3e-3,
+        "crust"        : 1.4e-4,
+        "ocean"        : 6e-10,
+        "human"        : 3e-8
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 24
-        self.name    = "Chromium"
-        self.symbol  = "Cr"
-        self.mass    = 52.00
         pass
 
 
 # 25
 class Manganese(Element):
+    number  = 25
+    name    = "Manganese"
+    symbol  = "Mn"
+    mass    = 54.94
+
+    abundance = {
+        "universe"     : 8e-6,
+        "sun"          : 1e-5,
+        "meteorite"    : 2.7e-3,
+        "crust"        : 1.1e-3,
+        "ocean"        : 2e-9,
+        "human"        : 2e-7
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 25
-        self.name    = "Manganese"
-        self.symbol  = "Mn"
-        self.mass    = 54.94
         pass
 
 
 # 26
 class Iron(Element):
+    number  = 26
+    name    = "Iron"
+    symbol  = "Fe"
+    mass    = 55.85
+
+    abundance = {
+        "universe"     : 1.1e-3,
+        "sun"          : 1e-3,
+        "meteorite"    : 2.2e-1,
+        "crust"        : 6.3e-2,
+        "ocean"        : 3e-9,
+        "human"        : 6e-5
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 26
-        self.name    = "Iron"
-        self.symbol  = "Fe"
-        self.mass    = 55.85
         pass
 
 
 # 27
 class Cobalt(Element):
+    number  = 27
+    name    = "Cobalt"
+    symbol  = "Co"
+    mass    = 58.93
+
+    abundance = {
+        "universe"     : 3e-6,
+        "sun"          : 4e-6,
+        "meteorite"    : 5.9e-4,
+        "crust"        : 3e-5,
+        "ocean"        : 8e-11,
+        "human"        : 2e-8
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 27
-        self.name    = "Cobalt"
-        self.symbol  = "Co"
-        self.mass    = 58.93
         pass
 
 
 # 28
 class Nickel(Element):
+    number  = 28
+    name    = "Nickel"
+    symbol  = "Ni"
+    mass    = 58.69
+
+    abundance = {
+        "universe"     : 0,
+        "sun"          : 0,
+        "meteorite"    : 0,
+        "crust"        : 0,
+        "ocean"        : 0,
+        "human"        : 0
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 28
-        self.name    = "Nickel"
-        self.symbol  = "Ni"
-        self.mass    = 58.69
         pass
 
 
 # 29
 class Copper(Element):
+    number  = 29
+    name    = "Copper"
+    symbol  = "Cu"
+    mass    = 63.55
+
+    abundance = {
+        "universe"     : 0,
+        "sun"          : 0,
+        "meteorite"    : 0,
+        "crust"        : 0,
+        "ocean"        : 0,
+        "human"        : 0
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 29
-        self.name    = "Copper"
-        self.symbol  = "Cu"
-        self.mass    = 63.55
         pass
 
 
 # 30
 class Zinc(Element):
+    number  = 30
+    name    = "Zinc"
+    symbol  = "Zn"
+    mass    = 65.41
+
+    abundance = {
+        "universe"     : 0,
+        "sun"          : 0,
+        "meteorite"    : 0,
+        "crust"        : 0,
+        "ocean"        : 0,
+        "human"        : 0
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 30
-        self.name    = "Zinc"
-        self.symbol  = "Zn"
-        self.mass    = 65.41
         pass
 
 
 # 31
 class Gallium(Element):
+    number  = 31
+    name    = "Gallium"
+    symbol  = "Ga"
+    mass    = 69.72
+
+    abundance = {
+        "universe"     : 0,
+        "sun"          : 0,
+        "meteorite"    : 0,
+        "crust"        : 0,
+        "ocean"        : 0,
+        "human"        : 0
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 31
-        self.name    = "Gallium"
-        self.symbol  = "Ga"
-        self.mass    = 69.72
         pass
 
 
 # 32
 class Germanium(Element):
+    number  = 32
+    name    = "Germanium"
+    symbol  = "Ge"
+    mass    = 72.64
+
+    abundance = {
+        "universe"     : 0,
+        "sun"          : 0,
+        "meteorite"    : 0,
+        "crust"        : 0,
+        "ocean"        : 0,
+        "human"        : 0
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 32
-        self.name    = "Germanium"
-        self.symbol  = "Ge"
-        self.mass    = 72.64
         pass
 
 
 # 33
 class Arsenic(Element):
+    number  = 33
+    name    = "Arsenic"
+    symbol  = "As"
+    mass    = 74.92
+
+    abundance = {
+        "universe"     : 0,
+        "sun"          : 0,
+        "meteorite"    : 0,
+        "crust"        : 0,
+        "ocean"        : 0,
+        "human"        : 0
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 33
-        self.name    = "Arsenic"
-        self.symbol  = "As"
-        self.mass    = 74.92
         pass
 
 
 # 34
 class Selenium(Element):
+    number  = 34
+    name    = "Selenium"
+    symbol  = "Se"
+    mass    = 78.96
+
+    abundance = {
+        "universe"     : 0,
+        "sun"          : 0,
+        "meteorite"    : 0,
+        "crust"        : 0,
+        "ocean"        : 0,
+        "human"        : 0
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 34
-        self.name    = "Selenium"
-        self.symbol  = "Se"
-        self.mass    = 78.96
         pass
 
 
 # 35
 class Bromine(Element):
+    number  = 35
+    name    = "Bromine"
+    symbol  = "Br"
+    mass    = 79.90
+
+    abundance = {
+        "universe"     : 0,
+        "sun"          : 0,
+        "meteorite"    : 0,
+        "crust"        : 0,
+        "ocean"        : 0,
+        "human"        : 0
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 35
-        self.name    = "Bromine"
-        self.symbol  = "Br"
-        self.mass    = 79.90
         pass
 
 
 # 36
 class Krypton(Element):
+    number  = 36
+    name    = "Krypton"
+    symbol  = "Kr"
+    mass    = 83.80
+
+    abundance = {
+        "universe"     : 0,
+        "sun"          : 0,
+        "meteorite"    : 0,
+        "crust"        : 0,
+        "ocean"        : 0,
+        "human"        : 0
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 36
-        self.name    = "Krypton"
-        self.symbol  = "Kr"
-        self.mass    = 83.80
         pass
 
 
 # 37
 class Rubidium(Element):
+    number  = 37
+    name    = "Rubidium"
+    symbol  = "Rb"
+    mass    = 85.47
+
+    abundance = {
+        "universe"     : 0,
+        "sun"          : 0,
+        "meteorite"    : 0,
+        "crust"        : 0,
+        "ocean"        : 0,
+        "human"        : 0
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 37
-        self.name    = "Rubidium"
-        self.symbol  = "Rb"
-        self.mass    = 85.47
         pass
 
 
 # 38
 class Strontium(Element):
+    number  = 38
+    name    = "Strontium"
+    symbol  = "Sr"
+    mass    = 87.62
+
+    abundance = {
+        "universe"     : 0,
+        "sun"          : 0,
+        "meteorite"    : 0,
+        "crust"        : 0,
+        "ocean"        : 0,
+        "human"        : 0
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 38
-        self.name    = "Strontium"
-        self.symbol  = "Sr"
-        self.mass    = 87.62
         pass
 
 
 # 39
 class Yttrium(Element):
+    number  = 39
+    name    = "Yttrium"
+    symbol  = "Y"
+    mass    = 88.91
+
+    abundance = {
+        "universe"     : 0,
+        "sun"          : 0,
+        "meteorite"    : 0,
+        "crust"        : 0,
+        "ocean"        : 0,
+        "human"        : 0
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 39
-        self.name    = "Yttrium"
-        self.symbol  = "Y"
-        self.mass    = 88.91
         pass
 
 
 # 40
 class Zirconium(Element):
+    number  = 40
+    name    = "Zirconium"
+    symbol  = "Zr"
+    mass    = 91.22
+
+    abundance = {
+        "universe"     : 0,
+        "sun"          : 0,
+        "meteorite"    : 0,
+        "crust"        : 0,
+        "ocean"        : 0,
+        "human"        : 0
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 40
-        self.name    = "Zirconium"
-        self.symbol  = "Zr"
-        self.mass    = 91.22
         pass
 
 
 #41
 class Niobium(Element):
+    number  = 41
+    name    = "Niobium"
+    symbol  = "Nb"
+    mass    = 92.91
+
+    abundance = {
+        "universe"     : 0,
+        "sun"          : 0,
+        "meteorite"    : 0,
+        "crust"        : 0,
+        "ocean"        : 0,
+        "human"        : 0
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 41
-        self.name    = "Niobium"
-        self.symbol  = "Nb"
-        self.mass    = 92.91
         pass
 
 
 #42
 class Molybdenum(Element):
+    number  = 42
+    name    = "Molybdenum"
+    symbol  = "Mo"
+    mass    = 95.94
+
+    abundance = {
+        "universe"     : 0,
+        "sun"          : 0,
+        "meteorite"    : 0,
+        "crust"        : 0,
+        "ocean"        : 0,
+        "human"        : 0
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 42
-        self.name    = "Molybdenum"
-        self.symbol  = "Mo"
-        self.mass    = 95.94
         pass
 
 
 #43
 class Technetium(Element):
+    number  = 43
+    name    = "Technetium"
+    symbol  = "Tc"
+    mass    = 98   # Radioactive. Mass is for the longest lived isotope.
+
+    abundance = {
+        "universe"     : 0,
+        "sun"          : 0,
+        "meteorite"    : 0,
+        "crust"        : 0,
+        "ocean"        : 0,
+        "human"        : 0
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 43
-        self.name    = "Technetium"
-        self.symbol  = "Tc"
-        self.mass    = 98   # Radioactive. Mass is for the longest lived isotope.
         pass
 
 
 # 44
 class Ruthenium(Element):
+    number  = 44
+    name    = "Ruthenium"
+    symbol  = "Ru"
+    mass    = 101.07
+
+    abundance = {
+        "universe"     : 0,
+        "sun"          : 0,
+        "meteorite"    : 0,
+        "crust"        : 0,
+        "ocean"        : 0,
+        "human"        : 0
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 44
-        self.name    = "Ruthenium"
-        self.symbol  = "Ru"
-        self.mass    = 101.07
         pass
 
 
 # 45
 class Rhodium(Element):
+    number  = 45
+    name    = "Rhodium"
+    symbol  = "Rh"
+    mass    = 102.91
+
+    abundance = {
+        "universe"     : 0,
+        "sun"          : 0,
+        "meteorite"    : 0,
+        "crust"        : 0,
+        "ocean"        : 0,
+        "human"        : 0
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 45
-        self.name    = "Rhodium"
-        self.symbol  = "Rh"
-        self.mass    = 102.91
         pass
 
 
 # 46
 class Palladium(Element):
+    number  = 46
+    name    = "Palladium"
+    symbol  = "Pd"
+    mass    = 106.42
+
+    abundance = {
+        "universe"     : 0,
+        "sun"          : 0,
+        "meteorite"    : 0,
+        "crust"        : 0,
+        "ocean"        : 0,
+        "human"        : 0
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 46
-        self.name    = "Palladium"
-        self.symbol  = "Pd"
-        self.mass    = 106.42
         pass
 
 
 # 47
 class Silver(Element):
+    number  = 47
+    name    = "Silver"
+    symbol  = "Ag"
+    mass    = 107.87
+
+    abundance = {
+        "universe"     : 0,
+        "sun"          : 0,
+        "meteorite"    : 0,
+        "crust"        : 0,
+        "ocean"        : 0,
+        "human"        : 0
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 47
-        self.name    = "Silver"
-        self.symbol  = "Ag"
-        self.mass    = 107.87
         pass
 
 
 # 48
 class Cadmium(Element):
+    number  = 48
+    name    = "Cadmium"
+    symbol  = "Cd"
+    mass    = 112.41
+
+    abundance = {
+        "universe"     : 0,
+        "sun"          : 0,
+        "meteorite"    : 0,
+        "crust"        : 0,
+        "ocean"        : 0,
+        "human"        : 0
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 48
-        self.name    = "Cadmium"
-        self.symbol  = "Cd"
-        self.mass    = 112.41
         pass
 
 
 # 49
 class Indium(Element):
+    number  = 49
+    name    = "Indium"
+    symbol  = "In"
+    mass    = 114.82
+
+    abundance = {
+        "universe"     : 0,
+        "sun"          : 0,
+        "meteorite"    : 0,
+        "crust"        : 0,
+        "ocean"        : 0,
+        "human"        : 0
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 49
-        self.name    = "Indium"
-        self.symbol  = "In"
-        self.mass    = 114.82
         pass
 
 
 # 50
 class Tin(Element):
+    number  = 50
+    name    = "Tin"
+    symbol  = "Sn"
+    mass    = 118.71
+
+    abundance = {
+        "universe"     : 0,
+        "sun"          : 0,
+        "meteorite"    : 0,
+        "crust"        : 0,
+        "ocean"        : 0,
+        "human"        : 0
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 50
-        self.name    = "Tin"
-        self.symbol  = "Sn"
-        self.mass    = 118.71
         pass
 
 
 # 51
 class Antimony(Element):
+    number  = 51
+    name    = "Antimony"
+    symbol  = "Sb"
+    mass    = 121.76
+
+    abundance = {
+        "universe"     : 0,
+        "sun"          : 0,
+        "meteorite"    : 0,
+        "crust"        : 0,
+        "ocean"        : 0,
+        "human"        : 0
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 51
-        self.name    = "Antimony"
-        self.symbol  = "Sb"
-        self.mass    = 121.76
         pass
 
 
 # 52
 class Tellurium(Element):
+    number  = 52
+    name    = "Tellurium"
+    symbol  = "Te"
+    mass    = 127.6   # Only 1 decimal place was given.
+
+    abundance = {
+        "universe"     : 0,
+        "sun"          : 0,
+        "meteorite"    : 0,
+        "crust"        : 0,
+        "ocean"        : 0,
+        "human"        : 0
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 52
-        self.name    = "Tellurium"
-        self.symbol  = "Te"
-        self.mass    = 127.6   # Only 1 decimal place was given.
         pass
 
 
 # 53
 class Iodine(Element):
+    number  = 53
+    name    = "Iodine"
+    symbol  = "I"
+    mass    = 126.90
+
+    abundance = {
+        "universe"     : 0,
+        "sun"          : 0,
+        "meteorite"    : 0,
+        "crust"        : 0,
+        "ocean"        : 0,
+        "human"        : 0
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 53
-        self.name    = "Iodine"
-        self.symbol  = "I"
-        self.mass    = 126.90
         pass
 
 
 # 54
 class Xenon(Element):
+    number  = 54
+    name    = "Xenon"
+    symbol  = "Xe"
+    mass    = 131.29
+
+    abundance = {
+        "universe"     : 0,
+        "sun"          : 0,
+        "meteorite"    : 0,
+        "crust"        : 0,
+        "ocean"        : 0,
+        "human"        : 0
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 54
-        self.name    = "Xenon"
-        self.symbol  = "Xe"
-        self.mass    = 131.29
         pass
 
 
 # 55
 class Cesium(Element):
+    number  = 55
+    name    = "Cesium"
+    symbol  = "Cs"
+    mass    = 132.91
+
+    abundance = {
+        "universe"     : 0,
+        "sun"          : 0,
+        "meteorite"    : 0,
+        "crust"        : 0,
+        "ocean"        : 0,
+        "human"        : 0
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 55
-        self.name    = "Cesium"
-        self.symbol  = "Cs"
-        self.mass    = 132.91
         pass
 
 
 # 56
 class Barium(Element):
+    number  = 56
+    name    = "Barium"
+    symbol  = "Ba"
+    mass    = 137.33
+
+    abundance = {
+        "universe"     : 0,
+        "sun"          : 0,
+        "meteorite"    : 0,
+        "crust"        : 0,
+        "ocean"        : 0,
+        "human"        : 0
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 56
-        self.name    = "Barium"
-        self.symbol  = "Ba"
-        self.mass    = 137.33
         pass
 
 
 # 57
 class Lanthanum(Element):
+    number  = 57
+    name    = "Lanthanum"
+    symbol  = "La"
+    mass    = 138.91
+
+    abundance = {
+        "universe"     : 0,
+        "sun"          : 0,
+        "meteorite"    : 0,
+        "crust"        : 0,
+        "ocean"        : 0,
+        "human"        : 0
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 57
-        self.name    = "Lanthanum"
-        self.symbol  = "La"
-        self.mass    = 138.91
         pass
 
 
 # 58
 class Cerium(Element):
+    number  = 58
+    name    = "Cerium"
+    symbol  = "Ce"
+    mass    = 140.12
+
+    abundance = {
+        "universe"     : 0,
+        "sun"          : 0,
+        "meteorite"    : 0,
+        "crust"        : 0,
+        "ocean"        : 0,
+        "human"        : 0
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 58
-        self.name    = "Cerium"
-        self.symbol  = "Ce"
-        self.mass    = 140.12
         pass
 
 
 # 59
 class Praseodymium(Element):
+    number  = 59
+    name    = "Praseodymium"
+    symbol  = "Pr"
+    mass    = 140.91
+
+    abundance = {
+        "universe"     : 0,
+        "sun"          : 0,
+        "meteorite"    : 0,
+        "crust"        : 0,
+        "ocean"        : 0,
+        "human"        : 0
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 59
-        self.name    = "Praseodymium"
-        self.symbol  = "Pr"
-        self.mass    = 140.91
         pass
 
 
 # 60
 class Neodymium(Element):
+    number  = 60
+    name    = "Neodymium"
+    symbol  = "Nd"
+    mass    = 144.24
+
+    abundance = {
+        "universe"     : 0,
+        "sun"          : 0,
+        "meteorite"    : 0,
+        "crust"        : 0,
+        "ocean"        : 0,
+        "human"        : 0
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 60
-        self.name    = "Neodymium"
-        self.symbol  = "Nd"
-        self.mass    = 144.24
         pass
 
 
 # 61
 class Promethium(Element):
+    number  = 61
+    name    = "Promethium"
+    symbol  = "Pm"
+    mass    = 145   # Radioactive. Mass is for the longest lived isotope.
+
+    abundance = {
+        "universe"     : 0,
+        "sun"          : 0,
+        "meteorite"    : 0,
+        "crust"        : 0,
+        "ocean"        : 0,
+        "human"        : 0
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 61
-        self.name    = "Promethium"
-        self.symbol  = "Pm"
-        self.mass    = 145   # Radioactive. Mass is for the longest lived isotope.
         pass
 
 
 # 62
 class Samarium(Element):
+    number  = 62
+    name    = "Samarium"
+    symbol  = "Sm"
+    mass    = 150.36
+
+    abundance = {
+        "universe"     : 0,
+        "sun"          : 0,
+        "meteorite"    : 0,
+        "crust"        : 0,
+        "ocean"        : 0,
+        "human"        : 0
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 62
-        self.name    = "Samarium"
-        self.symbol  = "Sm"
-        self.mass    = 150.36
         pass
 
 
 # 63
 class Europium(Element):
+    number  = 63
+    name    = "Europium"
+    symbol  = "Eu"
+    mass    = 151.96
+
+    abundance = {
+        "universe"     : 0,
+        "sun"          : 0,
+        "meteorite"    : 0,
+        "crust"        : 0,
+        "ocean"        : 0,
+        "human"        : 0
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 63
-        self.name    = "Europium"
-        self.symbol  = "Eu"
-        self.mass    = 151.96
         pass
 
 
 # 64
 class Gadolinium(Element):
+    number  = 64
+    name    = "Gadolinium"
+    symbol  = "Gd"
+    mass    = 157.25
+
+    abundance = {
+        "universe"     : 0,
+        "sun"          : 0,
+        "meteorite"    : 0,
+        "crust"        : 0,
+        "ocean"        : 0,
+        "human"        : 0
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 64
-        self.name    = "Gadolinium"
-        self.symbol  = "Gd"
-        self.mass    = 157.25
         pass
 
 
 # 65
 class Terbium(Element):
+    number  = 65
+    name    = "Terbium"
+    symbol  = "Tb"
+    mass    = 158.93
+
+    abundance = {
+        "universe"     : 0,
+        "sun"          : 0,
+        "meteorite"    : 0,
+        "crust"        : 0,
+        "ocean"        : 0,
+        "human"        : 0
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 65
-        self.name    = "Terbium"
-        self.symbol  = "Tb"
-        self.mass    = 158.93
         pass
 
 
 # 66
 class Dysprosium(Element):
+    number  = 66
+    name    = "Dysprosium"
+    symbol  = "Dy"
+    mass    = 162.5   # Only 1 decimal place was given.
+
+    abundance = {
+        "universe"     : 0,
+        "sun"          : 0,
+        "meteorite"    : 0,
+        "crust"        : 0,
+        "ocean"        : 0,
+        "human"        : 0
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 66
-        self.name    = "Dysprosium"
-        self.symbol  = "Dy"
-        self.mass    = 162.5   # Only 1 decimal place was given.
         pass
 
 
 # 67
 class Holmium(Element):
+    number  = 67
+    name    = "Holmium"
+    symbol  = "Ho"
+    mass    = 164.93
+
+    abundance = {
+        "universe"     : 0,
+        "sun"          : 0,
+        "meteorite"    : 0,
+        "crust"        : 0,
+        "ocean"        : 0,
+        "human"        : 0
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 67
-        self.name    = "Holmium"
-        self.symbol  = "Ho"
-        self.mass    = 164.93
         pass
 
 
 # 68
 class Erbium(Element):
+    number  = 68
+    name    = "Erbium"
+    symbol  = "Er"
+    mass    = 167.26
+
+    abundance = {
+        "universe"     : 0,
+        "sun"          : 0,
+        "meteorite"    : 0,
+        "crust"        : 0,
+        "ocean"        : 0,
+        "human"        : 0
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 68
-        self.name    = "Erbium"
-        self.symbol  = "Er"
-        self.mass    = 167.26
         pass
 
 
 # 69
 class Thulium(Element):
+    number  = 69
+    name    = "Thulium"
+    symbol  = "Tm"
+    mass    = 168.93
+
+    abundance = {
+        "universe"     : 0,
+        "sun"          : 0,
+        "meteorite"    : 0,
+        "crust"        : 0,
+        "ocean"        : 0,
+        "human"        : 0
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 69
-        self.name    = "Thulium"
-        self.symbol  = "Tm"
-        self.mass    = 168.93
         pass
 
 
 # 70
 class Ytterbium(Element):
+    number  = 70
+    name    = "Ytterbium"
+    symbol  = "Yb"
+    mass    = 173.04
+
+    abundance = {
+        "universe"     : 0,
+        "sun"          : 0,
+        "meteorite"    : 0,
+        "crust"        : 0,
+        "ocean"        : 0,
+        "human"        : 0
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 70
-        self.name    = "Ytterbium"
-        self.symbol  = "Yb"
-        self.mass    = 173.04
         pass
 
 
 # 71
 class Lutetium(Element):
+    number  = 71
+    name    = "Lutetium"
+    symbol  = "Lu"
+    mass    = 174.97
+
+    abundance = {
+        "universe"     : 0,
+        "sun"          : 0,
+        "meteorite"    : 0,
+        "crust"        : 0,
+        "ocean"        : 0,
+        "human"        : 0
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 71
-        self.name    = "Lutetium"
-        self.symbol  = "Lu"
-        self.mass    = 174.97
         pass
 
 
 # 72
 class Hafnium(Element):
+    number  = 72
+    name    = "Hafnium"
+    symbol  = "Hf"
+    mass    = 178.49
+
+    abundance = {
+        "universe"     : 0,
+        "sun"          : 0,
+        "meteorite"    : 0,
+        "crust"        : 0,
+        "ocean"        : 0,
+        "human"        : 0
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 72
-        self.name    = "Hafnium"
-        self.symbol  = "Hf"
-        self.mass    = 178.49
         pass
 
 
 # 73
 class Tantalum(Element):
+    number  = 73
+    name    = "Tantalum"
+    symbol  = "Ta"
+    mass    = 180.95
+
+    abundance = {
+        "universe"     : 0,
+        "sun"          : 0,
+        "meteorite"    : 0,
+        "crust"        : 0,
+        "ocean"        : 0,
+        "human"        : 0
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 73
-        self.name    = "Tantalum"
-        self.symbol  = "Ta"
-        self.mass    = 180.95
         pass
 
 
 # 74
 class Tungsten(Element):
+    number  = 74
+    name    = "Tungsten"
+    symbol  = "W"
+    mass    = 183.84
+
+    abundance = {
+        "universe"     : 0,
+        "sun"          : 0,
+        "meteorite"    : 0,
+        "crust"        : 0,
+        "ocean"        : 0,
+        "human"        : 0
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 74
-        self.name    = "Tungsten"
-        self.symbol  = "W"
-        self.mass    = 183.84
         pass
 
 
 # 75
 class Rhenium(Element):
+    number  = 75
+    name    = "Rhenium"
+    symbol  = "Re"
+    mass    = 186.21
+
+    abundance = {
+        "universe"     : 0,
+        "sun"          : 0,
+        "meteorite"    : 0,
+        "crust"        : 0,
+        "ocean"        : 0,
+        "human"        : 0
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 75
-        self.name    = "Rhenium"
-        self.symbol  = "Re"
-        self.mass    = 186.21
         pass
 
 
 # 76
 class Osmium(Element):
+    number  = 76
+    name    = "Osmium"
+    symbol  = "Os"
+    mass    = 190.23
+
+    abundance = {
+        "universe"     : 0,
+        "sun"          : 0,
+        "meteorite"    : 0,
+        "crust"        : 0,
+        "ocean"        : 0,
+        "human"        : 0
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 76
-        self.name    = "Osmium"
-        self.symbol  = "Os"
-        self.mass    = 190.23
         pass
 
 
 # 77
 class Iridium(Element):
+    number  = 77
+    name    = "Iridium"
+    symbol  = "Ir"
+    mass    = 192.22
+
+    abundance = {
+        "universe"     : 0,
+        "sun"          : 0,
+        "meteorite"    : 0,
+        "crust"        : 0,
+        "ocean"        : 0,
+        "human"        : 0
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 77
-        self.name    = "Iridium"
-        self.symbol  = "Ir"
-        self.mass    = 192.22
         pass
 
 
 # 78
 class Platinum(Element):
+    number  = 78
+    name    = "Platinum"
+    symbol  = "Pt"
+    mass    = 195.08
+
+    abundance = {
+        "universe"     : 0,
+        "sun"          : 0,
+        "meteorite"    : 0,
+        "crust"        : 0,
+        "ocean"        : 0,
+        "human"        : 0
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 78
-        self.name    = "Platinum"
-        self.symbol  = "Pt"
-        self.mass    = 195.08
         pass
 
 
 # 79
 class Gold(Element):
+    number  = 79
+    name    = "Gold"
+    symbol  = "Au"
+    mass    = 196.97
+
+    abundance = {
+        "universe"     : 0,
+        "sun"          : 0,
+        "meteorite"    : 0,
+        "crust"        : 0,
+        "ocean"        : 0,
+        "human"        : 0
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 79
-        self.name    = "Gold"
-        self.symbol  = "Au"
-        self.mass    = 196.97
         pass
 
 
 # 80
 class Mercury(Element):
+    number  = 80
+    name    = "Mercury"
+    symbol  = "Hg"
+    mass    = 200.59
+
+    abundance = {
+        "universe"     : 0,
+        "sun"          : 0,
+        "meteorite"    : 0,
+        "crust"        : 0,
+        "ocean"        : 0,
+        "human"        : 0
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 80
-        self.name    = "Mercury"
-        self.symbol  = "Hg"
-        self.mass    = 200.59
         pass
 
 
 # 81
 class Thallium(Element):
+    number  = 81
+    name    = "Thallium"
+    symbol  = "Tl"
+    mass    = 204.38
+
+    abundance = {
+        "universe"     : 0,
+        "sun"          : 0,
+        "meteorite"    : 0,
+        "crust"        : 0,
+        "ocean"        : 0,
+        "human"        : 0
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 81
-        self.name    = "Thallium"
-        self.symbol  = "Tl"
-        self.mass    = 204.38
         pass
 
 
 # 82
 class Lead(Element):
+    number  = 82
+    name    = "Lead"
+    symbol  = "Pb"
+    mass    = 207.2   # Only 1 decimal place was given.
+
+    abundance = {
+        "universe"     : 0,
+        "sun"          : 0,
+        "meteorite"    : 0,
+        "crust"        : 0,
+        "ocean"        : 0,
+        "human"        : 0
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 82
-        self.name    = "Lead"
-        self.symbol  = "Pb"
-        self.mass    = 207.2   # Only 1 decimal place was given.
         pass
 
 
 # 83
 class Bismuth(Element):
+    number  = 83
+    name    = "Bismuth"
+    symbol  = "Bi"
+    mass    = 208.98
+
+    abundance = {
+        "universe"     : 0,
+        "sun"          : 0,
+        "meteorite"    : 0,
+        "crust"        : 0,
+        "ocean"        : 0,
+        "human"        : 0
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 83
-        self.name    = "Bismuth"
-        self.symbol  = "Bi"
-        self.mass    = 208.98
         pass
 
 
 # 84
 class Polonium(Element):
+    number  = 84
+    name    = "Polonium"
+    symbol  = "Po"
+    mass    = 209   # Radioactive. Mass is for the longest lived isotope.
+
+    abundance = {
+        "universe"     : 0,
+        "sun"          : 0,
+        "meteorite"    : 0,
+        "crust"        : 0,
+        "ocean"        : 0,
+        "human"        : 0
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 84
-        self.name    = "Polonium"
-        self.symbol  = "Po"
-        self.mass    = 209   # Radioactive. Mass is for the longest lived isotope.
         pass
 
 
 # 85
 class Astatine(Element):
+    number  = 85
+    name    = "Astatine"
+    symbol  = "At"
+    mass    = 210   # Radioactive. Mass is for the longest lived isotope.
+
+    abundance = {
+        "universe"     : 0,
+        "sun"          : 0,
+        "meteorite"    : 0,
+        "crust"        : 0,
+        "ocean"        : 0,
+        "human"        : 0
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 85
-        self.name    = "Astatine"
-        self.symbol  = "At"
-        self.mass    = 210   # Radioactive. Mass is for the longest lived isotope.
         pass
 
 
 # 86
 class Radon(Element):
+    number  = 86
+    name    = "Radon"
+    symbol  = "Rn"
+    mass    = 222   # Radioactive. Mass is for the longest lived isotope.
+
+    abundance = {
+        "universe"     : 0,
+        "sun"          : 0,
+        "meteorite"    : 0,
+        "crust"        : 0,
+        "ocean"        : 0,
+        "human"        : 0
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 86
-        self.name    = "Radon"
-        self.symbol  = "Rn"
-        self.mass    = 222   # Radioactive. Mass is for the longest lived isotope.
         pass
 
 
 # 87
 class Francium(Element):
+    number  = 87
+    name    = "Francium"
+    symbol  = "Fr"
+    mass    = 223   # Radioactive. Mass is for the longest lived isotope.
+
+    abundance = {
+        "universe"     : 0,
+        "sun"          : 0,
+        "meteorite"    : 0,
+        "crust"        : 0,
+        "ocean"        : 0,
+        "human"        : 0
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 87
-        self.name    = "Francium"
-        self.symbol  = "Fr"
-        self.mass    = 223   # Radioactive. Mass is for the longest lived isotope.
         pass
 
 
 # 88
 class Radium(Element):
+    number  = 88
+    name    = "Radium"
+    symbol  = "Ra"
+    mass    = 226   # Radioactive. Mass is for the longest lived isotope.
+
+    abundance = {
+        "universe"     : 0,
+        "sun"          : 0,
+        "meteorite"    : 0,
+        "crust"        : 0,
+        "ocean"        : 0,
+        "human"        : 0
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 88
-        self.name    = "Radium"
-        self.symbol  = "Ra"
-        self.mass    = 226   # Radioactive. Mass is for the longest lived isotope.
         pass
 
 
 # 89
 class Actinium(Element):
+    number  = 89
+    name    = "Actinium"
+    symbol  = "Ac"
+    mass    = 227   # Radioactive. Mass is for the longest lived isotope.
+
+    abundance = {
+        "universe"     : 0,
+        "sun"          : 0,
+        "meteorite"    : 0,
+        "crust"        : 0,
+        "ocean"        : 0,
+        "human"        : 0
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 89
-        self.name    = "Actinium"
-        self.symbol  = "Ac"
-        self.mass    = 227   # Radioactive. Mass is for the longest lived isotope.
         pass
 
 
 # 90
 class Thorium(Element):
+    number  = 90
+    name    = "Thorium"
+    symbol  = "Th"
+    mass    = 232.04
+
+    abundance = {
+        "universe"     : 4e-10,
+        "sun"          : 3e-10,
+        "meteorite"    : 3.9e-8,
+        "crust"        : 6e-6,
+        "ocean"        : 4e-14,
+        "human"        : 0.0
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 90
-        self.name    = "Thorium"
-        self.symbol  = "Th"
-        self.mass    = 232.04
         pass
 
 
 # 91
 class Protactinium(Element):
+    number  = 91
+    name    = "Protactinium"
+    symbol  = "Pa"
+    mass    = 231.04
+
+    abundance = {
+        "universe"     : 0.0,
+        "sun"          : 0.0,
+        "meteorite"    : 0.0,
+        "crust"        : 9.9e-15,
+        "ocean"        : 2e-25,
+        "human"        : 0.0
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 91
-        self.name    = "Protactinium"
-        self.symbol  = "Pa"
-        self.mass    = 231.04
         pass
 
 
 # 92 - This is the last naturally occuring element. The rest are man-made.
 class Uranium(Element):
+    number  = 92
+    name    = "Uranium"
+    symbol  = "U"
+    mass    = 238.03
+
+    abundance = {
+        "universe"     : 2e-10,
+        "sun"          : 1e-9,
+        "meteorite"    : 9.8e-9,
+        "crust"        : 1.8e-6,
+        "ocean"        : 3.3e-9,
+        "human"        : 1e-9
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 92
-        self.name    = "Uranium"
-        self.symbol  = "U"
-        self.mass    = 238.03
         pass
 
 
 # 93
 class Neptunium(Element):
+    number  = 93
+    name    = "Neptunium"
+    symbol  = "Np"
+    mass    = 237   # Radioactive. Mass is for the longest lived isotope.
+
+    abundance = { # abuncances are actually 0 since this element is man made
+        "universe"     : 0.0,
+        "sun"          : 0.0,
+        "meteorite"    : 0.0,
+        "crust"        : 0.0,
+        "ocean"        : 0.0,
+        "human"        : 0.0
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 93
-        self.name    = "Neptunium"
-        self.symbol  = "Np"
-        self.mass    = 237   # Radioactive. Mass is for the longest lived isotope.
         pass
 
 
 # 94
 class Plutonium(Element):
+    number  = 94
+    name    = "Plutonium"
+    symbol  = "Pu"
+    mass    = 244   # Radioactive. Mass is for the longest lived isotope.
+
+    abundance = { # abuncances are actually 0 since this element is man made
+        "universe"     : 0.0,
+        "sun"          : 0.0,
+        "meteorite"    : 0.0,
+        "crust"        : 0.0,
+        "ocean"        : 0.0,
+        "human"        : 0.0
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 94
-        self.name    = "Plutonium"
-        self.symbol  = "Pu"
-        self.mass    = 244   # Radioactive. Mass is for the longest lived isotope.
         pass
 
 
 # 95 - This is included because it's common in smoke detectors
 class Americium(Element):
+    number  = 95
+    name    = "Americium"
+    symbol  = "Am"
+    mass    = 243   # Radioactive. Mass is for the longest lived isotope.
+
+    abundance = { # abuncances are actually 0 since this element is man made
+        "universe"     : 0.0,
+        "sun"          : 0.0,
+        "meteorite"    : 0.0,
+        "crust"        : 0.0,
+        "ocean"        : 0.0,
+        "human"        : 0.0
+    }
+
     def __init__(self):
         Element.__init__(self)
-        self.number  = 95
-        self.name    = "Americium"
-        self.symbol  = "Am"
-        self.mass    = 243   # Radioactive. Mass is for the longest lived isotope.
         pass
 

@@ -5,9 +5,13 @@ class Model(model.Model):
         model.Model.__init__(self, parent)
         pass
 
-    def refine_mineral(self, mineral):
-        print("\033[94m"+"Refining "+mineral.name+" and Storing it's Elements in the Elemental Storage Unit."+"\033[0m")
-        for chemical in mineral.chemicals:
+    def refine_mineral(self, object):
+        # spherical_cow: for simplicity we'll assume the composition is in terms of volume
+        for component in object.composition.composition:
+            portion = component[0]
+            chemical = component[1]
+            moles = chemical.moles_from_m3(portion * object.volume)
+
             for element in chemical.elements:
-                self.parent.elemental_storage_unit.store_element(element)
+                self.elemental_storage_unit.store_element(element, moles)
         pass
