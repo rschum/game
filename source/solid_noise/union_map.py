@@ -11,15 +11,15 @@ class UnionMap(base_map.BaseMap):
     def __init__(self, parent = None, seed = 0):
         base_map.BaseMap.__init__(self, parent, seed)
 
-    def refresh(self):
-        base_map.BaseMap.refresh(self)
+    def load(self):
+        base_map.BaseMap.load(self)
 
         for i in range(self.complexity):
             octave = noise_map.NoiseMap(self)
             octave.seed         = self.seed + i+1
             octave.frequency    = self.frequency * 2 * i+1
             octave.amplitude    = 1
-            octave.refresh()
+            octave.load()
             self.octaves.append(octave)
         pass
 

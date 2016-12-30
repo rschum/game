@@ -11,8 +11,8 @@ class NoiseMap(base_map.BaseMap):
         base_map.BaseMap.__init__(self, parent, seed)
         pass
 
-    def refresh(self):
-        base_map.BaseMap.refresh(self)
+    def load(self):
+        base_map.BaseMap.load(self)
         self.generator  = OpenSimplex(self.seed)
         pass
 

@@ -42,7 +42,7 @@ class BaseMap:
     def populate_noise_map(self, ix, iy, nx, ny):
         pass
 
-    def refresh(self):
+    def load(self):
         self.x_axis     = self.x_axis       if self.parent == None else self.parent.x_axis
         self.y_axis     = self.y_axis       if self.parent == None else self.parent.y_axis
         self.max_value  = self.max_value    if self.parent == None else self.parent.max_value
