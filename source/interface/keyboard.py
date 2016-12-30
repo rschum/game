@@ -12,6 +12,8 @@ class Keyboard:
             KEY_A.down()
         elif key == K_m:
             KEY_M.down()
+        elif key == K_p:
+            KEY_P.down()
         elif key == K_UP:
             KEY_UP.down()
         elif key == K_DOWN:
@@ -32,6 +34,8 @@ class Keyboard:
             KEY_A.up()
         elif key == K_m:
             KEY_M.up()
+        elif key == K_p:
+            KEY_P.up()
         elif key == K_UP:
             KEY_UP.up()
         elif key == K_DOWN:
@@ -91,6 +95,29 @@ class KeyM:
         self.value = False
         for subscriber in self.subscribers:
             subscriber.on_keyup_m()
+        pass
+
+class KeyP:
+    subscribers = []
+    value = False
+    
+    def __init__(self):
+        pass
+    
+    def subscribe(self, subscriber):
+        self.subscribers.append(subscriber)
+        pass
+    
+    def down(self):
+        self.value = True
+        for subscriber in self.subscribers:
+            subscriber.on_keydown_p()
+        pass
+
+    def up(self):
+        self.value = False
+        for subscriber in self.subscribers:
+            subscriber.on_keyup_p()
         pass
 
 class KeyUp:
@@ -254,6 +281,7 @@ class KeyLShift:
 KEYBOARD    = Keyboard()
 KEY_A       = KeyA()
 KEY_M       = KeyM()
+KEY_P       = KeyP()
 KEY_UP      = KeyUp()
 KEY_DOWN    = KeyDown()
 KEY_LEFT    = KeyLeft()
