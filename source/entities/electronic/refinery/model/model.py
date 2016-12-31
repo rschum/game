@@ -13,5 +13,5 @@ class Model(model.Model):
             moles = chemical.moles_from_m3(portion * object.volume)
 
             for element in chemical.elements:
-                self.elemental_storage_unit.store_element(element, moles)
+                self.parent.elemental_storage_unit.store_element(element, moles)
         pass
