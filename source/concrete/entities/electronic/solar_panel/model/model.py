@@ -8,7 +8,7 @@ class Model(model.Model):
 
     grid = None
 
-    def __init__(self, parent):
+    def __init__(self, parent = None):
         model.Model.__init__(self, parent)
         self.charge_time = datetime.now()
         pass

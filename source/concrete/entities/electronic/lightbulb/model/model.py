@@ -11,7 +11,7 @@ class Model(model.Model):
 
     discharge = -0.5
 
-    def __init__(self, parent):
+    def __init__(self, parent = None):
         model.Model.__init__(self, parent)
         pass
 
