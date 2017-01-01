@@ -1,4 +1,4 @@
-from source.abstract.entities.human import controller
+from source.abstract.entities.human.controller import controller
 import keyboard_events
 import joystick_events
 

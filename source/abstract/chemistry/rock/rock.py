@@ -1,10 +1,10 @@
-class Rock:
-    name = None
-    composition = None
-    
-    def __init__(self):
-        pass
+from controller import controller
+from model import model
+from view import view
 
-    def pretty_print(self, i=0):
-        print(("\t"*i) + self.name)
-        self.composition.pretty_print(i+1)
+class Rock(controller.Controller, model.Model, view.View):
+    def __init__(self, parent = None):
+        controller.Controller.__init__(self)
+        model.Model.__init__(self, parent)
+        view.View.__init__(self)
+        pass

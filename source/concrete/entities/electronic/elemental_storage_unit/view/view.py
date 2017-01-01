@@ -2,7 +2,9 @@ from source.library.action import action
 
 from source.abstract.entities.inanimate.view import view
 
-from ..animation_config import stand
+from ..model import model
+
+from animation_config import stand
 
 class View(view.View):
     def __init__(self):

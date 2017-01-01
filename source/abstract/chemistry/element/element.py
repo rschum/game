@@ -1,20 +1,10 @@
-class Element:
-    number          = None
-    name            = None
-    symbol          = None
-    mass            = None
+from controller import controller
+from model import model
+from view import view
 
-    abundance = {
-        "universe"     : 0,
-        "sun"          : 0,
-        "meteorite"    : 0,
-        "crust"        : 0,
-        "ocean"        : 0,
-        "human"        : 0
-    }
-
-    def __init__(self):
+class Element(controller.Controller, model.Model, view.View):
+    def __init__(self, parent = None):
+        controller.Controller.__init__(self)
+        model.Model.__init__(self, parent)
+        view.View.__init__(self)
         pass
-
-    def pretty_print(self, i=0):
-        print(("\t"*i) + self.name)

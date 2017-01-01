@@ -1,8 +1,9 @@
 from source.abstract.entities.inanimate.view import view
-from ..model import model
 from source.library.action import action
 
-from ..animation_config import percent_000, percent_020, percent_040, percent_060, percent_080, percent_100
+from animation_config import percent_000, percent_020, percent_040, percent_060, percent_080, percent_100
+
+from ..model import model
 
 class View(view.View):
     def __init__(self):
