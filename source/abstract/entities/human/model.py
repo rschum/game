@@ -39,7 +39,7 @@ class Model(model.Model):
     def pickup(self, item = None):
         if item != None:
             self.holding = item
-            self.holding.on_pickup()
+            self.holding.on_pickup(self)
             return True
         if self.holding == None:
             self.holding = self.get_nearest_item()
