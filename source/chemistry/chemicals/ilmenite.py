@@ -1,5 +1,5 @@
 from source.chemistry.element import elements
-from source.chemistry.chemical import chemical
+from source.abstract.chemistry.chemical import chemical
 
 
 class Ilmenite(chemical.Chemical):

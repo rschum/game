@@ -1,4 +1,4 @@
-from source.chemistry.rock import rock
+from source.abstract.chemistry.rock import rock
 from source.chemistry.chemicals import water
 from source.chemistry.composition.composition import Composition
 

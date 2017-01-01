@@ -1,5 +1,5 @@
 from source.chemistry.element import elements
-from source.chemistry.chemical import chemical
+from source.abstract.chemistry.chemical import chemical
 
 
 # Al2Si2O5(OH)4 in mineralogy or Al2O3-2SiO2-2H2O in ceramics

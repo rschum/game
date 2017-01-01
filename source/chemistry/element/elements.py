@@ -1,4 +1,4 @@
-from source.chemistry.element.element import Element
+from source.abstract.chemistry.element.element import Element
 
 # more values can be found at
 # http://periodictable.com/index.html

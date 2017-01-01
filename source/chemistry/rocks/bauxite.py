@@ -1,7 +1,7 @@
 from source.chemistry.chemicals import anatase, boehmite, calcium_oxide, diaspore, goethite, gibbsite
 from source.chemistry.chemicals import hematite, ilmenite, kaolinite, silica, water
 from source.chemistry.composition import composition
-from source.chemistry.rock import rock
+from source.abstract.chemistry.rock import rock
 
 
 class Bauxite(rock.Rock):
