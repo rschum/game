@@ -6,7 +6,8 @@ class Controller:
         self.transform()
         pass
 
-    def on_pickup(self):
+    def on_pickup(self, parent):
+        parent.transform()
         pass
 
     def on_drop(self):
