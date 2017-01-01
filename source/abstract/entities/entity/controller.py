@@ -1,3 +1,5 @@
+import pygame
+
 class Controller:
     def __init__(self):
         pass
@@ -10,4 +12,5 @@ class Controller:
         pass
 
     def on_drop(self):
+        self.drop()
         pass

@@ -31,7 +31,6 @@ class Model(model.Model):
 
     def drop_item(self):
         if self.holding != None:
-            self.holding.position = pygame.math.Vector2(self.holding.position.x, self.holding.position.y)
             self.holding.on_drop()
             self.holding = None
         pass

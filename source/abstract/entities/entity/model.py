@@ -37,6 +37,13 @@ class Model(base_model.BaseModel):
         self.move_state = MoveState.STAND
         pass
 
+    def drop(self):
+        self.position = pygame.math.Vector3(
+            self.position.x,
+            self.position.y,
+            self.position.z
+        )
+
     def get_kilometer(self):
         return (
             math.floor(self.position.x / 10000),
