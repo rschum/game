@@ -1,6 +1,6 @@
 #! /usr/bin/python2.7
 
-from source.solid_noise import union_map#solid_noise, planet
+from source.library.solid_noise import union_map#solid_noise, planet
 
 if __name__ == "__main__":
     map = union_map.UnionMap(None)

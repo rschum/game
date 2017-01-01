@@ -1,5 +1,5 @@
 from source.abstract.entities.inanimate import view
-from source.action import action
+from source.library.action import action
 
 import model
 

@@ -2,7 +2,7 @@ import model
 from animation_config import damaged_seed, damaged_sprout, damaged_ripe
 from animation_config import healthy_seed, healthy_sprout, healthy_ripe
 from source.abstract.entities.inanimate import view
-from source.action import action
+from source.library.action import action
 
 class View(view.View):
     def __init__(self):

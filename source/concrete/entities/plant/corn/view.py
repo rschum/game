@@ -1,5 +1,5 @@
 from source.abstract.entities.inanimate import view
-from source.action import action
+from source.library.action import action
 
 from animation_config import healthy_seed, healthy_sprout, healthy_sapling, healthy_mature, healthy_ripe, healthy_picked
 from animation_config import damaged_seed, damaged_sprout, damaged_sapling, damaged_mature, damaged_ripe, damaged_picked

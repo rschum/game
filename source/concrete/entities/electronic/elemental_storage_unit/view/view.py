@@ -1,4 +1,4 @@
-from source.action import action
+from source.library.action import action
 
 from source.abstract.entities.inanimate.view import view
 
