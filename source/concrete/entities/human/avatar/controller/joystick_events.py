@@ -1,4 +1,4 @@
-from source.interface import joystick
+from source.library.ui import joystick
 
 class JoystickEvents:
     def __init__(self):

@@ -1,4 +1,4 @@
-from source.interface import keyboard
+from source.library.ui import keyboard
 
 class KeyboardEvents:
     def __init__(self):

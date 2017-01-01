@@ -2,8 +2,8 @@ import pygame
 from pygame.locals import *
 import sys
 
-from source.interface import keyboard
-from source.interface import joystick
+from source.library.ui import keyboard
+from source.library.ui import joystick
 
 class App:
     clock               = None

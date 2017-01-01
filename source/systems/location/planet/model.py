@@ -1,6 +1,6 @@
 from source.abstract.location.model import model
 from source.global_variables import global_variables, camera
-#from source.interface import instructions
+#from source.library.ui import instructions
 from source.systems.location.kilometer import kilometer
 from source.systems.location.homestead import homestead
 from source.concrete.entities.human.avatar import avatar

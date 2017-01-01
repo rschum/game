@@ -1,5 +1,5 @@
 from source.abstract.location.controller import controller
-from source.interface import keyboard
+from source.library.ui import keyboard
 from source.library.solid_noise import union_map
 
 class Controller(controller.Controller):

@@ -1,3 +1,3 @@
-from source.interface.window import window
+from source.library.ui.window import window
 
 WINDOW      = window.Window()

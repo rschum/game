@@ -1,3 +1,3 @@
-from source.interface.camera import camera
+from source.library.ui.camera import camera
 
 CAMERA  = camera.Camera()
