@@ -1,5 +1,5 @@
 from source.abstract.app import app
-from source.systems.universe import universe
+from source.systems.location.universe import universe
 
 class Game(app.App):
     def __init__(self):
