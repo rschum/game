@@ -1,4 +1,8 @@
 #! /usr/bin/python2.7
+
+from os import sys, path
+sys.path.append(path.dirname(path.dirname(path.abspath(__file__))))
+
 import pygame
 
 # Define some colors

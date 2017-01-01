@@ -1,5 +1,8 @@
 #! /usr/bin/python2.7
 
+from os import sys, path
+sys.path.append(path.dirname(path.dirname(path.abspath(__file__))))
+
 from source.library.science.geology.rocks import bauxite
 from source.library.science.geology.rocks import ice
 from source.systems.logistics import logistics

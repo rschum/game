@@ -1,5 +1,8 @@
 #! /usr/bin/python2.7
 
+from os import sys, path
+sys.path.append(path.dirname(path.dirname(path.abspath(__file__))))
+
 from source.library.solid_noise import union_map#solid_noise, planet
 
 if __name__ == "__main__":

@@ -1,0 +1,5 @@
+#! /bin/bash
+
+#./demo/build_workflow.py
+#./demo/solid_noise.py
+./demo/demo.py
