@@ -1,8 +1,8 @@
 from source.abstract.entities.inanimate.model import model
 
-from source.entities.electronic.elemental_storage_unit import elemental_storage_unit
-from source.entities.electronic.refinery import refinery
-from source.entities.electronic.replicator import replicator
+from source.concrete.entities.electronic.elemental_storage_unit import elemental_storage_unit
+from source.concrete.entities.electronic.refinery import refinery
+from source.concrete.entities.electronic.replicator import replicator
 
 class Model(model.Model):
     name = "Logistics"

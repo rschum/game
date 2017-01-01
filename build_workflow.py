@@ -3,7 +3,7 @@
 from source.chemistry.rocks import bauxite
 from source.chemistry.rocks import ice
 from source.systems.logistics import logistics
-from source.entities.inanimate.rock import rock
+from source.concrete.entities.inanimate.rock import rock
 
 if __name__ == "__main__":
     logistics  = logistics.Logistics()

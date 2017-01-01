@@ -1,14 +1,14 @@
 from source.abstract.location.model import model
 from source.systems.power_grid import power_grid
-from source.entities.plant.corn import corn
-from source.entities.plant.turnip import turnip
-from source.entities.plant.tomato import tomato
-from source.entities.plant.potato import potato
-from source.entities.human.npc import npc
-from source.entities.electronic.solar_panel import solar_panel
-from source.entities.electronic.battery import battery
-from source.entities.electronic.lightbulb import lightbulb
-from source.entities.inanimate.rock import rock
+from source.concrete.entities.plant.corn import corn
+from source.concrete.entities.plant.turnip import turnip
+from source.concrete.entities.plant.tomato import tomato
+from source.concrete.entities.plant.potato import potato
+from source.concrete.entities.human.npc import npc
+from source.concrete.entities.electronic.solar_panel import solar_panel
+from source.concrete.entities.electronic.battery import battery
+from source.concrete.entities.electronic.lightbulb import lightbulb
+from source.concrete.entities.inanimate.rock import rock
 from source.systems.logistics import logistics
 
 class Model(model.Model):

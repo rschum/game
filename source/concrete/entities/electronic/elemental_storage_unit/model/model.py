@@ -1,6 +1,6 @@
 from source.abstract.entities.inanimate.model import model
 
-from source.entities.electronic.elemental_storage_tank import elemental_storage_tank
+from source.concrete.entities.electronic.elemental_storage_tank import elemental_storage_tank
 
 class Model(model.Model):
     name = "Elemental Storage Unit"

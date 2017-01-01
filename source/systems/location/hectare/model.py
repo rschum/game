@@ -1,5 +1,5 @@
 from source.abstract.location.model import model
-from source.entities.inanimate.tile import tile
+from source.concrete.entities.inanimate.tile import tile
 
 class Model(model.Model):
     position    = (0, 0)
