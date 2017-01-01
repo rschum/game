@@ -19,17 +19,17 @@ class Hydrogen(Element):
     symbol  = "H"
     mass    = 1.01
 
-    abundance = {
-        "universe"     : 0.75,
-        "sun"          : 0.75,
-        "meteorite"    : 0.024,
-        "crust"        : 0.0015,
-        "ocean"        : 0.11,
-        "human"        : 0.10
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 0.75,
+            "sun"          : 0.75,
+            "meteorite"    : 0.024,
+            "crust"        : 0.0015,
+            "ocean"        : 0.11,
+            "human"        : 0.10
+        }
         pass
 
 
@@ -40,17 +40,17 @@ class Helium(Element):
     symbol  = "He"
     mass    = 4.00
 
-    abundance = {
-        "universe"     : 0.23,
-        "sun"          : 0.23,
-        "meteorite"    : 0.0,
-        "crust"        : 5.5e-9,
-        "ocean"        : 7.2e-12,
-        "human"        : 0.0
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 0.23,
+            "sun"          : 0.23,
+            "meteorite"    : 0.0,
+            "crust"        : 5.5e-9,
+            "ocean"        : 7.2e-12,
+            "human"        : 0.0
+        }
         pass
 
 
@@ -61,17 +61,17 @@ class Lithium(Element):
     symbol  = "Li"
     mass    = 6.94
 
-    abundance = {
-        "universe"     : 6e-9,
-        "sun"          : 6e-11,
-        "meteorite"    : 1.7e-6,
-        "crust"        : 1.7e-5,
-        "ocean"        : 1.8e-7,
-        "human"        : 3e-8
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 6e-9,
+            "sun"          : 6e-11,
+            "meteorite"    : 1.7e-6,
+            "crust"        : 1.7e-5,
+            "ocean"        : 1.8e-7,
+            "human"        : 3e-8
+        }
         pass
 
 
@@ -82,17 +82,17 @@ class Beryllium(Element):
     symbol  = "Be"
     mass    = 9.01
 
-    abundance = {
-        "universe"     : 1e-9,
-        "sun"          : 1e-10,
-        "meteorite"    : 2.9e-8,
-        "crust"        : 1.9e-6,
-        "ocean"        : 6e-13,
-        "human"        : 4e-10
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 1e-9,
+            "sun"          : 1e-10,
+            "meteorite"    : 2.9e-8,
+            "crust"        : 1.9e-6,
+            "ocean"        : 6e-13,
+            "human"        : 4e-10
+        }
         pass
 
 
@@ -103,17 +103,17 @@ class Boron(Element):
     symbol  = "B"
     mass    = 10.81
 
-    abundance = {
-        "universe"     : 1e-9,
-        "sun"          : 2e-9,
-        "meteorite"    : 1.6e-6,
-        "crust"        : 8.6e-6,
-        "ocean"        : 4.4e-6,
-        "human"        : 7e-7
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 1e-9,
+            "sun"          : 2e-9,
+            "meteorite"    : 1.6e-6,
+            "crust"        : 8.6e-6,
+            "ocean"        : 4.4e-6,
+            "human"        : 7e-7
+        }
         pass
 
 
@@ -124,17 +124,17 @@ class Carbon(Element):
     symbol  = "C"
     mass    = 12.01
 
-    abundance = {
-        "universe"     : 5e-3,
-        "sun"          : 3e-3,
-        "meteorite"    : 1.5e-2,
-        "crust"        : 1.8e-3,
-        "ocean"        : 2.8e-5,
-        "human"        : 0.23
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 5e-3,
+            "sun"          : 3e-3,
+            "meteorite"    : 1.5e-2,
+            "crust"        : 1.8e-3,
+            "ocean"        : 2.8e-5,
+            "human"        : 0.23
+        }
         pass
 
 
@@ -145,17 +145,17 @@ class Nitrogen(Element):
     symbol  = "N"
     mass    = 14.01
 
-    abundance = {
-        "universe"     : 1e-3,
-        "sun"          : 1e-3,
-        "meteorite"    : 1.4e-3,
-        "crust"        : 2e-5,
-        "ocean"        : 5e-7,
-        "human"        : 2.6e-2
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 1e-3,
+            "sun"          : 1e-3,
+            "meteorite"    : 1.4e-3,
+            "crust"        : 2e-5,
+            "ocean"        : 5e-7,
+            "human"        : 2.6e-2
+        }
         pass
 
 
@@ -166,17 +166,17 @@ class Oxygen(Element):
     symbol  = "O"
     mass    = 16.00
 
-    abundance = {
-        "universe"     : 1e-2,
-        "sun"          : 9e-3,
-        "meteorite"    : 0.40,
-        "crust"        : 0.46,
-        "ocean"        : 0.86,
-        "human"        : 0.61
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 1e-2,
+            "sun"          : 9e-3,
+            "meteorite"    : 0.40,
+            "crust"        : 0.46,
+            "ocean"        : 0.86,
+            "human"        : 0.61
+        }
         pass
 
 
@@ -187,17 +187,17 @@ class Fluorine(Element):
     symbol  = "F"
     mass    = 19.00
 
-    abundance = {
-        "universe"     : 4e-7,
-        "sun"          : 5e-7,
-        "meteorite"    : 8.7e-5,
-        "crust"        : 5.4e-4,
-        "ocean"        : 1.3e-6,
-        "human"        : 3.7e-5
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 4e-7,
+            "sun"          : 5e-7,
+            "meteorite"    : 8.7e-5,
+            "crust"        : 5.4e-4,
+            "ocean"        : 1.3e-6,
+            "human"        : 3.7e-5
+        }
         pass
 
 
@@ -208,17 +208,17 @@ class Neon(Element):
     symbol  = "Ne"
     mass    = 20.18
 
-    abundance = {
-        "universe"     : 1.3e-3,
-        "sun"          : 1e-3,
-        "meteorite"    : 0,
-        "crust"        : 3e-9,
-        "ocean"        : 1.2e-10,
-        "human"        : 0
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 1.3e-3,
+            "sun"          : 1e-3,
+            "meteorite"    : 0,
+            "crust"        : 3e-9,
+            "ocean"        : 1.2e-10,
+            "human"        : 0
+        }
         pass
 
 
@@ -229,17 +229,17 @@ class Sodium(Element):
     symbol  = "Na"
     mass    = 22.99
 
-    abundance = {
-        "universe"     : 2e-5,
-        "sun"          : 4e-5,
-        "meteorite"    : 5.5e-3,
-        "crust"        : 2.3e-2,
-        "ocean"        : 1.1e-2,
-        "human"        : 1.4e-3
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 2e-5,
+            "sun"          : 4e-5,
+            "meteorite"    : 5.5e-3,
+            "crust"        : 2.3e-2,
+            "ocean"        : 1.1e-2,
+            "human"        : 1.4e-3
+        }
         pass
 
 
@@ -250,17 +250,17 @@ class Magnesium(Element):
     symbol  = "Mg"
     mass    = 24.31
 
-    abundance = {
-        "universe"     : 6e-4,
-        "sun"          : 7e-4,
-        "meteorite"    : 1.2e-1,
-        "crust"        : 2.9e-2,
-        "ocean"        : 1.3e-3,
-        "human"        : 2.7e-4
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 6e-4,
+            "sun"          : 7e-4,
+            "meteorite"    : 1.2e-1,
+            "crust"        : 2.9e-2,
+            "ocean"        : 1.3e-3,
+            "human"        : 2.7e-4
+        }
         pass
 
 
@@ -271,17 +271,17 @@ class Aluminum(Element):
     symbol  = "Al"
     mass    = 26.98
 
-    abundance = {
-        "universe"     : 5e-5,
-        "sun"          : 6e-5,
-        "meteorite"    : 9.1e-3,
-        "crust"        : 8.1e-2,
-        "ocean"        : 5e-9,
-        "human"        : 9e-7
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 5e-5,
+            "sun"          : 6e-5,
+            "meteorite"    : 9.1e-3,
+            "crust"        : 8.1e-2,
+            "ocean"        : 5e-9,
+            "human"        : 9e-7
+        }
         pass
 
 
@@ -292,17 +292,17 @@ class Silicon(Element):
     symbol  = "Si"
     mass    = 28.09
 
-    abundance = {
-        "universe"     : 7e-4,
-        "sun"          : 9e-4,
-        "meteorite"    : 0.14,
-        "crust"        : 0.27,
-        "ocean"        : 1e-6,
-        "human"        : 2.6e-4
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 7e-4,
+            "sun"          : 9e-4,
+            "meteorite"    : 0.14,
+            "crust"        : 0.27,
+            "ocean"        : 1e-6,
+            "human"        : 2.6e-4
+        }
         pass
 
 
@@ -313,17 +313,17 @@ class Phosphorus(Element):
     symbol  = "P"
     mass    = 30.97
 
-    abundance = {
-        "universe"     : 7e-6,
-        "sun"          : 7e-6,
-        "meteorite"    : 1.1e-3,
-        "crust"        : 9.9e-4,
-        "ocean"        : 7e-8,
-        "human"        : 1.1e-2
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 7e-6,
+            "sun"          : 7e-6,
+            "meteorite"    : 1.1e-3,
+            "crust"        : 9.9e-4,
+            "ocean"        : 7e-8,
+            "human"        : 1.1e-2
+        }
         pass
 
 
@@ -334,17 +334,17 @@ class Sulfur(Element):
     symbol  = "S"
     mass    = 32.07
 
-    abundance = {
-        "universe"     : 5e-4,
-        "sun"          : 4e-4,
-        "meteorite"    : 4e-2,
-        "crust"        : 4.2e-4,
-        "ocean"        : 9.3e-4,
-        "human"        : 2e-3
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 5e-4,
+            "sun"          : 4e-4,
+            "meteorite"    : 4e-2,
+            "crust"        : 4.2e-4,
+            "ocean"        : 9.3e-4,
+            "human"        : 2e-3
+        }
         pass
 
 
@@ -355,17 +355,17 @@ class Chlorine(Element):
     symbol  = "Cl"
     mass    = 35.45
 
-    abundance = {
-        "universe"     : 1e-6,
-        "sun"          : 8e-6,
-        "meteorite"    : 3.7e-4,
-        "crust"        : 1.7e-4,
-        "ocean"        : 2e-2,
-        "human"        : 1.2e-3
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 1e-6,
+            "sun"          : 8e-6,
+            "meteorite"    : 3.7e-4,
+            "crust"        : 1.7e-4,
+            "ocean"        : 2e-2,
+            "human"        : 1.2e-3
+        }
         pass
 
 
@@ -376,17 +376,17 @@ class Argon(Element):
     symbol  = "Ar"
     mass    = 39.95
 
-    abundance = {
-        "universe"     : 2e-4,
-        "sun"          : 7e-5,
-        "meteorite"    : 0,
-        "crust"        : 1.5e-6,
-        "ocean"        : 4.5e-7,
-        "human"        : 0
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 2e-4,
+            "sun"          : 7e-5,
+            "meteorite"    : 0,
+            "crust"        : 1.5e-6,
+            "ocean"        : 4.5e-7,
+            "human"        : 0
+        }
         pass
 
 
@@ -397,17 +397,17 @@ class Potassium(Element):
     symbol  = "K"
     mass    = 39.10
 
-    abundance = {
-        "universe"     : 3e-6,
-        "sun"          : 4e-6,
-        "meteorite"    : 7e-4,
-        "crust"        : 1.5e-2,
-        "ocean"        : 4.2e-4,
-        "human"        : 2e-3
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 3e-6,
+            "sun"          : 4e-6,
+            "meteorite"    : 7e-4,
+            "crust"        : 1.5e-2,
+            "ocean"        : 4.2e-4,
+            "human"        : 2e-3
+        }
         pass
 
 
@@ -418,17 +418,17 @@ class Calcium(Element):
     symbol  = "Ca"
     mass    = 40.08
 
-    abundance = {
-        "universe"     : 7e-5,
-        "sun"          : 7e-5,
-        "meteorite"    : 1.1e-2,
-        "crust"        : 0.05,
-        "ocean"        : 4.2e-6,
-        "human"        : 1.4e-2
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 7e-5,
+            "sun"          : 7e-5,
+            "meteorite"    : 1.1e-2,
+            "crust"        : 0.05,
+            "ocean"        : 4.2e-6,
+            "human"        : 1.4e-2
+        }
         pass
 
 
@@ -439,17 +439,17 @@ class Scandium(Element):
     symbol  = "Sc"
     mass    = 44.96
 
-    abundance = {
-        "universe"     : 3e-8,
-        "sun"          : 4e-8,
-        "meteorite"    : 6.4e-6,
-        "crust"        : 2.6e-5,
-        "ocean"        : 1.5e-12,
-        "human"        : 0
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 3e-8,
+            "sun"          : 4e-8,
+            "meteorite"    : 6.4e-6,
+            "crust"        : 2.6e-5,
+            "ocean"        : 1.5e-12,
+            "human"        : 0
+        }
         pass
 
 
@@ -460,17 +460,17 @@ class Titanium(Element):
     symbol  = "Ti"
     mass    = 47.87
 
-    abundance = {
-        "universe"     : 3e-6,
-        "sun"          : 4e-6,
-        "meteorite"    : 5.4e-4,
-        "crust"        : 6.6e-3,
-        "ocean"        : 1e-9,
-        "human"        : 0
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 3e-6,
+            "sun"          : 4e-6,
+            "meteorite"    : 5.4e-4,
+            "crust"        : 6.6e-3,
+            "ocean"        : 1e-9,
+            "human"        : 0
+        }
         pass
 
 
@@ -481,17 +481,17 @@ class Vanadium(Element):
     symbol  = "V"
     mass    = 50.94
 
-    abundance = {
-        "universe"     : 1e-6,
-        "sun"          : 4e-7,
-        "meteorite"    : 6.1e-5,
-        "crust"        : 1.9e-4,
-        "ocean"        : 1.5e-9,
-        "human"        : 3e-8
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 1e-6,
+            "sun"          : 4e-7,
+            "meteorite"    : 6.1e-5,
+            "crust"        : 1.9e-4,
+            "ocean"        : 1.5e-9,
+            "human"        : 3e-8
+        }
         pass
 
 
@@ -502,17 +502,17 @@ class Chromium(Element):
     symbol  = "Cr"
     mass    = 52.00
 
-    abundance = {
-        "universe"     : 1.5e-5,
-        "sun"          : 2e-5,
-        "meteorite"    : 3e-3,
-        "crust"        : 1.4e-4,
-        "ocean"        : 6e-10,
-        "human"        : 3e-8
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 1.5e-5,
+            "sun"          : 2e-5,
+            "meteorite"    : 3e-3,
+            "crust"        : 1.4e-4,
+            "ocean"        : 6e-10,
+            "human"        : 3e-8
+        }
         pass
 
 
@@ -523,17 +523,17 @@ class Manganese(Element):
     symbol  = "Mn"
     mass    = 54.94
 
-    abundance = {
-        "universe"     : 8e-6,
-        "sun"          : 1e-5,
-        "meteorite"    : 2.7e-3,
-        "crust"        : 1.1e-3,
-        "ocean"        : 2e-9,
-        "human"        : 2e-7
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 8e-6,
+            "sun"          : 1e-5,
+            "meteorite"    : 2.7e-3,
+            "crust"        : 1.1e-3,
+            "ocean"        : 2e-9,
+            "human"        : 2e-7
+        }
         pass
 
 
@@ -544,17 +544,17 @@ class Iron(Element):
     symbol  = "Fe"
     mass    = 55.85
 
-    abundance = {
-        "universe"     : 1.1e-3,
-        "sun"          : 1e-3,
-        "meteorite"    : 2.2e-1,
-        "crust"        : 6.3e-2,
-        "ocean"        : 3e-9,
-        "human"        : 6e-5
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 1.1e-3,
+            "sun"          : 1e-3,
+            "meteorite"    : 2.2e-1,
+            "crust"        : 6.3e-2,
+            "ocean"        : 3e-9,
+            "human"        : 6e-5
+        }
         pass
 
 
@@ -565,17 +565,17 @@ class Cobalt(Element):
     symbol  = "Co"
     mass    = 58.93
 
-    abundance = {
-        "universe"     : 3e-6,
-        "sun"          : 4e-6,
-        "meteorite"    : 5.9e-4,
-        "crust"        : 3e-5,
-        "ocean"        : 8e-11,
-        "human"        : 2e-8
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 3e-6,
+            "sun"          : 4e-6,
+            "meteorite"    : 5.9e-4,
+            "crust"        : 3e-5,
+            "ocean"        : 8e-11,
+            "human"        : 2e-8
+        }
         pass
 
 
@@ -586,17 +586,17 @@ class Nickel(Element):
     symbol  = "Ni"
     mass    = 58.69
 
-    abundance = {
-        "universe"     : 0,
-        "sun"          : 0,
-        "meteorite"    : 0,
-        "crust"        : 0,
-        "ocean"        : 0,
-        "human"        : 0
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 0,
+            "sun"          : 0,
+            "meteorite"    : 0,
+            "crust"        : 0,
+            "ocean"        : 0,
+            "human"        : 0
+        }
         pass
 
 
@@ -607,17 +607,17 @@ class Copper(Element):
     symbol  = "Cu"
     mass    = 63.55
 
-    abundance = {
-        "universe"     : 0,
-        "sun"          : 0,
-        "meteorite"    : 0,
-        "crust"        : 0,
-        "ocean"        : 0,
-        "human"        : 0
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 0,
+            "sun"          : 0,
+            "meteorite"    : 0,
+            "crust"        : 0,
+            "ocean"        : 0,
+            "human"        : 0
+        }
         pass
 
 
@@ -628,17 +628,17 @@ class Zinc(Element):
     symbol  = "Zn"
     mass    = 65.41
 
-    abundance = {
-        "universe"     : 0,
-        "sun"          : 0,
-        "meteorite"    : 0,
-        "crust"        : 0,
-        "ocean"        : 0,
-        "human"        : 0
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 0,
+            "sun"          : 0,
+            "meteorite"    : 0,
+            "crust"        : 0,
+            "ocean"        : 0,
+            "human"        : 0
+        }
         pass
 
 
@@ -649,17 +649,17 @@ class Gallium(Element):
     symbol  = "Ga"
     mass    = 69.72
 
-    abundance = {
-        "universe"     : 0,
-        "sun"          : 0,
-        "meteorite"    : 0,
-        "crust"        : 0,
-        "ocean"        : 0,
-        "human"        : 0
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 0,
+            "sun"          : 0,
+            "meteorite"    : 0,
+            "crust"        : 0,
+            "ocean"        : 0,
+            "human"        : 0
+        }
         pass
 
 
@@ -670,17 +670,17 @@ class Germanium(Element):
     symbol  = "Ge"
     mass    = 72.64
 
-    abundance = {
-        "universe"     : 0,
-        "sun"          : 0,
-        "meteorite"    : 0,
-        "crust"        : 0,
-        "ocean"        : 0,
-        "human"        : 0
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 0,
+            "sun"          : 0,
+            "meteorite"    : 0,
+            "crust"        : 0,
+            "ocean"        : 0,
+            "human"        : 0
+        }
         pass
 
 
@@ -691,17 +691,17 @@ class Arsenic(Element):
     symbol  = "As"
     mass    = 74.92
 
-    abundance = {
-        "universe"     : 0,
-        "sun"          : 0,
-        "meteorite"    : 0,
-        "crust"        : 0,
-        "ocean"        : 0,
-        "human"        : 0
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 0,
+            "sun"          : 0,
+            "meteorite"    : 0,
+            "crust"        : 0,
+            "ocean"        : 0,
+            "human"        : 0
+        }
         pass
 
 
@@ -712,17 +712,17 @@ class Selenium(Element):
     symbol  = "Se"
     mass    = 78.96
 
-    abundance = {
-        "universe"     : 0,
-        "sun"          : 0,
-        "meteorite"    : 0,
-        "crust"        : 0,
-        "ocean"        : 0,
-        "human"        : 0
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 0,
+            "sun"          : 0,
+            "meteorite"    : 0,
+            "crust"        : 0,
+            "ocean"        : 0,
+            "human"        : 0
+        }
         pass
 
 
@@ -733,17 +733,17 @@ class Bromine(Element):
     symbol  = "Br"
     mass    = 79.90
 
-    abundance = {
-        "universe"     : 0,
-        "sun"          : 0,
-        "meteorite"    : 0,
-        "crust"        : 0,
-        "ocean"        : 0,
-        "human"        : 0
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 0,
+            "sun"          : 0,
+            "meteorite"    : 0,
+            "crust"        : 0,
+            "ocean"        : 0,
+            "human"        : 0
+        }
         pass
 
 
@@ -754,17 +754,17 @@ class Krypton(Element):
     symbol  = "Kr"
     mass    = 83.80
 
-    abundance = {
-        "universe"     : 0,
-        "sun"          : 0,
-        "meteorite"    : 0,
-        "crust"        : 0,
-        "ocean"        : 0,
-        "human"        : 0
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 0,
+            "sun"          : 0,
+            "meteorite"    : 0,
+            "crust"        : 0,
+            "ocean"        : 0,
+            "human"        : 0
+        }
         pass
 
 
@@ -775,17 +775,17 @@ class Rubidium(Element):
     symbol  = "Rb"
     mass    = 85.47
 
-    abundance = {
-        "universe"     : 0,
-        "sun"          : 0,
-        "meteorite"    : 0,
-        "crust"        : 0,
-        "ocean"        : 0,
-        "human"        : 0
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 0,
+            "sun"          : 0,
+            "meteorite"    : 0,
+            "crust"        : 0,
+            "ocean"        : 0,
+            "human"        : 0
+        }
         pass
 
 
@@ -796,17 +796,17 @@ class Strontium(Element):
     symbol  = "Sr"
     mass    = 87.62
 
-    abundance = {
-        "universe"     : 0,
-        "sun"          : 0,
-        "meteorite"    : 0,
-        "crust"        : 0,
-        "ocean"        : 0,
-        "human"        : 0
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 0,
+            "sun"          : 0,
+            "meteorite"    : 0,
+            "crust"        : 0,
+            "ocean"        : 0,
+            "human"        : 0
+        }
         pass
 
 
@@ -817,17 +817,17 @@ class Yttrium(Element):
     symbol  = "Y"
     mass    = 88.91
 
-    abundance = {
-        "universe"     : 0,
-        "sun"          : 0,
-        "meteorite"    : 0,
-        "crust"        : 0,
-        "ocean"        : 0,
-        "human"        : 0
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 0,
+            "sun"          : 0,
+            "meteorite"    : 0,
+            "crust"        : 0,
+            "ocean"        : 0,
+            "human"        : 0
+        }
         pass
 
 
@@ -838,17 +838,17 @@ class Zirconium(Element):
     symbol  = "Zr"
     mass    = 91.22
 
-    abundance = {
-        "universe"     : 0,
-        "sun"          : 0,
-        "meteorite"    : 0,
-        "crust"        : 0,
-        "ocean"        : 0,
-        "human"        : 0
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 0,
+            "sun"          : 0,
+            "meteorite"    : 0,
+            "crust"        : 0,
+            "ocean"        : 0,
+            "human"        : 0
+        }
         pass
 
 
@@ -859,17 +859,17 @@ class Niobium(Element):
     symbol  = "Nb"
     mass    = 92.91
 
-    abundance = {
-        "universe"     : 0,
-        "sun"          : 0,
-        "meteorite"    : 0,
-        "crust"        : 0,
-        "ocean"        : 0,
-        "human"        : 0
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 0,
+            "sun"          : 0,
+            "meteorite"    : 0,
+            "crust"        : 0,
+            "ocean"        : 0,
+            "human"        : 0
+        }
         pass
 
 
@@ -880,17 +880,17 @@ class Molybdenum(Element):
     symbol  = "Mo"
     mass    = 95.94
 
-    abundance = {
-        "universe"     : 0,
-        "sun"          : 0,
-        "meteorite"    : 0,
-        "crust"        : 0,
-        "ocean"        : 0,
-        "human"        : 0
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 0,
+            "sun"          : 0,
+            "meteorite"    : 0,
+            "crust"        : 0,
+            "ocean"        : 0,
+            "human"        : 0
+        }
         pass
 
 
@@ -901,17 +901,17 @@ class Technetium(Element):
     symbol  = "Tc"
     mass    = 98   # Radioactive. Mass is for the longest lived isotope.
 
-    abundance = {
-        "universe"     : 0,
-        "sun"          : 0,
-        "meteorite"    : 0,
-        "crust"        : 0,
-        "ocean"        : 0,
-        "human"        : 0
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 0,
+            "sun"          : 0,
+            "meteorite"    : 0,
+            "crust"        : 0,
+            "ocean"        : 0,
+            "human"        : 0
+        }
         pass
 
 
@@ -922,17 +922,17 @@ class Ruthenium(Element):
     symbol  = "Ru"
     mass    = 101.07
 
-    abundance = {
-        "universe"     : 0,
-        "sun"          : 0,
-        "meteorite"    : 0,
-        "crust"        : 0,
-        "ocean"        : 0,
-        "human"        : 0
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 0,
+            "sun"          : 0,
+            "meteorite"    : 0,
+            "crust"        : 0,
+            "ocean"        : 0,
+            "human"        : 0
+        }
         pass
 
 
@@ -943,17 +943,17 @@ class Rhodium(Element):
     symbol  = "Rh"
     mass    = 102.91
 
-    abundance = {
-        "universe"     : 0,
-        "sun"          : 0,
-        "meteorite"    : 0,
-        "crust"        : 0,
-        "ocean"        : 0,
-        "human"        : 0
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 0,
+            "sun"          : 0,
+            "meteorite"    : 0,
+            "crust"        : 0,
+            "ocean"        : 0,
+            "human"        : 0
+        }
         pass
 
 
@@ -964,17 +964,17 @@ class Palladium(Element):
     symbol  = "Pd"
     mass    = 106.42
 
-    abundance = {
-        "universe"     : 0,
-        "sun"          : 0,
-        "meteorite"    : 0,
-        "crust"        : 0,
-        "ocean"        : 0,
-        "human"        : 0
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 0,
+            "sun"          : 0,
+            "meteorite"    : 0,
+            "crust"        : 0,
+            "ocean"        : 0,
+            "human"        : 0
+        }
         pass
 
 
@@ -985,17 +985,17 @@ class Silver(Element):
     symbol  = "Ag"
     mass    = 107.87
 
-    abundance = {
-        "universe"     : 0,
-        "sun"          : 0,
-        "meteorite"    : 0,
-        "crust"        : 0,
-        "ocean"        : 0,
-        "human"        : 0
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 0,
+            "sun"          : 0,
+            "meteorite"    : 0,
+            "crust"        : 0,
+            "ocean"        : 0,
+            "human"        : 0
+        }
         pass
 
 
@@ -1006,17 +1006,17 @@ class Cadmium(Element):
     symbol  = "Cd"
     mass    = 112.41
 
-    abundance = {
-        "universe"     : 0,
-        "sun"          : 0,
-        "meteorite"    : 0,
-        "crust"        : 0,
-        "ocean"        : 0,
-        "human"        : 0
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 0,
+            "sun"          : 0,
+            "meteorite"    : 0,
+            "crust"        : 0,
+            "ocean"        : 0,
+            "human"        : 0
+        }
         pass
 
 
@@ -1027,17 +1027,17 @@ class Indium(Element):
     symbol  = "In"
     mass    = 114.82
 
-    abundance = {
-        "universe"     : 0,
-        "sun"          : 0,
-        "meteorite"    : 0,
-        "crust"        : 0,
-        "ocean"        : 0,
-        "human"        : 0
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 0,
+            "sun"          : 0,
+            "meteorite"    : 0,
+            "crust"        : 0,
+            "ocean"        : 0,
+            "human"        : 0
+        }
         pass
 
 
@@ -1048,17 +1048,17 @@ class Tin(Element):
     symbol  = "Sn"
     mass    = 118.71
 
-    abundance = {
-        "universe"     : 0,
-        "sun"          : 0,
-        "meteorite"    : 0,
-        "crust"        : 0,
-        "ocean"        : 0,
-        "human"        : 0
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 0,
+            "sun"          : 0,
+            "meteorite"    : 0,
+            "crust"        : 0,
+            "ocean"        : 0,
+            "human"        : 0
+        }
         pass
 
 
@@ -1069,17 +1069,17 @@ class Antimony(Element):
     symbol  = "Sb"
     mass    = 121.76
 
-    abundance = {
-        "universe"     : 0,
-        "sun"          : 0,
-        "meteorite"    : 0,
-        "crust"        : 0,
-        "ocean"        : 0,
-        "human"        : 0
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 0,
+            "sun"          : 0,
+            "meteorite"    : 0,
+            "crust"        : 0,
+            "ocean"        : 0,
+            "human"        : 0
+        }
         pass
 
 
@@ -1090,17 +1090,17 @@ class Tellurium(Element):
     symbol  = "Te"
     mass    = 127.6   # Only 1 decimal place was given.
 
-    abundance = {
-        "universe"     : 0,
-        "sun"          : 0,
-        "meteorite"    : 0,
-        "crust"        : 0,
-        "ocean"        : 0,
-        "human"        : 0
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 0,
+            "sun"          : 0,
+            "meteorite"    : 0,
+            "crust"        : 0,
+            "ocean"        : 0,
+            "human"        : 0
+        }
         pass
 
 
@@ -1111,17 +1111,17 @@ class Iodine(Element):
     symbol  = "I"
     mass    = 126.90
 
-    abundance = {
-        "universe"     : 0,
-        "sun"          : 0,
-        "meteorite"    : 0,
-        "crust"        : 0,
-        "ocean"        : 0,
-        "human"        : 0
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 0,
+            "sun"          : 0,
+            "meteorite"    : 0,
+            "crust"        : 0,
+            "ocean"        : 0,
+            "human"        : 0
+        }
         pass
 
 
@@ -1132,17 +1132,17 @@ class Xenon(Element):
     symbol  = "Xe"
     mass    = 131.29
 
-    abundance = {
-        "universe"     : 0,
-        "sun"          : 0,
-        "meteorite"    : 0,
-        "crust"        : 0,
-        "ocean"        : 0,
-        "human"        : 0
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 0,
+            "sun"          : 0,
+            "meteorite"    : 0,
+            "crust"        : 0,
+            "ocean"        : 0,
+            "human"        : 0
+        }
         pass
 
 
@@ -1153,17 +1153,17 @@ class Cesium(Element):
     symbol  = "Cs"
     mass    = 132.91
 
-    abundance = {
-        "universe"     : 0,
-        "sun"          : 0,
-        "meteorite"    : 0,
-        "crust"        : 0,
-        "ocean"        : 0,
-        "human"        : 0
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 0,
+            "sun"          : 0,
+            "meteorite"    : 0,
+            "crust"        : 0,
+            "ocean"        : 0,
+            "human"        : 0
+        }
         pass
 
 
@@ -1174,17 +1174,17 @@ class Barium(Element):
     symbol  = "Ba"
     mass    = 137.33
 
-    abundance = {
-        "universe"     : 0,
-        "sun"          : 0,
-        "meteorite"    : 0,
-        "crust"        : 0,
-        "ocean"        : 0,
-        "human"        : 0
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 0,
+            "sun"          : 0,
+            "meteorite"    : 0,
+            "crust"        : 0,
+            "ocean"        : 0,
+            "human"        : 0
+        }
         pass
 
 
@@ -1195,17 +1195,17 @@ class Lanthanum(Element):
     symbol  = "La"
     mass    = 138.91
 
-    abundance = {
-        "universe"     : 0,
-        "sun"          : 0,
-        "meteorite"    : 0,
-        "crust"        : 0,
-        "ocean"        : 0,
-        "human"        : 0
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 0,
+            "sun"          : 0,
+            "meteorite"    : 0,
+            "crust"        : 0,
+            "ocean"        : 0,
+            "human"        : 0
+        }
         pass
 
 
@@ -1216,17 +1216,17 @@ class Cerium(Element):
     symbol  = "Ce"
     mass    = 140.12
 
-    abundance = {
-        "universe"     : 0,
-        "sun"          : 0,
-        "meteorite"    : 0,
-        "crust"        : 0,
-        "ocean"        : 0,
-        "human"        : 0
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 0,
+            "sun"          : 0,
+            "meteorite"    : 0,
+            "crust"        : 0,
+            "ocean"        : 0,
+            "human"        : 0
+        }
         pass
 
 
@@ -1237,17 +1237,17 @@ class Praseodymium(Element):
     symbol  = "Pr"
     mass    = 140.91
 
-    abundance = {
-        "universe"     : 0,
-        "sun"          : 0,
-        "meteorite"    : 0,
-        "crust"        : 0,
-        "ocean"        : 0,
-        "human"        : 0
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 0,
+            "sun"          : 0,
+            "meteorite"    : 0,
+            "crust"        : 0,
+            "ocean"        : 0,
+            "human"        : 0
+        }
         pass
 
 
@@ -1258,17 +1258,17 @@ class Neodymium(Element):
     symbol  = "Nd"
     mass    = 144.24
 
-    abundance = {
-        "universe"     : 0,
-        "sun"          : 0,
-        "meteorite"    : 0,
-        "crust"        : 0,
-        "ocean"        : 0,
-        "human"        : 0
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 0,
+            "sun"          : 0,
+            "meteorite"    : 0,
+            "crust"        : 0,
+            "ocean"        : 0,
+            "human"        : 0
+        }
         pass
 
 
@@ -1279,17 +1279,17 @@ class Promethium(Element):
     symbol  = "Pm"
     mass    = 145   # Radioactive. Mass is for the longest lived isotope.
 
-    abundance = {
-        "universe"     : 0,
-        "sun"          : 0,
-        "meteorite"    : 0,
-        "crust"        : 0,
-        "ocean"        : 0,
-        "human"        : 0
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 0,
+            "sun"          : 0,
+            "meteorite"    : 0,
+            "crust"        : 0,
+            "ocean"        : 0,
+            "human"        : 0
+        }
         pass
 
 
@@ -1300,17 +1300,17 @@ class Samarium(Element):
     symbol  = "Sm"
     mass    = 150.36
 
-    abundance = {
-        "universe"     : 0,
-        "sun"          : 0,
-        "meteorite"    : 0,
-        "crust"        : 0,
-        "ocean"        : 0,
-        "human"        : 0
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 0,
+            "sun"          : 0,
+            "meteorite"    : 0,
+            "crust"        : 0,
+            "ocean"        : 0,
+            "human"        : 0
+        }
         pass
 
 
@@ -1321,17 +1321,17 @@ class Europium(Element):
     symbol  = "Eu"
     mass    = 151.96
 
-    abundance = {
-        "universe"     : 0,
-        "sun"          : 0,
-        "meteorite"    : 0,
-        "crust"        : 0,
-        "ocean"        : 0,
-        "human"        : 0
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 0,
+            "sun"          : 0,
+            "meteorite"    : 0,
+            "crust"        : 0,
+            "ocean"        : 0,
+            "human"        : 0
+        }
         pass
 
 
@@ -1342,17 +1342,17 @@ class Gadolinium(Element):
     symbol  = "Gd"
     mass    = 157.25
 
-    abundance = {
-        "universe"     : 0,
-        "sun"          : 0,
-        "meteorite"    : 0,
-        "crust"        : 0,
-        "ocean"        : 0,
-        "human"        : 0
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 0,
+            "sun"          : 0,
+            "meteorite"    : 0,
+            "crust"        : 0,
+            "ocean"        : 0,
+            "human"        : 0
+        }
         pass
 
 
@@ -1363,17 +1363,17 @@ class Terbium(Element):
     symbol  = "Tb"
     mass    = 158.93
 
-    abundance = {
-        "universe"     : 0,
-        "sun"          : 0,
-        "meteorite"    : 0,
-        "crust"        : 0,
-        "ocean"        : 0,
-        "human"        : 0
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 0,
+            "sun"          : 0,
+            "meteorite"    : 0,
+            "crust"        : 0,
+            "ocean"        : 0,
+            "human"        : 0
+        }
         pass
 
 
@@ -1384,17 +1384,17 @@ class Dysprosium(Element):
     symbol  = "Dy"
     mass    = 162.5   # Only 1 decimal place was given.
 
-    abundance = {
-        "universe"     : 0,
-        "sun"          : 0,
-        "meteorite"    : 0,
-        "crust"        : 0,
-        "ocean"        : 0,
-        "human"        : 0
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 0,
+            "sun"          : 0,
+            "meteorite"    : 0,
+            "crust"        : 0,
+            "ocean"        : 0,
+            "human"        : 0
+        }
         pass
 
 
@@ -1405,17 +1405,17 @@ class Holmium(Element):
     symbol  = "Ho"
     mass    = 164.93
 
-    abundance = {
-        "universe"     : 0,
-        "sun"          : 0,
-        "meteorite"    : 0,
-        "crust"        : 0,
-        "ocean"        : 0,
-        "human"        : 0
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 0,
+            "sun"          : 0,
+            "meteorite"    : 0,
+            "crust"        : 0,
+            "ocean"        : 0,
+            "human"        : 0
+        }
         pass
 
 
@@ -1426,17 +1426,17 @@ class Erbium(Element):
     symbol  = "Er"
     mass    = 167.26
 
-    abundance = {
-        "universe"     : 0,
-        "sun"          : 0,
-        "meteorite"    : 0,
-        "crust"        : 0,
-        "ocean"        : 0,
-        "human"        : 0
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 0,
+            "sun"          : 0,
+            "meteorite"    : 0,
+            "crust"        : 0,
+            "ocean"        : 0,
+            "human"        : 0
+        }
         pass
 
 
@@ -1447,17 +1447,17 @@ class Thulium(Element):
     symbol  = "Tm"
     mass    = 168.93
 
-    abundance = {
-        "universe"     : 0,
-        "sun"          : 0,
-        "meteorite"    : 0,
-        "crust"        : 0,
-        "ocean"        : 0,
-        "human"        : 0
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 0,
+            "sun"          : 0,
+            "meteorite"    : 0,
+            "crust"        : 0,
+            "ocean"        : 0,
+            "human"        : 0
+        }
         pass
 
 
@@ -1468,17 +1468,17 @@ class Ytterbium(Element):
     symbol  = "Yb"
     mass    = 173.04
 
-    abundance = {
-        "universe"     : 0,
-        "sun"          : 0,
-        "meteorite"    : 0,
-        "crust"        : 0,
-        "ocean"        : 0,
-        "human"        : 0
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 0,
+            "sun"          : 0,
+            "meteorite"    : 0,
+            "crust"        : 0,
+            "ocean"        : 0,
+            "human"        : 0
+        }
         pass
 
 
@@ -1489,17 +1489,17 @@ class Lutetium(Element):
     symbol  = "Lu"
     mass    = 174.97
 
-    abundance = {
-        "universe"     : 0,
-        "sun"          : 0,
-        "meteorite"    : 0,
-        "crust"        : 0,
-        "ocean"        : 0,
-        "human"        : 0
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 0,
+            "sun"          : 0,
+            "meteorite"    : 0,
+            "crust"        : 0,
+            "ocean"        : 0,
+            "human"        : 0
+        }
         pass
 
 
@@ -1510,17 +1510,17 @@ class Hafnium(Element):
     symbol  = "Hf"
     mass    = 178.49
 
-    abundance = {
-        "universe"     : 0,
-        "sun"          : 0,
-        "meteorite"    : 0,
-        "crust"        : 0,
-        "ocean"        : 0,
-        "human"        : 0
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 0,
+            "sun"          : 0,
+            "meteorite"    : 0,
+            "crust"        : 0,
+            "ocean"        : 0,
+            "human"        : 0
+        }
         pass
 
 
@@ -1531,17 +1531,17 @@ class Tantalum(Element):
     symbol  = "Ta"
     mass    = 180.95
 
-    abundance = {
-        "universe"     : 0,
-        "sun"          : 0,
-        "meteorite"    : 0,
-        "crust"        : 0,
-        "ocean"        : 0,
-        "human"        : 0
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 0,
+            "sun"          : 0,
+            "meteorite"    : 0,
+            "crust"        : 0,
+            "ocean"        : 0,
+            "human"        : 0
+        }
         pass
 
 
@@ -1552,17 +1552,17 @@ class Tungsten(Element):
     symbol  = "W"
     mass    = 183.84
 
-    abundance = {
-        "universe"     : 0,
-        "sun"          : 0,
-        "meteorite"    : 0,
-        "crust"        : 0,
-        "ocean"        : 0,
-        "human"        : 0
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 0,
+            "sun"          : 0,
+            "meteorite"    : 0,
+            "crust"        : 0,
+            "ocean"        : 0,
+            "human"        : 0
+        }
         pass
 
 
@@ -1573,17 +1573,17 @@ class Rhenium(Element):
     symbol  = "Re"
     mass    = 186.21
 
-    abundance = {
-        "universe"     : 0,
-        "sun"          : 0,
-        "meteorite"    : 0,
-        "crust"        : 0,
-        "ocean"        : 0,
-        "human"        : 0
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 0,
+            "sun"          : 0,
+            "meteorite"    : 0,
+            "crust"        : 0,
+            "ocean"        : 0,
+            "human"        : 0
+        }
         pass
 
 
@@ -1594,17 +1594,17 @@ class Osmium(Element):
     symbol  = "Os"
     mass    = 190.23
 
-    abundance = {
-        "universe"     : 0,
-        "sun"          : 0,
-        "meteorite"    : 0,
-        "crust"        : 0,
-        "ocean"        : 0,
-        "human"        : 0
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 0,
+            "sun"          : 0,
+            "meteorite"    : 0,
+            "crust"        : 0,
+            "ocean"        : 0,
+            "human"        : 0
+        }
         pass
 
 
@@ -1615,17 +1615,17 @@ class Iridium(Element):
     symbol  = "Ir"
     mass    = 192.22
 
-    abundance = {
-        "universe"     : 0,
-        "sun"          : 0,
-        "meteorite"    : 0,
-        "crust"        : 0,
-        "ocean"        : 0,
-        "human"        : 0
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 0,
+            "sun"          : 0,
+            "meteorite"    : 0,
+            "crust"        : 0,
+            "ocean"        : 0,
+            "human"        : 0
+        }
         pass
 
 
@@ -1636,17 +1636,17 @@ class Platinum(Element):
     symbol  = "Pt"
     mass    = 195.08
 
-    abundance = {
-        "universe"     : 0,
-        "sun"          : 0,
-        "meteorite"    : 0,
-        "crust"        : 0,
-        "ocean"        : 0,
-        "human"        : 0
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 0,
+            "sun"          : 0,
+            "meteorite"    : 0,
+            "crust"        : 0,
+            "ocean"        : 0,
+            "human"        : 0
+        }
         pass
 
 
@@ -1657,17 +1657,17 @@ class Gold(Element):
     symbol  = "Au"
     mass    = 196.97
 
-    abundance = {
-        "universe"     : 0,
-        "sun"          : 0,
-        "meteorite"    : 0,
-        "crust"        : 0,
-        "ocean"        : 0,
-        "human"        : 0
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 0,
+            "sun"          : 0,
+            "meteorite"    : 0,
+            "crust"        : 0,
+            "ocean"        : 0,
+            "human"        : 0
+        }
         pass
 
 
@@ -1678,17 +1678,17 @@ class Mercury(Element):
     symbol  = "Hg"
     mass    = 200.59
 
-    abundance = {
-        "universe"     : 0,
-        "sun"          : 0,
-        "meteorite"    : 0,
-        "crust"        : 0,
-        "ocean"        : 0,
-        "human"        : 0
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 0,
+            "sun"          : 0,
+            "meteorite"    : 0,
+            "crust"        : 0,
+            "ocean"        : 0,
+            "human"        : 0
+        }
         pass
 
 
@@ -1699,17 +1699,17 @@ class Thallium(Element):
     symbol  = "Tl"
     mass    = 204.38
 
-    abundance = {
-        "universe"     : 0,
-        "sun"          : 0,
-        "meteorite"    : 0,
-        "crust"        : 0,
-        "ocean"        : 0,
-        "human"        : 0
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 0,
+            "sun"          : 0,
+            "meteorite"    : 0,
+            "crust"        : 0,
+            "ocean"        : 0,
+            "human"        : 0
+        }
         pass
 
 
@@ -1720,17 +1720,17 @@ class Lead(Element):
     symbol  = "Pb"
     mass    = 207.2   # Only 1 decimal place was given.
 
-    abundance = {
-        "universe"     : 0,
-        "sun"          : 0,
-        "meteorite"    : 0,
-        "crust"        : 0,
-        "ocean"        : 0,
-        "human"        : 0
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 0,
+            "sun"          : 0,
+            "meteorite"    : 0,
+            "crust"        : 0,
+            "ocean"        : 0,
+            "human"        : 0
+        }
         pass
 
 
@@ -1741,17 +1741,17 @@ class Bismuth(Element):
     symbol  = "Bi"
     mass    = 208.98
 
-    abundance = {
-        "universe"     : 0,
-        "sun"          : 0,
-        "meteorite"    : 0,
-        "crust"        : 0,
-        "ocean"        : 0,
-        "human"        : 0
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 0,
+            "sun"          : 0,
+            "meteorite"    : 0,
+            "crust"        : 0,
+            "ocean"        : 0,
+            "human"        : 0
+        }
         pass
 
 
@@ -1762,17 +1762,17 @@ class Polonium(Element):
     symbol  = "Po"
     mass    = 209   # Radioactive. Mass is for the longest lived isotope.
 
-    abundance = {
-        "universe"     : 0,
-        "sun"          : 0,
-        "meteorite"    : 0,
-        "crust"        : 0,
-        "ocean"        : 0,
-        "human"        : 0
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 0,
+            "sun"          : 0,
+            "meteorite"    : 0,
+            "crust"        : 0,
+            "ocean"        : 0,
+            "human"        : 0
+        }
         pass
 
 
@@ -1783,17 +1783,17 @@ class Astatine(Element):
     symbol  = "At"
     mass    = 210   # Radioactive. Mass is for the longest lived isotope.
 
-    abundance = {
-        "universe"     : 0,
-        "sun"          : 0,
-        "meteorite"    : 0,
-        "crust"        : 0,
-        "ocean"        : 0,
-        "human"        : 0
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 0,
+            "sun"          : 0,
+            "meteorite"    : 0,
+            "crust"        : 0,
+            "ocean"        : 0,
+            "human"        : 0
+        }
         pass
 
 
@@ -1804,17 +1804,17 @@ class Radon(Element):
     symbol  = "Rn"
     mass    = 222   # Radioactive. Mass is for the longest lived isotope.
 
-    abundance = {
-        "universe"     : 0,
-        "sun"          : 0,
-        "meteorite"    : 0,
-        "crust"        : 0,
-        "ocean"        : 0,
-        "human"        : 0
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 0,
+            "sun"          : 0,
+            "meteorite"    : 0,
+            "crust"        : 0,
+            "ocean"        : 0,
+            "human"        : 0
+        }
         pass
 
 
@@ -1825,17 +1825,17 @@ class Francium(Element):
     symbol  = "Fr"
     mass    = 223   # Radioactive. Mass is for the longest lived isotope.
 
-    abundance = {
-        "universe"     : 0,
-        "sun"          : 0,
-        "meteorite"    : 0,
-        "crust"        : 0,
-        "ocean"        : 0,
-        "human"        : 0
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 0,
+            "sun"          : 0,
+            "meteorite"    : 0,
+            "crust"        : 0,
+            "ocean"        : 0,
+            "human"        : 0
+        }
         pass
 
 
@@ -1846,17 +1846,17 @@ class Radium(Element):
     symbol  = "Ra"
     mass    = 226   # Radioactive. Mass is for the longest lived isotope.
 
-    abundance = {
-        "universe"     : 0,
-        "sun"          : 0,
-        "meteorite"    : 0,
-        "crust"        : 0,
-        "ocean"        : 0,
-        "human"        : 0
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 0,
+            "sun"          : 0,
+            "meteorite"    : 0,
+            "crust"        : 0,
+            "ocean"        : 0,
+            "human"        : 0
+        }
         pass
 
 
@@ -1867,17 +1867,17 @@ class Actinium(Element):
     symbol  = "Ac"
     mass    = 227   # Radioactive. Mass is for the longest lived isotope.
 
-    abundance = {
-        "universe"     : 0,
-        "sun"          : 0,
-        "meteorite"    : 0,
-        "crust"        : 0,
-        "ocean"        : 0,
-        "human"        : 0
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 0,
+            "sun"          : 0,
+            "meteorite"    : 0,
+            "crust"        : 0,
+            "ocean"        : 0,
+            "human"        : 0
+        }
         pass
 
 
@@ -1888,17 +1888,17 @@ class Thorium(Element):
     symbol  = "Th"
     mass    = 232.04
 
-    abundance = {
-        "universe"     : 4e-10,
-        "sun"          : 3e-10,
-        "meteorite"    : 3.9e-8,
-        "crust"        : 6e-6,
-        "ocean"        : 4e-14,
-        "human"        : 0.0
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 4e-10,
+            "sun"          : 3e-10,
+            "meteorite"    : 3.9e-8,
+            "crust"        : 6e-6,
+            "ocean"        : 4e-14,
+            "human"        : 0.0
+        }
         pass
 
 
@@ -1909,17 +1909,17 @@ class Protactinium(Element):
     symbol  = "Pa"
     mass    = 231.04
 
-    abundance = {
-        "universe"     : 0.0,
-        "sun"          : 0.0,
-        "meteorite"    : 0.0,
-        "crust"        : 9.9e-15,
-        "ocean"        : 2e-25,
-        "human"        : 0.0
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 0.0,
+            "sun"          : 0.0,
+            "meteorite"    : 0.0,
+            "crust"        : 9.9e-15,
+            "ocean"        : 2e-25,
+            "human"        : 0.0
+        }
         pass
 
 
@@ -1930,17 +1930,17 @@ class Uranium(Element):
     symbol  = "U"
     mass    = 238.03
 
-    abundance = {
-        "universe"     : 2e-10,
-        "sun"          : 1e-9,
-        "meteorite"    : 9.8e-9,
-        "crust"        : 1.8e-6,
-        "ocean"        : 3.3e-9,
-        "human"        : 1e-9
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = {
+            "universe"     : 2e-10,
+            "sun"          : 1e-9,
+            "meteorite"    : 9.8e-9,
+            "crust"        : 1.8e-6,
+            "ocean"        : 3.3e-9,
+            "human"        : 1e-9
+        }
         pass
 
 
@@ -1951,17 +1951,17 @@ class Neptunium(Element):
     symbol  = "Np"
     mass    = 237   # Radioactive. Mass is for the longest lived isotope.
 
-    abundance = { # abuncances are actually 0 since this element is man made
-        "universe"     : 0.0,
-        "sun"          : 0.0,
-        "meteorite"    : 0.0,
-        "crust"        : 0.0,
-        "ocean"        : 0.0,
-        "human"        : 0.0
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = { # abuncances are actually 0 since this element is man made
+            "universe"     : 0.0,
+            "sun"          : 0.0,
+            "meteorite"    : 0.0,
+            "crust"        : 0.0,
+            "ocean"        : 0.0,
+            "human"        : 0.0
+        }
         pass
 
 
@@ -1972,17 +1972,17 @@ class Plutonium(Element):
     symbol  = "Pu"
     mass    = 244   # Radioactive. Mass is for the longest lived isotope.
 
-    abundance = { # abuncances are actually 0 since this element is man made
-        "universe"     : 0.0,
-        "sun"          : 0.0,
-        "meteorite"    : 0.0,
-        "crust"        : 0.0,
-        "ocean"        : 0.0,
-        "human"        : 0.0
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = { # abuncances are actually 0 since this element is man made
+            "universe"     : 0.0,
+            "sun"          : 0.0,
+            "meteorite"    : 0.0,
+            "crust"        : 0.0,
+            "ocean"        : 0.0,
+            "human"        : 0.0
+        }
         pass
 
 
@@ -1993,16 +1993,16 @@ class Americium(Element):
     symbol  = "Am"
     mass    = 243   # Radioactive. Mass is for the longest lived isotope.
 
-    abundance = { # abuncances are actually 0 since this element is man made
-        "universe"     : 0.0,
-        "sun"          : 0.0,
-        "meteorite"    : 0.0,
-        "crust"        : 0.0,
-        "ocean"        : 0.0,
-        "human"        : 0.0
-    }
 
     def __init__(self):
         Element.__init__(self)
+        self.abundance = { # abuncances are actually 0 since this element is man made
+            "universe"     : 0.0,
+            "sun"          : 0.0,
+            "meteorite"    : 0.0,
+            "crust"        : 0.0,
+            "ocean"        : 0.0,
+            "human"        : 0.0
+        }
         pass
 
