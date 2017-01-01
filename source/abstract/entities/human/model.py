@@ -31,7 +31,7 @@ class Model(model.Model):
 
     def drop_item(self):
         if self.holding != None:
-            self.holding.position = self.holding.position
+            self.holding.position = pygame.math.Vector2(self.holding.position.x, self.holding.position.y)
             self.holding.on_drop()
             self.holding = None
         pass
@@ -39,7 +39,7 @@ class Model(model.Model):
     def pickup(self, item = None):
         if item != None:
             self.holding = item
-            self.holding.on_pickup(self)
+            self.holding.on_pickup()
             return True
         if self.holding == None:
             self.holding = self.get_nearest_item()
@@ -54,5 +54,6 @@ class Model(model.Model):
     def mine(self):
         from source.entities.inanimate.rock import rock
         ore = rock.Rock(self.parent.homestead)
+        ore.position = self.position
         self.parent.homestead.entities.append(ore)
         self.pickup(ore)
