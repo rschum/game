@@ -1,20 +1,19 @@
-from source.chemistry.element import elements
+from source.library.science.chemistry.element import elements
 from source.abstract.chemistry.chemical import chemical
 
 
-class Hematite(chemical.Chemical):
-    name = "Hematite"
-    molar_mass = 159.70
-    density = 5.26
-    formula = "Fe(III)2O3"
+class Goethite(chemical.Chemical):
+    name = "Goethite"
+    molar_mass = 88.86
+    density = 4.0  # 3.3 - 4.3
+    formula = "FeO(OH)"
 
     def __init__(self):
         chemical.Chemical.__init__(self)
         self.elements = [
             elements.Iron(),
-            elements.Iron(),
             elements.Oxygen(),
             elements.Oxygen(),
-            elements.Oxygen()
+            elements.Hydrogen(),
         ]
         pass

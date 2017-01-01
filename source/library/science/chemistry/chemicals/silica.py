@@ -1,4 +1,4 @@
-from source.chemistry.element import elements
+from source.library.science.chemistry.element import elements
 from source.abstract.chemistry.chemical import chemical
 
 

@@ -1,7 +1,7 @@
 #! /usr/bin/python2.7
 
-from source.chemistry.rocks import bauxite
-from source.chemistry.rocks import ice
+from source.library.science.chemistry.rocks import bauxite
+from source.library.science.chemistry.rocks import ice
 from source.systems.logistics import logistics
 from source.concrete.entities.inanimate.rock import rock
 

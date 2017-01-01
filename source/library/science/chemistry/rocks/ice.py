@@ -1,6 +1,6 @@
 from source.abstract.chemistry.rock import rock
-from source.chemistry.chemicals import water
-from source.chemistry.composition.composition import Composition
+from source.library.science.chemistry.chemicals import water
+from source.library.science.chemistry.composition.composition import Composition
 
 
 class Ice(rock.Rock):
