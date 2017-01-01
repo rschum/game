@@ -1,11 +1,10 @@
-class Mineral:
+class Rock:
     name = None
-    chemicals = [None]
+    composition = None
     
     def __init__(self):
         pass
 
     def pretty_print(self, i=0):
         print(("\t"*i) + self.name)
-        for chemical in self.chemicals:
-            chemical.pretty_print(i+1)
+        self.composition.pretty_print(i+1)

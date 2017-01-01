@@ -11,6 +11,8 @@ class Model(base_model.BaseModel):
 
     move_state = MoveState.STAND
 
+    composition = None
+
     def __init__(self, parent):
         base_model.BaseModel.__init__(self, parent)
         self.position = pygame.math.Vector3(0, 0, 0)
@@ -52,3 +54,10 @@ class Model(base_model.BaseModel):
             math.floor(self.position.x / 100),
             math.floor(self.position.y / 100)
         )
+
+    def get_composition(self):
+        return self.composition
+
+    def set_composition(self, composition):
+        self.composition = composition
+        pass

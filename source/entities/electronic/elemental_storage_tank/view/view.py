@@ -41,4 +41,4 @@ class View(view.View):
         pass
 
     def pretty_print(self, i=0):
-        print(("\t"*i)+self.element+" "+str(self.units)+"/"+str(self.capacity))
+        print(("\t"*i)+self.element+" "+str(self.stored)+"/"+str(self.capacity))

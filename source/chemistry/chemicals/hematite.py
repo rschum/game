@@ -1,12 +1,12 @@
-from source.abstract.chemistry.chemical import chemical
-from source.abstract.chemistry.element import elements
+from source.chemistry.element import elements
+from source.chemistry.chemical import chemical
 
 
-# Fe(III)2O3
 class Hematite(chemical.Chemical):
     name = "Hematite"
-    mass = 159.70
+    molar_mass = 159.70
     density = 5.26
+    formula = "Fe(III)2O3"
 
     def __init__(self):
         chemical.Chemical.__init__(self)

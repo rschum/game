@@ -1,30 +1,28 @@
 #! /usr/bin/python2.7
 
-from source.abstract.chemistry.minerals import bauxite
-from source.abstract.chemistry.minerals import ice
-#from source.entities.electronic.elemental_storage_unit import elemental_storage_unit
-#from source.entities.electronic.refinery import refinery
-#from source.entities.electronic.replicator import replicator
+from source.chemistry.rocks import bauxite
+from source.chemistry.rocks import ice
 from source.systems.logistics import logistics
+from source.entities.inanimate.rock import rock
 
 if __name__ == "__main__":
     logistics  = logistics.Logistics()
-    #esu        = elemental_storage_unit.ElementalStorageUnit()
-    #refinery   = refinery.Refinery(esu) #Create a refinery and attach the ElementalStorageUnit to it.
-    #replicator = replicator.Replicator(esu) #Create a Replicator and attach the ElementalStorageUnit to it.
 
-    #Create some minerals
-    ice = ice.Ice()
-    bauxite = bauxite.Bauxite()
+    #Create some rocks
+    ice_rock = rock.Rock(None, 1.2, ice.Ice().composition)
+    bauxite_rock = rock.Rock(None, 0.95, bauxite.Bauxite().composition)
 
     #Print out the composition of the Minerals
-    ice.pretty_print()
-    bauxite.pretty_print()
+    ice_rock.composition.pretty_print()
+    bauxite_rock.composition.pretty_print()
 
     #Put Minerals in the Refinery
-    logistics.refinery.refine_mineral(ice)
-    logistics.refinery.refine_mineral(bauxite)
-    
+    print("\033[94m"+"Refining ice rock and Storing it's Elements in the Elemental Storage Unit."+"\033[0m")
+    logistics.refinery.refine_mineral(ice_rock)
+
+    print("\033[94m"+"Refining bauxite rock and Storing it's Elements in the Elemental Storage Unit."+"\033[0m")
+    logistics.refinery.refine_mineral(bauxite_rock)
+
     #Print out the status of the ElementalStorageUnit
     logistics.elemental_storage_unit.pretty_print()
 
