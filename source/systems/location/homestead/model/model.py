@@ -1,4 +1,7 @@
 from source.abstract.location.model import model
+
+from source.library.science.geology.rocks import bauxite
+
 from source.systems.power_grid import power_grid
 from source.concrete.entities.plant.corn import corn
 from source.concrete.entities.plant.turnip import turnip
@@ -27,7 +30,7 @@ class Model(model.Model):
         
         self.power_grid = power_grid.PowerGrid()
 
-        self.rock = rock.Rock(self)
+        self.rock = rock.Rock(self, 0.95, bauxite.Bauxite().composition)
         self.rock.position.x = 0
         self.rock.position.y = 300
 

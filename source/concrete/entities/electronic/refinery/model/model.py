@@ -5,8 +5,13 @@ class Model(model.Model):
         model.Model.__init__(self, parent)
         pass
 
+    def activate(self):
+        for entity in self.parent.parent.entities:
+            if entity.position.x >= self.position.x and entity.position.y >= self.position.y:
+                if entity.position.x <= self.position.x + 100 and entity.position.y <= self.position.y + 100: #TODO: Magic Numbers get this from geometry
+                    self.refine_mineral(entity)
+
     def refine_mineral(self, object):
-        # spherical_cow: for simplicity we'll assume the composition is in terms of volume
         for component in object.composition.composition:
             portion = component[0]
             chemical = component[1]

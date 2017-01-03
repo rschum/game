@@ -9,10 +9,10 @@ class CapacityState:
     PERCENT_100 = 5
 
 class Model(model.Model):
-    element  = None
-    stored    = 0 # in moles
-    capacity = None # in moles
-    capacity_state = CapacityState.PERCENT_000
+    element         = None
+    stored          = 0 # in moles
+    capacity        = None # in moles
+    capacity_state  = CapacityState.PERCENT_000
 
     def __init__(self, parent, element, capacity = 10):
         model.Model.__init__(self, parent)
@@ -35,3 +35,6 @@ class Model(model.Model):
 
     def remove_elements(self, amount):
         self.stored -= amount
+
+    def get_stored_percent(self):
+        return float(self.stored) / float(self.capacity)

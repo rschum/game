@@ -21,3 +21,6 @@ class View:
         self.set_animation()
         self.animation.on_render(self)
         pass
+
+    def pretty_print(self, i = 0):
+        print(" "*i)

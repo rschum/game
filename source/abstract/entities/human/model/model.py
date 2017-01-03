@@ -52,7 +52,8 @@ class Model(model.Model):
 
     def mine(self):
         from source.concrete.entities.inanimate.rock import rock
-        ore = rock.Rock(self.parent.homestead)
+        from source.library.science.geology.rocks import bauxite
+        ore = rock.Rock(self.parent.homestead, 0.95, bauxite.Bauxite().composition)
         ore.position = self.position
         self.parent.homestead.entities.append(ore)
         self.pickup(ore)
