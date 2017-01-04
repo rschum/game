@@ -15,7 +15,6 @@ from source.concrete.entities.inanimate.rock import rock
 from source.systems.logistics import logistics
 
 class Model(model.Model):
-    entities        = []
     power_grid      = None
     logistics       = None
     battery0        = None
@@ -94,9 +93,3 @@ class Model(model.Model):
             self.logistics.elemental_storage_unit.tanks[tank].position.y = 500
             x += 50
         pass
-
-    def add_entity(self, object):
-        self.entities.append(object)
-
-    def remove_entity(self, object):
-        self.entities.remove(object)
