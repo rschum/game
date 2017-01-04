@@ -18,62 +18,67 @@ class Model(model.Model):
     entities        = []
     power_grid      = None
     logistics       = None
-    corn            = None
-    turnip          = None
-    tomato          = None
-    potato          = None
-    #npc             = None
-    rock            = None
+    battery0        = None
 
     def __init__(self, parent = None):
         model.Model.__init__(self, parent)
         
         self.power_grid = power_grid.PowerGrid()
 
-        self.rock = rock.Rock(self, 0.95, bauxite.Bauxite().composition)
-        self.rock.position.x = 0
-        self.rock.position.y = 300
+        rock0 = rock.Rock(self, 0.95, bauxite.Bauxite().composition)
+        rock0.position.x = 0
+        rock0.position.y = 300
+        self.add_entity(rock0)
 
-        self.corn = corn.Corn(self)
-        self.corn.position.x = 100
-        self.corn.position.y = 200
+        corn0 = corn.Corn(self)
+        corn0.position.x = 100
+        corn0.position.y = 200
+        self.add_entity(corn0)
 
-        self.turnip = turnip.Turnip(self)
-        self.turnip.position.x = 300
-        self.turnip.position.y = 200
+        turnip0 = turnip.Turnip(self)
+        turnip0.position.x = 300
+        turnip0.position.y = 200
+        self.add_entity(turnip0)
         
-        self.tomato = tomato.Tomato(self)
-        self.tomato.position.x = 200
-        self.tomato.position.y = 200
+        tomato0 = tomato.Tomato(self)
+        tomato0.position.x = 200
+        tomato0.position.y = 200
+        self.add_entity(tomato0)
 
-        self.potato = potato.Potato(self)
-        self.potato.position.x = 400
-        self.potato.position.y = 200
+        potato0 = potato.Potato(self)
+        potato0.position.x = 400
+        potato0.position.y = 200
+        self.add_entity(potato0)
 
-        self.solar_panel_0 = solar_panel.SolarPanel(self)
-        self.solar_panel_0.position.x = 0
-        self.solar_panel_0.position.y = 0
-        self.power_grid.attach_source(self.solar_panel_0)
+        solar_panel_0 = solar_panel.SolarPanel(self)
+        solar_panel_0.position.x = 0
+        solar_panel_0.position.y = 0
+        self.power_grid.attach_source(solar_panel_0)
+        self.add_entity(solar_panel_0)
 
-        self.solar_panel_1 = solar_panel.SolarPanel(self)
-        self.solar_panel_1.position.x = 0
-        self.solar_panel_1.position.y = 100
-        self.power_grid.attach_source(self.solar_panel_1)
+        solar_panel_1 = solar_panel.SolarPanel(self)
+        solar_panel_1.position.x = 0
+        solar_panel_1.position.y = 100
+        self.power_grid.attach_source(solar_panel_1)
+        self.add_entity(solar_panel_1)
 
-        self.battery = battery.Battery(self)
-        self.battery.position.x = 100
-        self.battery.position.y = 0
-        self.battery.charge = 21
-        self.power_grid.attach_store(self.battery)
+        self.battery0 = battery.Battery(self)
+        self.battery0.position.x = 100
+        self.battery0.position.y = 0
+        self.battery0.charge = 21
+        self.power_grid.attach_store(self.battery0)
+        self.add_entity(self.battery0)
 
-        self.lightbulb = lightbulb.LightBulb(self)
-        self.lightbulb.position.x = 200
-        self.lightbulb.position.y = 0
-        self.power_grid.attach_drain(self.lightbulb)
+        lightbulb0 = lightbulb.LightBulb(self)
+        lightbulb0.position.x = 200
+        lightbulb0.position.y = 0
+        self.power_grid.attach_drain(lightbulb0)
+        self.add_entity(lightbulb0)
 
         #self.npc = npc.NPC(self)
         #self.npc.position.x = 0
         #self.npc.position.y = 200
+        #self.add_entity(self.npc)
 
         self.logistics = logistics.Logistics(self)
         self.logistics.refinery.position.x = 0
@@ -88,18 +93,10 @@ class Model(model.Model):
             self.logistics.elemental_storage_unit.tanks[tank].position.x = x
             self.logistics.elemental_storage_unit.tanks[tank].position.y = 500
             x += 50
-
-        self.entities = [
-            self.rock,
-            self.corn,
-            self.turnip,
-            self.tomato,
-            self.potato,
-            #self.npc,
-            self.solar_panel_0,
-            self.solar_panel_1,
-            self.battery,
-            self.lightbulb
-        ]
-
         pass
+
+    def add_entity(self, object):
+        self.entities.append(object)
+
+    def remove_entity(self, object):
+        self.entities.remove(object)

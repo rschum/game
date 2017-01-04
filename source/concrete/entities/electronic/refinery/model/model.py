@@ -19,4 +19,5 @@ class Model(model.Model):
 
             for element in chemical.elements:
                 self.parent.elemental_storage_unit.store_element(element, moles)
+        self.parent.parent.remove_entity(object)
         pass

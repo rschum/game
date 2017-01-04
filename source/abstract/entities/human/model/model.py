@@ -55,5 +55,5 @@ class Model(model.Model):
         from source.library.science.geology.rocks import bauxite
         ore = rock.Rock(self.parent.homestead, 0.95, bauxite.Bauxite().composition)
         ore.position = self.position
-        self.parent.homestead.entities.append(ore)
+        self.parent.homestead.add_entity(ore)
         self.pickup(ore)
