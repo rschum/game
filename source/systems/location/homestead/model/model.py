@@ -7,7 +7,6 @@ from source.concrete.entities.plant.corn import corn
 from source.concrete.entities.plant.turnip import turnip
 from source.concrete.entities.plant.tomato import tomato
 from source.concrete.entities.plant.potato import potato
-from source.concrete.entities.human.npc import npc
 from source.concrete.entities.electronic.solar_panel import solar_panel
 from source.concrete.entities.electronic.battery import battery
 from source.concrete.entities.electronic.lightbulb import lightbulb

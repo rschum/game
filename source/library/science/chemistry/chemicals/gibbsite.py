@@ -2,7 +2,6 @@ from source.library.science.chemistry.element import elements
 from source.abstract.chemistry.chemical import chemical
 
 
-# Al(OH)3
 class Gibbsite(chemical.Chemical):
     name = "Gibbsite"
     molar_mass = 78.01

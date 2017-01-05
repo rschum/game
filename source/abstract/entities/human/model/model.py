@@ -1,6 +1,3 @@
-import pygame
-import math
-
 from source.abstract.entities.animate.model import model
 
 class Model(model.Model):

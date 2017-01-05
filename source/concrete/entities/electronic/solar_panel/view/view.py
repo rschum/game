@@ -3,10 +3,6 @@ from source.library.action import action
 
 from animation_config import stand
 
-from ..model import model
-
-import random
-
 class View(view.View):
     def __init__(self):
         view.View.__init__(self)

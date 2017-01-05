@@ -2,8 +2,6 @@ from source.library.action import action
 
 from source.abstract.entities.inanimate.view import view
 
-from ..model import model
-
 from animation_config import stand
 
 class View(view.View):
