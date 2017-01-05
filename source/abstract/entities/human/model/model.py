@@ -18,15 +18,25 @@ class Model(model.Model):
             self.holding.position.z = self.position.z
 
     def get_nearest_item(self):
-        shortest_distance   = None
-        item                = None
+        shortest_distance = None
+        item = None
         for entity in self.parent.homestead.entities:
             distance = self.position.distance_to(entity.position)
-            if distance < self.reach:
-                if distance < shortest_distance or shortest_distance == None:
-                    shortest_distance = distance
-                    item = entity
+            if distance < shortest_distance or shortest_distance == None:
+                shortest_distance = distance
+                item = entity
         return item
+
+    def get_nearest_reachable_item(self):
+        item = self.get_nearest_item() # could return None if there are no entities in homestead
+        if item != None:
+            distance = self.position.distance_to(item.position)
+            if distance < self.reach:
+                return item
+            else:
+                return None
+        else:
+            return None
 
     def drop_item(self):
         if self.holding != None:
@@ -39,14 +49,17 @@ class Model(model.Model):
             self.holding = item
             self.holding.on_pickup()
             return True
-        if self.holding == None:
-            self.holding = self.get_nearest_item()
-            if self.holding != None:
-                self.holding.on_pickup()
-            return True
-        else:
-            self.drop_item()
-            return True
+        else: # item = None
+            if self.holding == None:
+                self.holding = self.get_nearest_reachable_item()
+                if self.holding != None:
+                    self.holding.on_pickup()
+                    return True
+                else:
+                    return False
+            else:
+                self.drop_item()
+                return False
         return False
 
     def mine(self):
