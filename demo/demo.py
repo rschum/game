@@ -3,7 +3,6 @@
 from os import sys, path
 sys.path.append(path.dirname(path.dirname(path.abspath(__file__))))
 
-import pygame
 from source.systems.game import game
 
 if __name__ == "__main__":

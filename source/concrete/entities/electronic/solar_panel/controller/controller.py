@@ -6,6 +6,4 @@ class Controller(controller.Controller):
         pass
 
     def on_loop(self):
-        #self.delta_charge()
-        #self.parent.battery.charge += self.discharge()
         pass

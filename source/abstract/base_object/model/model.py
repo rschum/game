@@ -1,4 +1,4 @@
-import math, uuid
+import uuid
 from datetime import datetime, timedelta
 
 class Model:

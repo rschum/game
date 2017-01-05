@@ -2,7 +2,6 @@ from source.library.science.chemistry.element import elements
 from source.abstract.chemistry.chemical import chemical
 
 
-# FeO
 class IronIIOxide(chemical.Chemical):
     name = "IronII Oxide"
     molar_mass = 71.85

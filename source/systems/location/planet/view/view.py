@@ -14,5 +14,4 @@ class View(view.View):
         
         self.homestead.on_render()
         self.avatar.on_render()
-        #self.instructions.on_render()
         pass

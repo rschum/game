@@ -3,12 +3,8 @@ from source.library.action import action
 
 from ..model import model
 
-from animation_config import healthy_seed, healthy_sprout, healthy_ripe, healthy_picked
-from animation_config import damaged_seed, damaged_sprout, damaged_ripe, damaged_picked
-
-from datetime import datetime
-
-import random
+from animation_config import healthy_seed, healthy_sprout, healthy_ripe
+from animation_config import damaged_seed, damaged_sprout, damaged_ripe
 
 class View(view.View):
     def __init__(self):
