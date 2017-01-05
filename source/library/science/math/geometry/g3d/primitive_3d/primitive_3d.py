@@ -18,3 +18,14 @@ class Primitive3D:
             return True
         else:
             return False
+
+    def transform(self):
+        self.translate()
+        self.rotate()
+        pass
+
+    def translate(self):
+        pass
+
+    def rotate(self):
+        pass

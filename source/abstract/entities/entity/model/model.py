@@ -1,30 +1,25 @@
 import pygame
 from source.abstract.base_object.model import model
+from source.library.science.math.geometry.g3d.sphere import sphere
 
 class MoveState():
     STAND = 0
 
-class Model(model.Model):
-    position    = None
+class Model(model.Model, sphere.Sphere):
     direction   = 0
     move_state  = MoveState.STAND
     composition = None
 
     def __init__(self, parent = None):
         model.Model.__init__(self, parent)
+        sphere.Sphere.__init__(self)
+        self.radius = 100
         self.position = pygame.math.Vector3(0, 0, 0)
         pass
 
-    def transform(self):
-        self.translate()
-        self.rotate()
-        pass
-
     def translate(self):
+        sphere.Sphere.translate(self)
         self.position += self.speed()
-        pass
-
-    def rotate(self):
         pass
 
     def speed(self):

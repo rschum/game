@@ -2,10 +2,12 @@ from source.abstract.entities.animate.model import model
 
 class Model(model.Model):
     holding = None
-    reach   = 100
+    reach   = 0
     
     def __init__(self, parent = None):
         model.Model.__init__(self, parent)
+        self.radius = 100
+        self.reach = self.radius
         pass
     
     def translate(self):
