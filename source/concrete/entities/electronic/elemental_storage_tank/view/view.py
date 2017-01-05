@@ -17,7 +17,7 @@ class View(view.View):
         p = self.get_stored_percent()
         if p < .19:
             if self.capacity_state != model.CapacityState.PERCENT_000:
-                self.capacity_state = self.model.CapacityState.PERCENT_000
+                self.capacity_state = model.CapacityState.PERCENT_000
                 self.animation = action.Action(percent_000.percent_000_data)
         if p >= .20 and p <= .39:
             if self.capacity_state != model.CapacityState.PERCENT_020:
@@ -35,7 +35,7 @@ class View(view.View):
             if self.capacity_state != model.CapacityState.PERCENT_080:
                 self.capacity_state = model.CapacityState.PERCENT_080
                 self.animation = action.Action(percent_080.percent_080_data)
-        if p >= .100:
+        if p >= 1.0:
             if self.capacity_state != model.CapacityState.PERCENT_100:
                 self.capacity_state = model.CapacityState.PERCENT_100
                 self.animation = action.Action(percent_100.percent_100_data)

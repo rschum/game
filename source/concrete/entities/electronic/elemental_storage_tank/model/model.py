@@ -14,7 +14,7 @@ class Model(model.Model):
     capacity        = None # in moles
     capacity_state  = CapacityState.PERCENT_000
 
-    def __init__(self, parent, element, capacity = 10):
+    def __init__(self, parent, element, capacity = 100000):
         model.Model.__init__(self, parent)
         self.element = element
         self.capacity = capacity
