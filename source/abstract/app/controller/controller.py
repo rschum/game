@@ -10,6 +10,9 @@ class Controller:
         keyboard.KEY_ESCAPE.subscribe(self)
         pass
 
+    def asdf(self):
+        print "asdf"
+
     def on_quit(self):
         pygame.quit()
         sys.exit()
@@ -33,6 +36,10 @@ class Controller:
         while True:
             self.on_event()
             self.on_render()
-            self.clock.tick(self.frames_per_second)
+            self.on_time_event()
             self.universe.on_loop()
+        pass
+
+    def on_time_event(self):
+        self.clock.tick(self.frames_per_second)
         pass

@@ -1,3 +1,4 @@
+import math
 import pygame
 from source.abstract.base_object.model import model
 from source.library.science.math.geometry.g3d.sphere import sphere
@@ -70,23 +71,26 @@ class Model(model.Model, sphere.Sphere):
                 self.collisions.remove(entity)
         pass
 
+    def get_planet(self):
+        return self.parent
+
     def get_kilometer(self):
-        return (
-            math.floor(self.position.x / 10000),
-            math.floor(self.position.y / 10000)
-        )
+        kilo = self.get_planet().kilometers[0][0]
+        x = int(math.floor(self.position.x / 10000))
+        y = int(math.floor(self.position.y / 10000))
+        return kilo
 
     def get_hectare(self):
-        return (
-            math.floor(self.position.x / 1000),
-            math.floor(self.position.y / 1000)
-        )
+        hect = self.get_kilometer().hectares[0][0]
+        x = int(math.floor(self.position.x / 1000))
+        y = int(math.floor(self.position.y / 1000))
+        return hect
 
     def get_tile(self):
-        return (
-            math.floor(self.position.x / 100),
-            math.floor(self.position.y / 100)
-        )
+        x = int(math.floor(self.position.x / 100))
+        y = int(math.floor(self.position.y / 100))
+        tile = self.get_hectare().get_tile(x, y)
+        return tile
 
     def get_mass(self):
         return self.mass
