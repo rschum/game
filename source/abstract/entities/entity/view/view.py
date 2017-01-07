@@ -1,3 +1,4 @@
+from pygame import math
 from source.library.action import action
 from animation_config import stand
 
@@ -7,9 +8,14 @@ class View:
 
     animation = None
 
+    render_offset = None
+
     def __init__(self):
         self.height = 32
         self.width = 32
+        self.render_offset = math.Vector3(0, 0, 0)
+        self.render_offset.x = -(self.width / 2)
+        self.render_offset.y = -(self.height / 2)
         pass
 
     def set_animation(self):

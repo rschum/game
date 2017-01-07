@@ -46,7 +46,7 @@ class Animation:
     def on_render(self, obj):
         if isinstance(self.animation_object, pyganim.PygAnimation):
             self.move_conductor.play()
-            CAMERA.render_animation(self.animation_object, obj.position)
+            CAMERA.render_animation(self.animation_object, obj)
         else:
-            CAMERA.render_frame(self.animation_object, obj.position)
+            CAMERA.render_frame(self.animation_object, obj)
         pass

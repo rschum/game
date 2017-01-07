@@ -21,8 +21,8 @@ class Model(model.Model):
         self.homestead = homestead.Homestead()
 
         self.avatar = avatar.Avatar(self)
-        self.avatar.position.x = 300
-        self.avatar.position.y = 300
+        #self.avatar.position.x = 300
+        #self.avatar.position.y = 300
 
         #self.instructions = instructions.Instructions(window)
         self.camera = camera.CAMERA
