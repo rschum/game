@@ -3,7 +3,8 @@ from source.abstract.entities.inanimate.model import model
 from datetime import datetime
 
 class Model(model.Model):
-    charge = 0
+    name        = "Solar Panel"
+    charge      = 0
     charge_time = 0
 
     grid = None

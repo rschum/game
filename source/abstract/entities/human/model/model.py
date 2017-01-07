@@ -1,6 +1,7 @@
 from source.abstract.entities.animate.model import model
 
 class Model(model.Model):
+    name    = "HumanEntity"
     holding = None
     reach   = 0
     

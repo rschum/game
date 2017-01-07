@@ -6,6 +6,7 @@ class MoveState():
     STAND = 0
 
 class Model(model.Model, sphere.Sphere):
+    name        = "Entity"
     direction   = 0
     move_state  = MoveState.STAND
     composition = None
@@ -13,7 +14,7 @@ class Model(model.Model, sphere.Sphere):
     def __init__(self, parent = None):
         model.Model.__init__(self, parent)
         sphere.Sphere.__init__(self)
-        self.radius = 100
+        self.radius = 50
         self.position = pygame.math.Vector3(0, 0, 0)
         pass
 
@@ -35,6 +36,15 @@ class Model(model.Model, sphere.Sphere):
             self.position.y,
             self.position.z
         )
+        pass
+
+    def get_collisions(self):
+        for entity in self.parent.entities:
+            if entity is not self:
+                if self.collide(entity) == True:
+                    #print(self.name+" "+str(self.uuid)+" is colliding with "+entity.name+" "+str(self.uuid))
+                    pass
+        pass
 
     def get_kilometer(self):
         return (

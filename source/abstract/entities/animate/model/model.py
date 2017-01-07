@@ -9,6 +9,7 @@ class MoveState():
     RUN     = 2
 
 class Model(model.Model):
+    name        = "AnimateEntity"
     walk_speed  = 4
     run_speed   = 4
     velocity    = None

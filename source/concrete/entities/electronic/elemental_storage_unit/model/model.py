@@ -3,10 +3,10 @@ from source.abstract.entities.inanimate.model import model
 from source.concrete.entities.electronic.elemental_storage_tank import elemental_storage_tank
 
 class Model(model.Model):
-    name = "Elemental Storage Unit"
-    elements = []
+    name        = "Elemental Storage Unit"
+    elements    = []
     
-    tanks = {
+    tanks       = {
         "Aluminum" : None,
         "Carbon"   : None,
         "Hydrogen" : None,

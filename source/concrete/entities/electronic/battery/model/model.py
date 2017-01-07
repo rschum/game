@@ -9,6 +9,7 @@ class ChargeState:
     PERCENT_100 = 5
 
 class Model(model.Model):
+    name = "Battery"
     charge = 0
     charge_state = ChargeState.PERCENT_000
 

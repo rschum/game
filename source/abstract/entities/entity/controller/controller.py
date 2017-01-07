@@ -4,6 +4,7 @@ class Controller:
 
     def on_loop(self):
         self.transform()
+        self.get_collisions()
         pass
 
     def on_pickup(self):

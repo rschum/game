@@ -5,6 +5,7 @@ class Model:
     uuid    = None
     created = None
     parent  = None
+    name    = "BaseObject"
 
     def __init__(self, parent = None):
         self.parent = parent

@@ -12,8 +12,9 @@ class HealthState():
     DAMAGED = 1
 
 class Model(model.Model):
-    growth_state = GrowthState.SEED
-    health_state = HealthState.HEALTHY
+    name            = "Tomato"
+    growth_state    = GrowthState.SEED
+    health_state    = HealthState.HEALTHY
 
     def __init__(self, parent = None):
         model.Model.__init__(self, parent)

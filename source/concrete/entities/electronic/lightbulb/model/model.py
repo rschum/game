@@ -5,6 +5,7 @@ class UseState:
     ON  = 1
 
 class Model(model.Model):
+    name            = "Lightbulb"
     use_state = UseState.OFF
 
     grid = None

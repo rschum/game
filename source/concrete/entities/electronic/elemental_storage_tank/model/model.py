@@ -9,6 +9,7 @@ class CapacityState:
     PERCENT_100 = 5
 
 class Model(model.Model):
+    name            = "Elemental Storage Tank"
     element         = None
     stored          = 0 # in moles
     capacity        = None # in moles
