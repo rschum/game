@@ -43,4 +43,4 @@ class View(view.View):
         pass
 
     def pretty_print(self, i=0):
-        print(("\t"*i)+self.element+" "+str(self.stored)+"/"+str(self.get_stored_percent()))
+        print(("\t"*i)+self.element.name+" "+str(self.stored)+"/"+str(self.capacity))

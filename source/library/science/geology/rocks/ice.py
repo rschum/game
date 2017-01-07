@@ -8,5 +8,6 @@ class Ice(rock.Rock):
     def __init__(self):
         rock.Rock.__init__(self)
         self.name = "Ice"
-        self.composition = Composition([(1, water.Water())])
+        self.composition = [ (1, water.Water()) ]
+        self.density = 0.9
         pass

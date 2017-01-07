@@ -1,6 +1,6 @@
 from source.abstract.location.model import model
 
-from source.library.science.geology.rocks import bauxite
+from source.library.science.geology.rocks import ice
 
 from source.systems.power_grid import power_grid
 from source.concrete.entities.plant.corn import corn
@@ -20,10 +20,8 @@ class Model(model.Model):
 
     def __init__(self, parent = None):
         model.Model.__init__(self, parent)
-        
-        self.power_grid = power_grid.PowerGrid()
 
-        rock0 = rock.Rock(self, 0.95, bauxite.Bauxite().composition)
+        rock0 = rock.Rock(self, 100, ice.Ice())
         rock0.position.x = 0
         rock0.position.y = 300
         self.add_entity(rock0)
@@ -47,6 +45,8 @@ class Model(model.Model):
         potato0.position.x = 400
         potato0.position.y = 200
         self.add_entity(potato0)
+
+        self.power_grid = power_grid.PowerGrid()
 
         solar_panel_0 = solar_panel.SolarPanel(self)
         solar_panel_0.position.x = 0

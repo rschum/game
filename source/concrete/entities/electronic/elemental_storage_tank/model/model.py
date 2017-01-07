@@ -11,31 +11,34 @@ class CapacityState:
 class Model(model.Model):
     name            = "Elemental Storage Tank"
     element         = None
-    stored          = 0 # in moles
-    capacity        = None # in moles
+    stored          = 0 # in kg
+    capacity        = 0 # in kg
     capacity_state  = CapacityState.PERCENT_000
 
-    def __init__(self, parent, element, capacity = 100000):
+    def __init__(self, parent, element, capacity = 1000):
         model.Model.__init__(self, parent)
         self.element = element
         self.capacity = capacity
         pass
 
-    def add_element(self, moles):
+    def add_element(self, kg):
         # spherical_cow: storage should be of chemicals rather than elements.
-        # spherical_cow: storage should be in cubic meters, using the density of the stored chemical.
+        overage = (self.stored + kg) - self.capacity
         if self.stored == self.capacity:
-            print("\033[91m"+self.element+" Storage Tank is Full. "+self.element+" Has Been Wasted.\033[0m")
-        elif self.capacity - self.stored < moles:
-            print("\033[91m Only some " + self.element + " was stored. " + self.element + " Has Been Wasted.\033[0m")
+            # Oxygen tank is full. 1.3 kg of oxygen has been lost.
+            print("\033[91m"+self.element.name+" tank is full. "+str(overage)+" kg of "+self.element.name+" has been lost.\033[0m")
+        elif self.capacity - self.stored < kg:
+            # Oxygen tank is full. 0.7 kg of oxygen has been lost.
+            print("\033[91m"+self.element.name+" tank is full. "+str(overage)+" kg of "+self.element.name+" has been lost.\033[0m")
             self.stored = self.capacity
         else:
-            print("\033[92m"+self.element+" Stored.\033[0m")
-            self.stored += moles
+            # 0.7 kg of oxygen has been stored.
+            print("\033[92m"+str(kg)+" kg of "+self.element.name+" has been stored.\033[0m")
+            self.stored += kg
         pass
 
-    def remove_elements(self, amount):
-        self.stored -= amount
+    def remove_kg(self, kg):
+        self.stored -= kg
 
     def get_stored_percent(self):
         return float(self.stored) / float(self.capacity)

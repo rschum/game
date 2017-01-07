@@ -6,10 +6,12 @@ class MoveState():
     STAND = 0
 
 class Model(model.Model, sphere.Sphere):
-    name        = "Entity"
-    direction   = 0
-    move_state  = MoveState.STAND
-    composition = None
+    name           = "Entity"
+    direction      = 0
+    move_state     = MoveState.STAND
+    mass           = 1 # in kg
+    material       = None
+    element_masses = None
 
     collisions  = []
 
@@ -86,9 +88,33 @@ class Model(model.Model, sphere.Sphere):
             math.floor(self.position.y / 100)
         )
 
-    def get_composition(self):
-        return self.composition
+    def get_mass(self):
+        return self.mass
 
-    def set_composition(self, composition):
-        self.composition = composition
+    def set_mass(self, mass):
+        self.mass = mass
         pass
+
+    def get_material(self):
+        return self.material
+
+    def set_material(self, material):
+        self.material = material
+        pass
+
+    def get_element_masses(self):
+        if self.element_masses == None:
+            element_masses = dict()
+            for component in self.material.composition:
+                portion = component[0]
+                chemical = component[1]
+                kmoles = portion * self.mass / chemical.molar_mass
+
+                for element in chemical.elements:
+                    element_kg = kmoles * element.mass
+                    if element_masses.has_key(element.name):
+                        element_masses[element.name] += element_kg
+                    else:
+                        element_masses[element.name] = element_kg
+            self.element_masses = element_masses
+        return self.element_masses

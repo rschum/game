@@ -14,11 +14,13 @@ class Model(model.Model):
         from source.concrete.entities.inanimate.rock import rock
         from source.library.science.geology.rocks import bauxite
 
-        widget = rock.Rock(self.parent, 0.95, bauxite.Bauxite().composition)
-        
-        if self.parent.elemental_storage_unit.check_storage(widget.composition.composition):
+        widget = rock.Rock(self.parent, 100, bauxite.Bauxite())
+        # TODO: widget = solarPanel
+
+        element_requirements = widget.get_element_masses()
+        if self.parent.elemental_storage_unit.check_storage(element_requirements):
             print("\033[94m"+"Building Widget"+"\033[0m")
-            self.parent.elemental_storage_unit.take_elements(widget.composition.composition)
+            self.parent.elemental_storage_unit.take_elements(element_requirements)
             widget.position.x = self.position.x
             widget.position.y = self.position.y
             if self.parent.parent != None:

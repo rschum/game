@@ -11,15 +11,11 @@ class Model(model.Model):
         for entity in self.parent.parent.entities:
             if entity.position.x >= self.position.x and entity.position.y >= self.position.y:
                 if entity.position.x <= self.position.x + 100 and entity.position.y <= self.position.y + 100: #TODO: Magic Numbers get this from geometry
-                    self.refine_mineral(entity)
+                    self.refine_object(entity)
 
-    def refine_mineral(self, object):
-        for component in object.composition.composition:
-            portion = component[0]
-            chemical = component[1]
-            moles = chemical.moles_from_m3(portion * object.volume)
-
-            for element in chemical.elements:
-                self.parent.elemental_storage_unit.store_element(element, moles)
-        self.parent.parent.remove_entity(object)
+    def refine_object(self, entity):
+        element_masses = entity.get_element_masses()
+        for element_name in element_masses.keys():
+            self.parent.elemental_storage_unit.store_element(element_name, element_masses[element_name])
+        self.parent.parent.remove_entity(entity)
         pass
