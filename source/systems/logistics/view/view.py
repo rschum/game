@@ -1,4 +1,4 @@
-from source.abstract.entities.inanimate.view import view
+from source.abstract.location.view import view
 
 class View(view.View):
     def __init__(self):

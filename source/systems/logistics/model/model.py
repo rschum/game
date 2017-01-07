@@ -1,4 +1,4 @@
-from source.abstract.entities.inanimate.model import model
+from source.abstract.location.model import model
 
 from source.concrete.entities.electronic.elemental_storage_unit import elemental_storage_unit
 from source.concrete.entities.electronic.refinery import refinery

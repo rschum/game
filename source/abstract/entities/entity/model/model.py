@@ -11,10 +11,13 @@ class Model(model.Model, sphere.Sphere):
     move_state  = MoveState.STAND
     composition = None
 
+    collisions  = []
+
     def __init__(self, parent = None):
         model.Model.__init__(self, parent)
         sphere.Sphere.__init__(self)
-        self.radius = 50
+        self.collisions = []
+        self.radius = 1
         self.position = pygame.math.Vector3(0, 0, 0)
         pass
 
@@ -42,9 +45,19 @@ class Model(model.Model, sphere.Sphere):
         for entity in self.parent.entities:
             if entity is not self:
                 if self.collide(entity) == True:
-                    #print(self.name+" "+str(self.uuid)+" is colliding with "+entity.name+" "+str(self.uuid))
-                    pass
-        pass
+                    if entity not in self.collisions:
+                        print self.name
+                        self.collisions.append(entity)
+                        print(self.name+" "+str(self.uuid)+" is colliding with "+entity.name+" "+str(self.uuid))
+                        pass
+                else:
+                    if entity in self.collisions:
+                        print self.name
+                        #print self.collisions
+                        self.collisions.remove(entity)
+                        print(self.name+" "+str(self.uuid)+" is ! colliding with "+entity.name+" "+str(self.uuid))
+                        pass
+        return self.collisions
 
     def get_kilometer(self):
         return (

@@ -11,5 +11,4 @@ class Sphere(primitive_3d.Primitive3D):
         distance = self.position.distance_to(object.position)
         if distance < self.radius + object.radius:
             return True
-        else:
-            return False
+        return False

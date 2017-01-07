@@ -1,4 +1,4 @@
-from source.abstract.entities.inanimate.controller import controller
+from source.abstract.location.controller import controller
 
 class Controller(controller.Controller):
     def __init__(self):
