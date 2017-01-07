@@ -6,7 +6,7 @@ class Camera:
     position   = None
     center     = None
     resolution = None
-    flags      = 0
+    flags      = pygame.HWSURFACE
     depth      = 32
 
     def __init__(self):
@@ -30,6 +30,7 @@ class Camera:
         pass
 
     def render_animation(self, resource, object):
+        self.draw_radius(object)
         resource.blit(
             self.surface,
             (
@@ -40,6 +41,7 @@ class Camera:
         pass
 
     def render_frame(self, resource, object):
+        self.draw_radius(object)
         self.surface.blit(
             resource,
             (
@@ -47,6 +49,23 @@ class Camera:
                 object.position.y + object.render_offset.y - self.position.y + (self.resolution.y / 2)
             )
         )
+        pass
+
+    def draw_radius(self, object):
+        from source.abstract.entities.entity.model import model
+        if isinstance(object, model.Model):
+            line_width = 1
+            if line_width < object.radius:
+                pygame.draw.circle(
+                    self.surface,
+                    (0, 128, 0),
+                    (
+                        int(object.position.x - self.position.x + (self.resolution.x / 2)),
+                        int(object.position.y - self.position.y + (self.resolution.y / 2))
+                    ),
+                    object.radius,
+                    2
+                )
         pass
 
     def in_viewport(self, obj):
