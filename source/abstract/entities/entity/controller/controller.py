@@ -13,3 +13,6 @@ class Controller:
     def on_drop(self):
         self.drop()
         pass
+
+    def on_collide(self, object = None):
+        pass

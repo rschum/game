@@ -17,23 +17,20 @@ class Collisions(model.Model):
         print plant0.radius
         print plant1.radius
 
-        #plant1.position.x = 30
-        #plant1.position.y = 100
-
         self.add_entity(plant0)
         self.add_entity(plant1)
-
-    def print_positions(self):
-        print self.entities[0].position
-        print self.entities[1].position
 
     def collide(self):
         for entity in self.entities:
             print entity.name
             print entity.get_collisions()
 
+    def move_out_of_collision_range(self):
+        print("\nMove Out of Collision Range.")
+        self.entities[0].position.x = 64
+
 if __name__ == "__main__":
     collisions = Collisions()
-    collisions.print_positions()
     collisions.collide()
+    collisions.move_out_of_collision_range()
     collisions.collide()

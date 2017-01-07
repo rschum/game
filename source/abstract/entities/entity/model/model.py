@@ -45,19 +45,28 @@ class Model(model.Model, sphere.Sphere):
         for entity in self.parent.entities:
             if entity is not self:
                 if self.collide(entity) == True:
-                    if entity not in self.collisions:
-                        print self.name
-                        self.collisions.append(entity)
-                        print(self.name+" "+str(self.uuid)+" is colliding with "+entity.name+" "+str(self.uuid))
-                        pass
+                    self.__add_collisions(entity)
                 else:
-                    if entity in self.collisions:
-                        print self.name
-                        #print self.collisions
-                        self.collisions.remove(entity)
-                        print(self.name+" "+str(self.uuid)+" is ! colliding with "+entity.name+" "+str(self.uuid))
-                        pass
+                    self.__remove_collisions(entity)
+        self.__clean_collisions()
         return self.collisions
+
+    def __add_collisions(self, entity):
+        if entity not in self.collisions:
+            self.collisions.append(entity)
+            entity.on_collide(entity)
+        pass
+
+    def __remove_collisions(self, entity):
+        if entity in self.collisions:
+            self.collisions.remove(entity)
+        pass
+
+    def __clean_collisions(self):
+        for entity in self.collisions:
+            if entity not in self.parent.entities:
+                self.collisions.remove(entity)
+        pass
 
     def get_kilometer(self):
         return (
