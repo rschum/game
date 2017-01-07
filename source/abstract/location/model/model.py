@@ -1,4 +1,5 @@
 class Model:
+    name        = "Location"
     parent      = None
     entities    = []
 
@@ -7,7 +8,9 @@ class Model:
         pass
 
     def add_entity(self, object):
+        object.parent = self
         self.entities.append(object)
 
     def remove_entity(self, object):
+        object.parent = None
         self.entities.remove(object)

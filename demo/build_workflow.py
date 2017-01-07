@@ -17,14 +17,13 @@ class BuildWorkflow(model.Model):
         model.Model.__init__(self)
 
         self.logistics  = logistics.Logistics(self)
+        
         #Create some rocks
         ice_rock = rock.Rock(self, 1.2, ice.Ice().composition)
         bauxite_rock = rock.Rock(self, 0.95, bauxite.Bauxite().composition)
         
-        self.entities = [
-            ice_rock,
-            bauxite_rock
-        ]
+        self.add_entity(ice_rock)
+        self.add_entity(bauxite_rock)
 
     def print_composition_of_minerals(self):
         for entity in self.entities:
@@ -39,8 +38,12 @@ class BuildWorkflow(model.Model):
         self.logistics.elemental_storage_unit.pretty_print()
 
     def replicate_a_widget(self):
-        widget0 = self.logistics.replicator.build_widget()
-        widget0.pretty_print()
+        widget = self.logistics.replicator.build_widget()
+        self.add_entity(widget)
+
+    def print_entities(self):
+        for entity in self.entities:
+            print(entity)
 
 if __name__ == "__main__":
     build_workflow = BuildWorkflow()
@@ -51,3 +54,4 @@ if __name__ == "__main__":
     build_workflow.replicate_a_widget()
     build_workflow.replicate_a_widget()
     build_workflow.print_the_status_of_the_elemental_storage_unit()
+    build_workflow.print_entities()
