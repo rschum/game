@@ -40,7 +40,7 @@ class Model(model.Model):
             return None
 
     def activate(self):
-        for collidable in self.collisions:
+        for collidable in self.get_collisions():
             collidable.on_activate()
         pass
 
