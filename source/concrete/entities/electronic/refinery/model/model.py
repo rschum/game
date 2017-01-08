@@ -5,13 +5,27 @@ class Model(model.Model):
 
     def __init__(self, parent = None):
         model.Model.__init__(self, parent)
+        self.radius = 50
         pass
 
     def activate(self):
+        pos_0x = self.position.x - (self.width / 2)
+        pos_0y = self.position.y - (self.height / 2)
+        pos_1x = self.position.x + (self.width / 2)
+        pos_1y = self.position.y + (self.height / 2)
+
+        print pos_0x
+        print pos_0y
+        print pos_1x
+        print pos_1y
+
         for entity in self.parent.parent.entities:
-            if entity.position.x >= self.position.x and entity.position.y >= self.position.y:
-                if entity.position.x <= self.position.x + 100 and entity.position.y <= self.position.y + 100: #TODO: Magic Numbers get this from geometry
-                    self.refine_object(entity)
+            if entity.position.x >= self.position.x - (self.width / 2):
+                if entity.position.y >= self.position.y - (self.height / 2):
+                    if entity.position.x <= self.position.x + (self.width / 2):
+                        if entity.position.y <= self.position.y + (self.height / 2):
+                            self.refine_object(entity)
+        pass
 
     def refine_object(self, entity):
         element_masses = entity.get_element_masses()

@@ -19,6 +19,7 @@ class Model(model.Model):
         model.Model.__init__(self, parent)
         self.element = element
         self.capacity = capacity
+        self.radius = 16
         pass
 
     def add_element(self, kg):

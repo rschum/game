@@ -5,8 +5,10 @@ from source.library.science.chemistry.element import elements
 class Model(model.Model):
     name  = "Elemental Storage Unit"
     tanks = dict()
+    
     def __init__(self, parent = None):
         model.Model.__init__(self, parent)
+        self.radius = 50
         self.add_tank(elements.Aluminum)
         self.add_tank(elements.Carbon)
         self.add_tank(elements.Hydrogen)

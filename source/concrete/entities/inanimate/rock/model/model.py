@@ -6,6 +6,7 @@ class Model(model.Model):
 
     def __init__(self, parent, mass = 1, material = None):
         model.Model.__init__(self, parent)
+        self.radius = 16
         self.mass = mass  # in kg
         self.set_material(material)
         pass

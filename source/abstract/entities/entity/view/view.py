@@ -10,13 +10,19 @@ class View:
 
     render_offset = None
 
+    draw_radius = True
+    
+    height  = 0
+    width   = 0
+
     def __init__(self):
-        self.height = 32
-        self.width = 32
         self.render_offset = math.Vector3(0, 0, 0)
-        self.render_offset.x = -(self.width / 2)
-        self.render_offset.y = -(self.height / 2)
         pass
+
+    def get_render_offset(self):
+        self.render_offset.x = -(self.width / 2)
+        self.render_offset.y = -(self.height)
+        return self.render_offset
 
     def set_animation(self):
         if abs(self.speed().length()) == 0:

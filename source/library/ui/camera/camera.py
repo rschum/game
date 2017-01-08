@@ -15,7 +15,10 @@ class Camera:
         self.center     = pygame.math.Vector3(self.resolution.x / 2, self.resolution.y / 2, 0)
 
         self.surface = pygame.display.set_mode(
-            (int(self.resolution.x), int(self.resolution.y)),
+            (
+                int(self.resolution.x),
+                int(self.resolution.y)
+            ),
             self.flags,
             self.depth
         )
@@ -31,52 +34,53 @@ class Camera:
 
     def render_animation(self, resource, object):
         self.draw_radius(object)
+        pos = object.position + object.get_render_offset() - self.position + (self.resolution / 2)
         resource.blit(
             self.surface,
             (
-                object.position.x + object.render_offset.x - self.position.x + (self.resolution.x / 2),
-                object.position.y + object.render_offset.y - self.position.y + (self.resolution.y / 2)
+                pos.x,
+                pos.y
             )
         )
         pass
 
     def render_frame(self, resource, object):
         self.draw_radius(object)
+        pos = object.position + object.get_render_offset() - self.position + (self.resolution / 2)
         self.surface.blit(
             resource,
             (
-                object.position.x + object.render_offset.x - self.position.x + (self.resolution.x / 2),
-                object.position.y + object.render_offset.y - self.position.y + (self.resolution.y / 2)
+                pos.x,
+                pos.y
             )
         )
         pass
 
     def draw_radius(self, object):
-        from source.abstract.entities.entity.model import model
-        if isinstance(object, model.Model):
-            line_width = 1
-            if line_width < object.radius:
-                pygame.draw.circle(
-                    self.surface,
-                    (0, 128, 0),
-                    (
-                        int(object.position.x - self.position.x + (self.resolution.x / 2)),
-                        int(object.position.y - self.position.y + (self.resolution.y / 2))
-                    ),
-                    object.radius,
-                    2
-                )
+        if object.draw_radius == True:
+            from source.abstract.entities.entity.model import model
+            if isinstance(object, model.Model):
+                line_width = 1
+                if line_width < object.radius:
+                    pos = object.position - self.position + (self.resolution / 2)
+                    pygame.draw.circle(
+                        self.surface,
+                        (0, 128, 0),
+                        (
+                            int(pos.x),
+                            int(pos.y)
+                        ),
+                        object.radius,
+                        2
+                    )
         pass
 
-    def in_viewport(self, obj):
-        x = self.position.x - (self.resolution.x / 2)
-        y = self.position.y - (self.resolution.y / 2)
-        w = self.position.x + (self.resolution.y / 2)
-        h = self.position.y + (self.resolution.y / 2)
-
-        if obj.position.x > x or obj.position.x < w:
-            if obj.position.y > y or obj.position.y < h:
+    def in_viewport(self, object):
+        pos_0 = self.position - (self.resolution / 2)
+        pos_1 = self.position + (self.resolution / 2)
+        
+        if object.position.x > pos_0.x or object.position.x < pos_1.x:
+            if object.position.y > pos_0.y or object.position.y < pos_1.y:
                 return True
-        obj.animation = None
+        object.animation = None
         return False
-        pass

@@ -12,7 +12,9 @@ class Model(model.Model):
     def __init__(self, parent = None):
         model.Model.__init__(self, parent)
         self.charge_time = datetime.now()
+        self.radius = 50
         pass
 
     def delta_charge(self):
         self.charge += (datetime.now() - self.charge_time).total_seconds() / 100
+        pass

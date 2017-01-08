@@ -4,12 +4,21 @@ from source.library.action import action
 from animation_config import stand, mined
 
 class View(view.View):
+    draw_radius = False
+    
+    height  = 100
+    width   = 100
+    
     def __init__(self):
         view.View.__init__(self)
         self.animation = action.Action(stand.stand_data)
-        self.height = 100
-        self.width = 100
         pass
+
+    def get_render_offset(self):
+        self.render_offset.x = 0
+        self.render_offset.y = 0
+        return self.render_offset
+
 
     def on_render(self):
         if self.mined == False:
