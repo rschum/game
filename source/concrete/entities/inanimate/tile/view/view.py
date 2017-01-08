@@ -6,11 +6,10 @@ from animation_config import stand, mined
 class View(view.View):
     draw_radius = False
     
-    height  = 100
-    width   = 100
-    
     def __init__(self):
         view.View.__init__(self)
+        self.dimensions.x = 100
+        self.dimensions.y = 100
         self.animation = action.Action(stand.data)
         pass
 

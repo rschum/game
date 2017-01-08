@@ -5,11 +5,10 @@ from animation_config import run
 from animation_config import walk
 
 class View(view.View):
-    height  = 32
-    width   = 32
-
     def __init__(self):
         view.View.__init__(self)
+        self.dimensions.x = 32
+        self.dimensions.y = 32
         pass
 
     def set_animation(self):

@@ -7,11 +7,10 @@ from animation_config import healthy_seed, healthy_sprout, healthy_ripe
 from animation_config import damaged_seed, damaged_sprout, damaged_ripe
 
 class View(view.View):
-    height  = 32
-    width   = 32
-    
     def __init__(self):
         view.View.__init__(self)
+        self.dimensions.x = 32
+        self.dimensions.y = 32
         self.animation = action.Action(healthy_seed.data)
         pass
 

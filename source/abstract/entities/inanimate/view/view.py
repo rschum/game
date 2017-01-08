@@ -2,11 +2,10 @@ from source.abstract.entities.entity.view import view
 from ..model import model
 
 class View(view.View):
-    height  = 32
-    width   = 32
-    
     def __init__(self):
         view.View.__init__(self)
+        self.dimensions.x = 32
+        self.dimensions.y = 32
         pass
 
     def pretty_print(self, i = 0):

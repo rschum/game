@@ -9,21 +9,19 @@ class Model(model.Model):
         pass
 
     def activate(self):
-        pos_0x = self.position.x - (self.width / 2)
-        pos_0y = self.position.y - (self.height / 2)
-        pos_1x = self.position.x + (self.width / 2)
-        pos_1y = self.position.y + (self.height / 2)
+        pos_0 = self.position - (self.dimensions / 2)
+        pos_1 = self.position + (self.dimensions / 2)
 
-        print pos_0x
-        print pos_0y
-        print pos_1x
-        print pos_1y
+        #pos_0x = self.position.x - (self.dimensions.x / 2)
+        #pos_0y = self.position.y - (self.dimensions.y / 2)
+        #pos_1x = self.position.x + (self.dimensions.x / 2)
+        #pos_1y = self.position.y + (self.dimensions.y / 2)
 
         for entity in self.parent.parent.entities:
-            if entity.position.x >= self.position.x - (self.width / 2):
-                if entity.position.y >= self.position.y - (self.height / 2):
-                    if entity.position.x <= self.position.x + (self.width / 2):
-                        if entity.position.y <= self.position.y + (self.height / 2):
+            if entity.position.x >= pos_0.x:
+                if entity.position.y >= pos_0.y:
+                    if entity.position.x <= pos_1.x:
+                        if entity.position.y <= pos_1.y:
                             self.refine_object(entity)
         pass
 

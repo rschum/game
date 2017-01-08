@@ -38,8 +38,8 @@ class Model(model.Model):
         if x < self.size and y < self.size:
             if self.__tiles[x][y] == None:
                 self.__tiles[x][y] = tile.Tile(self)
-                self.__tiles[x][y].position.x = (x * self.__tiles[x][y].width)
-                self.__tiles[x][y].position.y = (y * self.__tiles[x][y].height)
+                self.__tiles[x][y].position.x = (x * self.__tiles[x][y].dimensions.x)
+                self.__tiles[x][y].position.y = (y * self.__tiles[x][y].dimensions.y)
             return self.__tiles[x][y]
         return None
     
@@ -62,21 +62,20 @@ class Model(model.Model):
         return tmp_tiles
 
     def convert_pixel_dimensions_to_tile_dimensions(self, a, b, c, d):
-        tile_width = self.get_tile(0, 0).width
-        tile_height = self.get_tile(0, 0).height
-        x = int((a - (c / 2)) / tile_width)
-        y = int((b - (d / 2)) / tile_height)
-        w = int((c + (c)) / tile_width) + 1
-        h = int((d + (d)) / tile_height) + 1
+        tile = self.get_tile(0, 0).dimensions
+        x = int((a - (c / 2)) / tile.x)
+        y = int((b - (d / 2)) / tile.y)
+        w = int((c + (c)) / tile.x) + 1
+        h = int((d + (d)) / tile.y) + 1
         return (x, y, w, h)
     
-    def get_near_tiles(self, obj):
+    def get_near_tiles(self, object):
         return self.get_tiles(
             self.convert_pixel_dimensions_to_tile_dimensions(
-                obj.position.x,
-                obj.position.y,
-                obj.resolution.x,
-                obj.resolution.y
+                object.position.x,
+                object.position.y,
+                object.resolution.x,
+                object.resolution.y
             )
         )
         pass

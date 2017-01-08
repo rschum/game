@@ -6,11 +6,10 @@ from ..model import model
 from animation_config import on, off
 
 class View(view.View):
-    height  = 100
-    width   = 58
-
     def __init__(self):
         view.View.__init__(self)
+        self.dimensions.x = 58
+        self.dimensions.y = 100
         self.animation = action.Action(off.data)
         pass
 

@@ -6,11 +6,10 @@ from animation_config import percent_000, percent_020, percent_040, percent_060,
 from ..model import model
 
 class View(view.View):
-    height  = 64
-    width   = 32
-
     def __init__(self):
         view.View.__init__(self)
+        self.dimensions.x = 32
+        self.dimensions.y = 64
         self.animation = action.Action(percent_000.data)
         pass
 

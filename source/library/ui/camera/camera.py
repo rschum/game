@@ -4,15 +4,17 @@ from source.global_variables import global_variables
 class Camera:
     surface    = None
     position   = None
-    center     = None
     resolution = None
     flags      = pygame.HWSURFACE
     depth      = 32
 
     def __init__(self):
         self.position   = pygame.math.Vector3(0, 0, 0)
-        self.resolution = pygame.math.Vector3(global_variables.RESOLUTION_X, global_variables.RESOLUTION_Y, 0)
-        self.center     = pygame.math.Vector3(self.resolution.x / 2, self.resolution.y / 2, 0)
+        self.resolution = pygame.math.Vector3(
+            global_variables.RESOLUTION_X,
+            global_variables.RESOLUTION_Y,
+            global_variables.RESOLUTION_Z
+        )
 
         self.surface = pygame.display.set_mode(
             (
@@ -34,7 +36,7 @@ class Camera:
 
     def render_animation(self, resource, object):
         self.draw_radius(object)
-        pos = object.position + object.get_render_offset() - self.position + (self.resolution / 2)
+        pos = self.render_offset_position(object)
         resource.blit(
             self.surface,
             (
@@ -46,7 +48,7 @@ class Camera:
 
     def render_frame(self, resource, object):
         self.draw_radius(object)
-        pos = object.position + object.get_render_offset() - self.position + (self.resolution / 2)
+        pos = self.render_offset_position(object)
         self.surface.blit(
             resource,
             (
@@ -60,20 +62,25 @@ class Camera:
         if object.draw_radius == True:
             from source.abstract.entities.entity.model import model
             if isinstance(object, model.Model):
-                line_width = 1
-                if line_width < object.radius:
-                    pos = object.position - self.position + (self.resolution / 2)
+                if object.stroke < object.radius:
+                    pos = self.render_position(object)
                     pygame.draw.circle(
                         self.surface,
-                        (0, 128, 0),
+                        object.stroke_color,
                         (
                             int(pos.x),
                             int(pos.y)
                         ),
                         object.radius,
-                        2
+                        object.stroke
                     )
         pass
+
+    def render_position(self, object):
+        return object.position - self.position + (self.resolution / 2)
+
+    def render_offset_position(self, object):
+        return object.position + object.get_render_offset() - self.position + (self.resolution / 2)
 
     def in_viewport(self, object):
         pos_0 = self.position - (self.resolution / 2)
