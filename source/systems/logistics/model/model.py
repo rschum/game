@@ -12,7 +12,5 @@ class Model(model.Model):
 
     def __init__(self, parent = None):
         model.Model.__init__(self, parent)
-        self.elemental_storage_unit  = elemental_storage_unit.ElementalStorageUnit(self)
-        self.refinery                = refinery.Refinery(self)
-        self.replicator              = replicator.Replicator(self)
         pass
+

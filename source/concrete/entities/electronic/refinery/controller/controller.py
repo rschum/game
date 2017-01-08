@@ -8,3 +8,7 @@ class Controller(controller.Controller):
     def on_refine(self, mineral):
         self.refine_mineral(mineral)
         pass
+
+    def on_activate(self):
+        self.activate()
+        pass

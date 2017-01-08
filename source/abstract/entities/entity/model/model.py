@@ -7,14 +7,13 @@ class MoveState():
     STAND = 0
 
 class Model(model.Model, sphere.Sphere):
-    name           = "Entity"
-    direction      = 0
-    move_state     = MoveState.STAND
-    mass           = 1 # in kg
-    material       = None
-    element_masses = None
-
-    collisions  = []
+    name            = "Entity"
+    direction       = 0
+    move_state      = MoveState.STAND
+    mass            = 1 # in kg
+    material        = None
+    element_masses  = None
+    collisions      = []
 
     def __init__(self, parent = None):
         model.Model.__init__(self, parent)

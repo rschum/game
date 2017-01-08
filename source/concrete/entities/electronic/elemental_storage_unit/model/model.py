@@ -3,11 +3,16 @@ from source.concrete.entities.electronic.elemental_storage_tank.elemental_storag
 from source.library.science.chemistry.element import elements
 
 class Model(model.Model):
-    name  = "Elemental Storage Unit"
-    tanks = dict()
-    
-    def __init__(self, parent = None):
+    name        = "Elemental Storage Unit"
+    tanks       = dict()
+    logistics   = None
+
+    def __init__(self, parent = None, logistics = None):
         model.Model.__init__(self, parent)
+        if logistics is not None:
+            self.logistics = logistics
+            self.logistics.elemental_storage_unit = self
+
         self.radius = 50
         self.add_tank(elements.Aluminum)
         self.add_tank(elements.Carbon)
@@ -33,7 +38,6 @@ class Model(model.Model):
         for element_name in element_masses.keys():
             if self.tanks[element_name].stored < element_masses[element_name]:
                 short_by = element_masses[element_name] - self.tanks[element_name].stored
-                # You need 1.5 kg more Aluminum to build that.
                 print("\033[91m"+"You need "+str(short_by)+" kg more "+element_name+" to build that."+"\033[0m")
                 have_enough = False
         return have_enough

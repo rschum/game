@@ -3,8 +3,8 @@ from model import model
 from view import view
 
 class Refinery(controller.Controller, model.Model, view.View):
-    def __init__(self, parent = None):
+    def __init__(self, parent = None, logistics = None):
         controller.Controller.__init__(self)
-        model.Model.__init__(self, parent)
+        model.Model.__init__(self, parent, logistics)
         view.View.__init__(self)
         pass

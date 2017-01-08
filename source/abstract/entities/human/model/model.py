@@ -39,6 +39,11 @@ class Model(model.Model):
         else:
             return None
 
+    def activate(self):
+        for collidable in self.collisions:
+            collidable.on_activate()
+        pass
+
     def drop_item(self):
         if self.holding != None:
             self.holding.on_drop()

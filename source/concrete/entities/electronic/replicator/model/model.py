@@ -1,10 +1,14 @@
 from source.abstract.entities.inanimate.model import model
 
 class Model(model.Model):
-    name    = "Replicator"
+    name        = "Replicator"
+    logistics   = None
     
-    def __init__(self, parent = None):
+    def __init__(self, parent = None, logistics = None):
         model.Model.__init__(self, parent)
+        if logistics is not None:
+            self.logistics = logistics
+            self.logistics.replicator = self
         self.radius = 50
         pass
 
@@ -19,13 +23,13 @@ class Model(model.Model):
         # TODO: widget = solarPanel
 
         element_requirements = widget.get_element_masses()
-        if self.parent.elemental_storage_unit.check_storage(element_requirements):
+        if self.logistics.elemental_storage_unit.check_storage(element_requirements):
             print("\033[94m"+"Building Widget"+"\033[0m")
-            self.parent.elemental_storage_unit.take_elements(element_requirements)
+            self.logistics.elemental_storage_unit.take_elements(element_requirements)
             widget.position.x = self.position.x
             widget.position.y = self.position.y
-            if self.parent.parent != None:
-                self.parent.parent.entities.append(widget)
+            if self.parent is not None:
+                self.parent.add_entity(widget)
             return widget
         else:
             print("\033[91m"+"Build Failed."+"\033[0m")

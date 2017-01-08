@@ -7,6 +7,9 @@ class Controller:
         self.get_collisions()
         pass
 
+    def on_activate(self):
+        pass
+
     def on_pickup(self):
         pass
 

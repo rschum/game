@@ -12,20 +12,26 @@ from source.concrete.entities.electronic.battery import battery
 from source.concrete.entities.electronic.lightbulb import lightbulb
 from source.concrete.entities.inanimate.rock import rock
 from source.systems.logistics import logistics
+from source.concrete.entities.electronic.elemental_storage_unit import elemental_storage_unit
+from source.concrete.entities.electronic.elemental_storage_tank import elemental_storage_tank
+from source.concrete.entities.electronic.refinery import refinery
+from source.concrete.entities.electronic.replicator import replicator
 
 class Model(model.Model):
     power_grid      = None
     logistics       = None
-    battery0        = None
 
     def __init__(self, parent = None):
         model.Model.__init__(self, parent)
 
-        rock0 = rock.Rock(self, 100, ice.Ice())
-        rock0.position.x = 50
-        rock0.position.y = 250
-        self.add_entity(rock0)
+        self.add_logistics()
+        self.add_power_grid()
+        self.add_crops()
+        self.add_npc()
+        self.add_rock()
+        pass
 
+    def add_crops(self):
         corn0 = corn.Corn(self)
         corn0.position.x = 150
         corn0.position.y = 250
@@ -45,7 +51,41 @@ class Model(model.Model):
         potato0.position.x = 450
         potato0.position.y = 250
         self.add_entity(potato0)
+        pass
 
+    def add_logistics(self):
+        self.logistics = logistics.Logistics(self)
+
+        elemental_storage_unit0 = elemental_storage_unit.ElementalStorageUnit(self, self.logistics)
+        elemental_storage_unit0.position.x = 150
+        elemental_storage_unit0.position.y = 350
+        self.add_entity(elemental_storage_unit0)
+        
+        refinery0 = refinery.Refinery(self, self.logistics)
+        refinery0.position.x = 50
+        refinery0.position.y = 350
+        self.add_entity(refinery0)
+        
+        replicator0 = replicator.Replicator(self, self.logistics)
+        replicator0.position.x = 250
+        replicator0.position.y = 350
+        self.add_entity(replicator0)
+
+        x = 50
+        for tank in elemental_storage_unit0.tanks:
+            elemental_storage_unit0.tanks[tank].position.x = x
+            elemental_storage_unit0.tanks[tank].position.y = 450
+            x += 50
+        pass
+
+    def add_npc(self):
+        #self.npc = npc.NPC(self)
+        #self.npc.position.x = 50
+        #self.npc.position.y = 250
+        #self.add_entity(self.npc)
+        pass
+
+    def add_power_grid(self):
         self.power_grid = power_grid.PowerGrid()
 
         solar_panel_0 = solar_panel.SolarPanel(self)
@@ -72,23 +112,11 @@ class Model(model.Model):
         lightbulb0.position.y = 50
         self.power_grid.attach_drain(lightbulb0)
         self.add_entity(lightbulb0)
+        pass
 
-        #self.npc = npc.NPC(self)
-        #self.npc.position.x = 50
-        #self.npc.position.y = 250
-        #self.add_entity(self.npc)
-
-        self.logistics = logistics.Logistics(self)
-        self.logistics.refinery.position.x = 50
-        self.logistics.refinery.position.y = 350
-        self.logistics.elemental_storage_unit.position.x = 150
-        self.logistics.elemental_storage_unit.position.y = 350
-        self.logistics.replicator.position.x = 250
-        self.logistics.replicator.position.y = 350
-
-        x = 50
-        for tank in self.logistics.elemental_storage_unit.tanks:
-            self.logistics.elemental_storage_unit.tanks[tank].position.x = x
-            self.logistics.elemental_storage_unit.tanks[tank].position.y = 450
-            x += 50
+    def add_rock(self):
+        rock0 = rock.Rock(self, 100, ice.Ice())
+        rock0.position.x = 50
+        rock0.position.y = 250
+        self.add_entity(rock0)
         pass
