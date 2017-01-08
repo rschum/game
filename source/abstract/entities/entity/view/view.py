@@ -27,7 +27,7 @@ class View:
     def set_animation(self):
         if abs(self.speed().length()) == 0:
             if self.animation == None or self.animation.action != "stand":
-                self.animation = action.Action(stand.stand_data)
+                self.animation = action.Action(stand.data)
 
     def on_render(self):
         self.set_animation()

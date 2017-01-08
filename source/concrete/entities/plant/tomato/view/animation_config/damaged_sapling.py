@@ -1,4 +1,4 @@
-damaged_sapling_data = {
+data = {
     "entity_name" : "tomato",
     "action" : "damaged_sapling",
     "animations" : [

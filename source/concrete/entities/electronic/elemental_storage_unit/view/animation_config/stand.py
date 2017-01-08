@@ -1,4 +1,4 @@
-stand_data = {
+data = {
     "entity_name" : "elemental_storage_unit",
     "action" : "stand",
     "animations" : [

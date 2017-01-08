@@ -12,7 +12,7 @@ class View(view.View):
     
     def __init__(self):
         view.View.__init__(self)
-        self.animation = action.Action(healthy_seed.healthy_seed_data)
+        self.animation = action.Action(healthy_seed.data)
         pass
 
     def on_render(self):
@@ -20,45 +20,45 @@ class View(view.View):
             if self.created_delta() <= 10:
                 if self.growth_state != model.GrowthState.SEED:
                     self.growth_state = model.GrowthState.SEED
-                    self.animation = action.Action(healthy_seed.healthy_seed_data)
+                    self.animation = action.Action(healthy_seed.data)
             elif self.created_delta() <= 20:
                 if self.growth_state != model.GrowthState.SPROUT:
                     self.growth_state = model.GrowthState.SPROUT
-                    self.animation = action.Action(healthy_sprout.healthy_sprout_data)
+                    self.animation = action.Action(healthy_sprout.data)
             elif self.created_delta() <= 30:
                 if self.growth_state != model.GrowthState.SAPLING:
                     self.growth_state = model.GrowthState.SAPLING
-                    self.animation = action.Action(healthy_sapling.healthy_sapling_data)
+                    self.animation = action.Action(healthy_sapling.data)
             elif self.created_delta() <= 40:
                 if self.growth_state != model.GrowthState.MATURE:
                     self.growth_state = model.GrowthState.MATURE
-                    self.animation = action.Action(healthy_mature.healthy_mature_data)
+                    self.animation = action.Action(healthy_mature.data)
             elif self.created_delta() > 40:
                 if self.growth_state != model.GrowthState.RIPE:
                     self.growth_state = model.GrowthState.RIPE
-                    self.animation = action.Action(healthy_ripe.healthy_ripe_data)
+                    self.animation = action.Action(healthy_ripe.data)
         
         if self.health_state == model.HealthState.DAMAGED:
             if self.created_delta() <= 10:
                 if self.growth_state != model.GrowthState.SEED:
                     self.growth_state = model.GrowthState.SEED
-                    self.animation = action.Action(damaged_seed.damaged_seed_data)
+                    self.animation = action.Action(damaged_seed.data)
             elif self.created_delta() <= 20:
                 if self.growth_state != model.GrowthState.SPROUT:
                     self.growth_state = model.GrowthState.SPROUT
-                    self.animation = action.Action(damaged_sprout.damaged_sprout_data)
+                    self.animation = action.Action(damaged_sprout.data)
             elif self.created_delta() <= 30:
                 if self.growth_state != model.GrowthState.SAPLING:
                     self.growth_state = model.GrowthState.SAPLING
-                    self.animation = action.Action(damaged_sapling.damaged_sapling_data)
+                    self.animation = action.Action(damaged_sapling.data)
             elif self.created_delta() <= 40:
                 if self.growth_state != model.GrowthState.MATURE:
                     self.growth_state = model.GrowthState.MATURE
-                    self.animation = action.Action(damaged_mature.damaged_mature_data)
+                    self.animation = action.Action(damaged_mature.data)
             elif self.created_delta() > 40:
                 if self.growth_state != model.GrowthState.RIPE:
                     self.growth_state = model.GrowthState.RIPE
-                    self.animation = action.Action(damaged_ripe.damaged_ripe_data)
+                    self.animation = action.Action(damaged_ripe.data)
         
         self.animation.on_render(self)
         pass

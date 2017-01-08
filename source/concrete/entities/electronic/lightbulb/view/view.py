@@ -11,18 +11,18 @@ class View(view.View):
 
     def __init__(self):
         view.View.__init__(self)
-        self.animation = action.Action(off.off_data)
+        self.animation = action.Action(off.data)
         pass
 
     def on_render(self):
         if self.parent.battery0.charge >= 50:
             if self.use_state != model.UseState.ON:
                 self.use_state = model.UseState.ON
-                self.animation = action.Action(on.on_data)
+                self.animation = action.Action(on.data)
         else:
             if self.use_state != model.UseState.OFF:
                 self.use_state = model.UseState.OFF
-                self.animation = action.Action(off.off_data)
+                self.animation = action.Action(off.data)
         
         self.animation.on_render(self)
         pass

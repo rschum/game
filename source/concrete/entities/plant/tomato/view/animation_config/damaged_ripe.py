@@ -1,4 +1,4 @@
-damaged_ripe_data = {
+data = {
     "entity_name" : "tomato",
     "action" : "damaged_ripe",
     "animations" : [

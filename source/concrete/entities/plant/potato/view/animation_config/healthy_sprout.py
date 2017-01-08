@@ -1,4 +1,4 @@
-healthy_sprout_data = {
+data = {
     "entity_name" : "potato",
     "action" : "healthy_sprout",
     "animations" : [

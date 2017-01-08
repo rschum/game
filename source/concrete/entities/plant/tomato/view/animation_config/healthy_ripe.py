@@ -1,4 +1,4 @@
-healthy_ripe_data = {
+data = {
     "entity_name" : "tomato",
     "action" : "healthy_ripe",
     "animations" : [

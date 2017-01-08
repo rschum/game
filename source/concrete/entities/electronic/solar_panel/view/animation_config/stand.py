@@ -1,4 +1,4 @@
-stand_data = {
+data = {
     "entity_name" : "solar_panel",
     "action" : "stand",
     "animations" : [

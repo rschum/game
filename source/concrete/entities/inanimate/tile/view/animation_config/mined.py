@@ -1,4 +1,4 @@
-mined_data = {
+data = {
     "entity_name" : "tile",
     "action" : "mined",
     "animations" : [

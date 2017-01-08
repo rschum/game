@@ -1,4 +1,4 @@
-run_data = {
+data = {
     "entity_name" : "entity",
     "action" : "run",
     "animations" : [

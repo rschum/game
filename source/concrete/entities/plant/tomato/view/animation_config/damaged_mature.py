@@ -1,4 +1,4 @@
-damaged_mature_data = {
+data = {
     "entity_name" : "tomato",
     "action" : "damaged_mature",
     "animations" : [

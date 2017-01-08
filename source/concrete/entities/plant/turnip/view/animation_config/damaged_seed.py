@@ -1,4 +1,4 @@
-damaged_seed_data = {
+data = {
     "entity_name" : "turnip",
     "action" : "damaged_seed",
     "animations" : [

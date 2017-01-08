@@ -1,4 +1,4 @@
-percent_080_data = {
+data = {
     "entity_name" : "battery",
     "action" : "percent_080",
     "animations" : [

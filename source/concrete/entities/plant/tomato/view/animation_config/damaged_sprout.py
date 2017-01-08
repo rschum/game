@@ -1,4 +1,4 @@
-damaged_sprout_data = {
+data = {
     "entity_name" : "tomato",
     "action" : "damaged_sprout",
     "animations" : [

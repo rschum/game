@@ -1,4 +1,4 @@
-damaged_picked_data = {
+data = {
     "entity_name" : "potato",
     "action" : "damaged_picked",
     "animations" : [

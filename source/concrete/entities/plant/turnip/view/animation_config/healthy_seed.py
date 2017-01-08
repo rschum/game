@@ -1,4 +1,4 @@
-healthy_seed_data = {
+data = {
     "entity_name" : "turnip",
     "action" : "healthy_seed",
     "animations" : [

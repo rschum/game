@@ -1,4 +1,4 @@
-stand_data = {
+data = {
     "entity_name" : "replicator",
     "action" : "stand",
     "animations" : [

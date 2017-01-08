@@ -1,4 +1,4 @@
-walk_data = {
+data = {
     "entity_name" : "entity",
     "action" : "walk",
     "animations" : [

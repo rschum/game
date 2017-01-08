@@ -1,4 +1,4 @@
-percent_000_data = {
+data = {
     "entity_name" : "elemental_storage_tank",
     "action" : "percent_000",
     "animations" : [

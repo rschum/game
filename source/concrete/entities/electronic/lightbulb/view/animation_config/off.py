@@ -1,4 +1,4 @@
-off_data = {
+data = {
     "entity_name" : "lightbulb",
     "action" : "off",
     "animations" : [

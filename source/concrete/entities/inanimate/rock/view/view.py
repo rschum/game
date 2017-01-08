@@ -9,7 +9,7 @@ class View(view.View):
     
     def __init__(self):
         view.View.__init__(self)
-        self.animation = action.Action(stand.stand_data)
+        self.animation = action.Action(stand.data)
         pass
 
     def on_render(self):
