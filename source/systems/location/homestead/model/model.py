@@ -12,7 +12,6 @@ from source.concrete.entities.electronic.battery import battery
 from source.concrete.entities.electronic.lightbulb import lightbulb
 from source.concrete.entities.inanimate.rock import rock
 from source.systems.logistics import logistics
-#from source.concrete.entities.electronic.elemental_storage_unit import elemental_storage_unit
 from source.concrete.entities.electronic.elemental_storage_tank import elemental_storage_tank
 from source.concrete.entities.electronic.refinery import refinery
 from source.concrete.entities.electronic.replicator import replicator
@@ -56,12 +55,7 @@ class Model(model.Model):
 
     def add_logistics(self):
         self.logistics = logistics.Logistics(self)
-        """
-        elemental_storage_unit0 = elemental_storage_unit.ElementalStorageUnit(self, self.logistics)
-        elemental_storage_unit0.position.x = 150
-        elemental_storage_unit0.position.y = 350
-        self.add_entity(elemental_storage_unit0)
-        """
+        
         refinery0 = refinery.Refinery(self, self.logistics)
         refinery0.position.x = 50
         refinery0.position.y = 350
@@ -119,15 +113,6 @@ class Model(model.Model):
         titanium_tank.position.y = 450
         self.logistics.add_tank(titanium_tank)
         self.add_entity(titanium_tank)
-
-        """
-        x = 50
-        for tank in elemental_storage_unit0.tanks:
-            elemental_storage_unit0.tanks[tank].position.x = x
-            elemental_storage_unit0.tanks[tank].position.y = 450
-            x += 50
-        pass
-        """
 
     def add_npc(self):
         #self.npc = npc.NPC(self)

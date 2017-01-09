@@ -1,12 +1,10 @@
 from source.abstract.location.model import model
 
-from source.concrete.entities.electronic.elemental_storage_unit import elemental_storage_unit
 from source.concrete.entities.electronic.refinery import refinery
 from source.concrete.entities.electronic.replicator import replicator
 
 class Model(model.Model):
     name = "Logistics"
-    #elemental_storage_unit  = None
     refinery                = None
     replicator              = None
     elemental_storage_tanks = dict()
