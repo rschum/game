@@ -1,4 +1,5 @@
-from source.abstract.entities.inanimate.model import model
+from source.abstract.entities.electronic.model import model
+
 
 class ChargeState:
     PERCENT_000 = 0

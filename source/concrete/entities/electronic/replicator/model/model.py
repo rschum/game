@@ -1,4 +1,4 @@
-from source.abstract.entities.inanimate.model import model
+from source.abstract.entities.electronic.model import model
 
 class Model(model.Model):
     name        = "Replicator"

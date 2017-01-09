@@ -1,8 +1,7 @@
+from animation_config import stand
+from source.abstract.entities.electronic.view import view
 from source.library.action import action
 
-from source.abstract.entities.inanimate.view import view
-
-from animation_config import stand
 
 class View(view.View):
     def __init__(self):
