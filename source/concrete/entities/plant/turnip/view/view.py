@@ -14,5 +14,5 @@ class View(view.View):
 
     def __init__(self):
         view.View.__init__(self)
-        self.animation = action.Action(healthy_seed.data)
+        self.animation = action.Action(self, healthy_seed.data)
         pass

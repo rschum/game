@@ -1,6 +1,5 @@
 from source.abstract.entities.electronic.model import model
 
-
 class CapacityState:
     PERCENT_000 = 0
     PERCENT_020 = 1
@@ -14,13 +13,11 @@ class Model(model.Model):
     element         = None
     empty_mass      = 10
     stored          = 0 # in kg
-    capacity        = 0 # in kg
+    capacity        = 100 # in kg
     capacity_state  = CapacityState.PERCENT_000
 
-    def __init__(self, parent, element, capacity = 1000):
+    def __init__(self, parent = None):
         model.Model.__init__(self, parent)
-        self.element = element
-        self.capacity = capacity
         self.radius = 16
         self.empty_mass = self.capacity*0.02
         self.mass = self.empty_mass

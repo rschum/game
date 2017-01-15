@@ -12,8 +12,7 @@ class Controller(controller.Controller):
         for kilometer in self.kilometers:
             for kilo in kilometer:
                 kilo.on_loop()
-        self.homestead.on_loop()
-        self.avatar.on_loop()
+        controller.Controller.on_loop(self)
         pass
 
     def on_keydown_p(self):

@@ -2,16 +2,17 @@ import pygame
 from pygame.locals import *
 import sys
 
+from source.abstract.base_object.controller import controller
+
 from source.library.ui import keyboard
 from source.library.ui import joystick
 
-class Controller:
+class Controller(controller.Controller):
     def __init__(self):
+        pygame.init()
+        controller.Controller.__init__(self)
         keyboard.KEY_ESCAPE.subscribe(self)
         pass
-
-    def asdf(self):
-        print "asdf"
 
     def on_quit(self):
         pygame.quit()
@@ -37,7 +38,7 @@ class Controller:
             self.on_event()
             self.on_render()
             self.on_time_event()
-            self.universe.on_loop()
+            self.entity_factory.on_loop()
         pass
 
     def on_time_event(self):

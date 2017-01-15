@@ -9,3 +9,4 @@ class View(view.View):
         for hectare in self.hectares:
             for hect in hectare:
                 hect.on_render()
+        view.View.on_render(self)

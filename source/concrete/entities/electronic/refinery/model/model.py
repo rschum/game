@@ -4,11 +4,8 @@ class Model(model.Model):
     name        = "Refinery"
     logistics   = None
 
-    def __init__(self, parent = None, logistics = None):
+    def __init__(self, parent = None):
         model.Model.__init__(self, parent)
-        if logistics is not None:
-            self.logistics = logistics
-            self.logistics.refinery = self
         self.radius = 50
         self.mass = 50
         pass

@@ -1,8 +1,10 @@
-from source.abstract.app import app
-from source.systems.location.universe import universe
+from controller import controller
+from model import model
+from view import view
 
-class Game(app.App):
+class Game(controller.Controller, model.Model, view.View):
     def __init__(self):
-        app.App.__init__(self)
-        self.universe = universe.Universe()
+        controller.Controller.__init__(self)
+        model.Model.__init__(self)
+        view.View.__init__(self)
         pass

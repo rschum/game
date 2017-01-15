@@ -21,7 +21,7 @@ class Model(model.Model):
     def get_nearest_item(self):
         shortest_distance = None
         item = None
-        for entity in self.parent.homestead.entities:
+        for entity in self.parent.homestead.children:
             distance = self.position.distance_to(entity.position)
             if distance < shortest_distance or shortest_distance == None:
                 shortest_distance = distance
@@ -69,10 +69,19 @@ class Model(model.Model):
         return False
 
     def mine(self):
-        ore = self.get_tile().mine_ore()
+        ore = None
+        for tile in self.entity_factory.tiles:
+            t = self.entity_factory.tiles[tile]
+            if self.collide(t):
+                print t
+                ore = t.mine_ore()
+                break
+
         if ore != None:
-            ore.parent = self.parent.homestead
+            for homestead in self.entity_factory.homesteads:
+                h = self.entity_factory.homesteads[homestead]
+                if self.collide(h):
+                    ore.set_parent(h)
             ore.position = self.position
-            self.parent.homestead.add_entity(ore)
             self.pickup(ore)
         pass

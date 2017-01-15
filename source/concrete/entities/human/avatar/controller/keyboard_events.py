@@ -14,11 +14,10 @@ class KeyboardEvents:
 
     def on_keydown_a(self):
         self.activate()
-        #self.parent.homestead.logistics.refinery.activate()
+        print self.get_collisions()
         pass
 
     def on_keyup_a(self):
-        #self.parent.homestead.logistics.replicator.activate()
         pass
 
     def on_keydown_m(self):

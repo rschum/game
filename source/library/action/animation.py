@@ -1,8 +1,8 @@
 import pygame
 from libs.pyganim import pyganim
-from source.global_variables.camera import CAMERA
 
 class Animation:
+    parent              = None
     entity_name         = None
     path_to_images      = "resources/images/"
     action              = None
@@ -11,7 +11,8 @@ class Animation:
     directory           = None
     move_conductor      = None
 
-    def __init__(self, data, animation):
+    def __init__(self, parent, data, animation):
+        self.parent         = parent
         self.entity_name    = data["entity_name"]
         self.action         = data["action"]
         self.direction      = animation["direction"]
@@ -21,16 +22,16 @@ class Animation:
     def path_to_animations(self):
         return self.path_to_images+self.entity_name+"/animations/"
 
-    def load_frames(self, f):
-        if len(f) > 1:
-            self.load_animation(f)
+    def load_frames(self, frames):
+        if len(frames) > 1:
+            self.load_animation(frames)
         else:
-            self.load_frame(f)
+            self.load_frame(frames)
         pass
 
-    def load_animation(self, f):
+    def load_animation(self, frame):
         frames = []
-        for fr in f:
+        for fr in frame:
             tmp_frame = self.path_to_animations()+self.action+'/'+self.direction+'/'+fr[0]
             tmp_duration = fr[1]
             fra = (tmp_frame, tmp_duration)
@@ -38,15 +39,15 @@ class Animation:
             self.animation_object = pyganim.PygAnimation(frames)
             self.move_conductor = pyganim.PygConductor(self.animation_object)
 
-    def load_frame(self, f):
-        tmp_frame = self.path_to_animations()+self.action+'/'+self.direction+'/'+f[0][0]
-        fra = pygame.image.load(tmp_frame).convert_alpha()
-        self.animation_object = fra
+    def load_frame(self, frame):
+        tmp_frame = self.path_to_animations()+self.action+'/'+self.direction+'/'+frame[0][0]
+        f = pygame.image.load(tmp_frame).convert_alpha()
+        self.animation_object = f
 
-    def on_render(self, obj):
+    def on_render(self, object):
         if isinstance(self.animation_object, pyganim.PygAnimation):
             self.move_conductor.play()
-            CAMERA.render_animation(self.animation_object, obj)
+            self.parent.get_app().entity_factory.camera.render_animation(self.animation_object, object)
         else:
-            CAMERA.render_frame(self.animation_object, obj)
+            self.parent.get_app().entity_factory.camera.render_frame(self.animation_object, object)
         pass

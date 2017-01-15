@@ -1,12 +1,15 @@
+from source.abstract.base_object.view import view
+
 import pygame
 
-class View:
+class View(view.View):
     def __init__(self):
+        view.View.__init__(self)
         pass
 
-    def on_render(self):
-        self.universe.on_render()
-        self.post_render()
+    def render(self):
+        view.View.render(self)
+        self.entity_factory.on_render()
         pass
 
     def post_render(self):
