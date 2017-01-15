@@ -1,10 +1,8 @@
-class Controller:
-    def __init__(self):
-        pass
+from source.abstract.base_object.controller import controller
 
-    def on_loop(self):
-        self.transform()
-        self.get_collisions()
+class Controller(controller.Controller):
+    def __init__(self):
+        controller.Controller.__init__(self)
         pass
 
     def on_activate(self):
@@ -15,9 +13,6 @@ class Controller:
 
     def on_drop(self):
         self.drop()
-        pass
-
-    def on_collide(self, object = None):
         pass
 
     def on_1_second(self):

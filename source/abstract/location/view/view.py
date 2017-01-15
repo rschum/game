@@ -1,6 +1,6 @@
-class View:
-    def __init__(self):
-        pass
+from source.abstract.base_object.view import view
 
-    def on_render(self):
+class View(view.View):
+    def __init__(self):
+        view.View.__init__(self)
         pass

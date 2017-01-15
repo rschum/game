@@ -8,7 +8,3 @@ class Controller(controller.Controller, keyboard_events.KeyboardEvents, joystick
         keyboard_events.KeyboardEvents.__init__(self)
         joystick_events.JoystickEvents.__init__(self)
         pass
-
-    def on_loop(self):
-        controller.Controller.on_loop(self)
-        pass

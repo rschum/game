@@ -10,7 +10,7 @@ class View(view.View):
         view.View.__init__(self)
         self.dimensions.x = 100
         self.dimensions.y = 100
-        self.animation = action.Action(stand.data)
+        self.animation = action.Action(self, stand.data)
         pass
 
     def get_render_offset(self):
@@ -22,10 +22,10 @@ class View(view.View):
     def on_render(self):
         if self.mined == False:
             if self.animation == None or self.animation.action != "stand":
-                self.animation = action.Action(stand.data)
+                self.animation = action.Action(self, stand.data)
         if self.mined == True:
             if self.animation == None or self.animation.action != "mined":
-                self.animation = action.Action(mined.data)
+                self.animation = action.Action(self, mined.data)
         self.animation.on_render(self)
         pass
 

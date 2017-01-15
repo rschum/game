@@ -2,6 +2,7 @@ from source.global_variables import global_variables
 import animation
 
 class Action:
+    parent      = None
     action      = None
     entity_name = None
     north       = None
@@ -9,7 +10,8 @@ class Action:
     west        = None
     south       = None
 
-    def __init__(self, data):
+    def __init__(self, parent, data):
+        self.parent = parent
         self.action = data["action"]
         self.entity_name = data["entity_name"]
         self.assign_directions(data)
@@ -18,13 +20,13 @@ class Action:
     def assign_directions(self, data):
         for ani in data["animations"]:
             if ani["direction"] == "north":
-                self.north = animation.Animation(data, ani)
+                self.north = animation.Animation(self.parent, data, ani)
             elif ani["direction"] == "east":
-                self.east = animation.Animation(data, ani)
+                self.east = animation.Animation(self.parent, data, ani)
             elif ani["direction"] == "south":
-                self.south = animation.Animation(data, ani)
+                self.south = animation.Animation(self.parent, data, ani)
             elif ani["direction"] == "west":
-                self.west = animation.Animation(data, ani)
+                self.west = animation.Animation(self.parent, data, ani)
             else:
                 print("Error: Avatar Animations Action not valid option")
         pass

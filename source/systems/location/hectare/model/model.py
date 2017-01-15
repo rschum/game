@@ -1,15 +1,18 @@
 from source.abstract.location.model import model
 from source.concrete.entities.inanimate.tile import tile
 
+from pygame import math
+
 class Model(model.Model):
-    position    = (0, 0)
-    size        = 100
-    entities    = []
-    
-    __tiles     = [[None]]
+    size  = 10
+    tiles = None
 
     def __init__(self, parent = None):
         model.Model.__init__(self, parent)
+        tiles = [[]]
+        self.name = "Hectare"
+        self.dimensions = math.Vector3(10000, 10000, 10000)
+        self.radius = self.dimensions.x / 2
         self.populate_tiles()
         pass
 
@@ -36,15 +39,19 @@ class Model(model.Model):
 
     def get_tile(self, x, y):
         if x < self.size and y < self.size:
-            if self.__tiles[x][y] == None:
-                self.__tiles[x][y] = tile.Tile(self)
-                self.__tiles[x][y].position.x = (x * self.__tiles[x][y].dimensions.x)
-                self.__tiles[x][y].position.y = (y * self.__tiles[x][y].dimensions.y)
-            return self.__tiles[x][y].get_tile()
+            if self.tiles[x][y] == None:
+                self.tiles[x][y] = self.entity_factory.spawn(tile.Tile, self)
+                self.tiles[x][y].position.x = (x * self.tiles[x][y].dimensions.x)
+                self.tiles[x][y].position.y = (y * self.tiles[x][y].dimensions.y)
+            return self.tiles[x][y].get_tile()
         return None
     
     def populate_tiles(self):
-        self.__tiles = [[None for x in range(self.size)] for y in range(self.size)]
+        self.tiles = [
+            [
+                None for x in range(self.size)
+            ] for y in range(self.size)
+        ]
         pass
     
     def get_tiles(self, a):
@@ -74,8 +81,8 @@ class Model(model.Model):
             self.convert_pixel_dimensions_to_tile_dimensions(
                 object.position.x,
                 object.position.y,
-                object.resolution.x,
-                object.resolution.y
+                object.dimensions.x,
+                object.dimensions.y
             )
         )
         pass

@@ -16,8 +16,8 @@ class View(view.View):
         s= abs(self.speed().length())
         if s > 0 and s <= 4:
             if self.animation == None or self.animation.action != "walk":
-                self.animation = action.Action(walk.data)
+                self.animation = action.Action(self, walk.data)
         elif s > 4:
             if self.animation == None or self.animation.action != "run":
-                self.animation = action.Action(run.data)
+                self.animation = action.Action(self, run.data)
         pass

@@ -1,12 +1,15 @@
 from source.abstract.entities.inanimate.model import model
 
+from pygame import math
+
 class Model(model.Model):
     name    = "Tile"
     mined   = False
 
     def __init__(self, parent = None):
         model.Model.__init__(self, parent)
-        self.radius = 50
+        self.dimensions = math.Vector3(100, 100, 100)
+        self.radius = self.dimensions.x / 2
         self.mass = 100
         pass
 
@@ -14,7 +17,9 @@ class Model(model.Model):
         if self.mined == False:
             from source.concrete.entities.inanimate.rock import rock
             from source.library.science.geology.rocks import bauxite
-            ore = rock.Rock(None, 100, bauxite.Bauxite())
+            ore = self.entity_factory.spawn(rock.Rock, None)
+            ore.mass = 100
+            ore.set_material(bauxite.Bauxite())
             self.mined = True
             return ore
         else:

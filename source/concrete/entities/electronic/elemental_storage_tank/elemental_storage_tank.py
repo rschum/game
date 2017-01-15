@@ -3,8 +3,8 @@ from model import model
 from view import view
 
 class ElementalStorageTank(controller.Controller, model.Model, view.View):
-    def __init__(self, parent, element, capacity):
+    def __init__(self, parent = None):
         controller.Controller.__init__(self)
-        model.Model.__init__(self, parent, element, capacity)
+        model.Model.__init__(self, parent)
         view.View.__init__(self)
         pass

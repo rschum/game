@@ -1,6 +1,5 @@
 from source.abstract.entities.electronic.model import model
 
-
 class UseState:
     OFF = 0
     ON  = 1

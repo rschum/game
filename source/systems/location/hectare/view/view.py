@@ -1,5 +1,4 @@
 from source.abstract.location.view import view
-from source.global_variables.camera import CAMERA
 
 class View(view.View):
     def __init__(self):
@@ -7,12 +6,13 @@ class View(view.View):
         pass
 
     def on_render(self):
-        for row in self.get_near_tiles(CAMERA):
+        camera = self.entity_factory.camera
+        for row in self.get_near_tiles(camera):
             for t in row:
                 if t != None:
-                    if CAMERA.in_viewport(t):
+                    if camera.in_viewport(t):
                         t.on_render()
-            
-        for entity in self.entities:
-            entity.on_render()
+                        pass
+        
+        #view.View.on_render(self)
         pass

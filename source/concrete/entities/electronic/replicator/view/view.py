@@ -9,7 +9,7 @@ class View(view.View):
         view.View.__init__(self)
         self.dimensions.x = 100
         self.dimensions.y = 100
-        self.animation = action.Action(stand.data)
+        self.animation = action.Action(self, stand.data)
         pass
 
     def get_render_offset(self):

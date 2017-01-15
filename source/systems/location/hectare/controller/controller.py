@@ -5,12 +5,12 @@ class Controller(controller.Controller):
         controller.Controller.__init__(self)
         pass
 
-    def on_loop(self, obj):
-        for row in self.get_near_tiles(obj):
+    def on_loop(self):
+        controller.Controller.on_loop(self)
+        camera = self.entity_factory.camera
+        for row in self.get_near_tiles(camera):
             for t in row:
                 if t != None:
-                    t.on_loop()
-        
-        for entity in self.entities:
-            entity.on_loop()
+                    if camera.in_viewport(t):
+                        t.on_loop()
         pass

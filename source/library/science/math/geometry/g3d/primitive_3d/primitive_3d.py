@@ -20,8 +20,11 @@ class Primitive3D:
             return False
 
     def transform(self):
+        p = math.Vector3(self.position.x, self.position.y, self.position.z)
         self.translate()
         self.rotate()
+        if self.position != p:
+            self.get_collisions()
         pass
 
     def translate(self):

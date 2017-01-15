@@ -1,30 +1,25 @@
 import math
 import pygame
 from source.abstract.base_object.model import model
-from source.library.science.math.geometry.g3d.sphere import sphere
 
 class MoveState():
     STAND = 0
 
-class Model(model.Model, sphere.Sphere):
+class Model(model.Model):
     name            = "Entity"
     direction       = 0
     move_state      = MoveState.STAND
     mass            = 0 # in kg
     material        = None
     element_masses  = None
-    collisions      = []
 
     def __init__(self, parent = None):
         model.Model.__init__(self, parent)
-        sphere.Sphere.__init__(self)
-        self.collisions = []
-        self.radius = 1
         self.position = pygame.math.Vector3(0, 0, 0)
         pass
 
     def translate(self):
-        sphere.Sphere.translate(self)
+        model.Model.translate(self)
         self.position += self.speed()
         pass
 
@@ -41,33 +36,6 @@ class Model(model.Model, sphere.Sphere):
             self.position.y,
             self.position.z
         )
-        pass
-
-    def get_collisions(self):
-        for entity in self.parent.entities:
-            if entity is not self:
-                if self.collide(entity) == True:
-                    self.__add_collisions(entity)
-                else:
-                    self.__remove_collisions(entity)
-        self.__clean_collisions()
-        return self.collisions
-
-    def __add_collisions(self, entity):
-        if entity not in self.collisions:
-            self.collisions.append(entity)
-            entity.on_collide(entity)
-        pass
-
-    def __remove_collisions(self, entity):
-        if entity in self.collisions:
-            self.collisions.remove(entity)
-        pass
-
-    def __clean_collisions(self):
-        for entity in self.collisions:
-            if entity not in self.parent.entities:
-                self.collisions.remove(entity)
         pass
 
     def get_planet(self):

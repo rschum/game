@@ -1,4 +1,6 @@
-class Model:
+from source.abstract.location.model import model
+
+class Model(model.Model):
     sources = []
     stores  = []
     drains   = []
@@ -6,22 +8,29 @@ class Model:
     grid = None
 
     def __init__(self, parent = None):
+        model.Model.__init__(self, parent)
         pass
 
-    def attach_source(self, obj):
-        obj.grid = self
-        self.sources.append(obj)
+    def attach_source(self, object):
+        object.grid = self
+        self.sources.append(object)
         pass
 
-    def attach_store(self, obj):
-        obj.grid = self
-        self.stores.append(obj)
+    def attach_store(self, object):
+        object.grid = self
+        self.stores.append(object)
         pass
 
-    def attach_drain(self, obj):
-        obj.grid = self
-        self.drains.append(obj)
+    def attach_drain(self, object):
+        object.grid = self
+        self.drains.append(object)
         pass
+
+    def get_charge(self):
+        charge = 0
+        for store in self.stores:
+            charge += store.charge
+        return charge
 
     def charge(self):
         charge = 0

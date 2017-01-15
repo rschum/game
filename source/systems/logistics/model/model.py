@@ -16,6 +16,14 @@ class Model(model.Model):
     def add_tank(self, tank):
         self.elemental_storage_tanks[tank.element.name] = tank
 
+    def add_refinery(self, refinery):
+        self.refinery = refinery
+        self.refinery.logistics = self
+
+    def add_replicator(self, replicator):
+        self.replicator = replicator
+        self.replicator.logistics = self
+
     def store_element(self, element_name, kg):
         self.elemental_storage_tanks[element_name].add_element(kg)
         pass
