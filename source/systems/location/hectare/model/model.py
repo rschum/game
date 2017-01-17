@@ -40,7 +40,7 @@ class Model(model.Model):
     def get_tile(self, x, y):
         if x < self.size and y < self.size:
             if self.tiles[x][y] == None:
-                self.tiles[x][y] = self.entity_factory.spawn(tile.Tile, self)
+                self.tiles[x][y] = self.entity_manager.spawn(tile.Tile, self)
                 self.tiles[x][y].position.x = (x * self.tiles[x][y].dimensions.x)
                 self.tiles[x][y].position.y = (y * self.tiles[x][y].dimensions.y)
             return self.tiles[x][y].get_tile()

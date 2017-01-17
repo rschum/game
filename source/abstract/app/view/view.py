@@ -9,7 +9,7 @@ class View(view.View):
 
     def render(self):
         view.View.render(self)
-        self.entity_factory.on_render()
+        self.entity_manager.on_render()
         pass
 
     def post_render(self):

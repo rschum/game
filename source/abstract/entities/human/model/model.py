@@ -21,11 +21,12 @@ class Model(model.Model):
     def get_nearest_item(self):
         shortest_distance = None
         item = None
-        for entity in self.parent.homestead.children:
-            distance = self.position.distance_to(entity.position)
+        for entity in self.entity_manager.entities:
+            e = self.entity_manager.entities[entity]
+            distance = self.position.distance_to(e.position)
             if distance < shortest_distance or shortest_distance == None:
                 shortest_distance = distance
-                item = entity
+                item = e
         return item
 
     def get_nearest_reachable_item(self):
@@ -70,16 +71,15 @@ class Model(model.Model):
 
     def mine(self):
         ore = None
-        for tile in self.entity_factory.tiles:
-            t = self.entity_factory.tiles[tile]
+        for tile in self.entity_manager.tiles:
+            t = self.entity_manager.tiles[tile]
             if self.collide(t):
-                print t
                 ore = t.mine_ore()
                 break
 
         if ore != None:
-            for homestead in self.entity_factory.homesteads:
-                h = self.entity_factory.homesteads[homestead]
+            for homestead in self.entity_manager.homesteads:
+                h = self.entity_manager.homesteads[homestead]
                 if self.collide(h):
                     ore.set_parent(h)
             ore.position = self.position

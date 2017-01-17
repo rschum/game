@@ -52,40 +52,47 @@ class Model:
         hom = self.spawn(homestead.Homestead, uni)
         ava = self.spawn(avatar.Avatar, uni)
         cam.set_target(ava)
-        print self.entities
         pass
 
-    def spawn(self, entity, parent = None):
-        e = entity(parent)
-        e.entity_factory = self
-        if(entity is avatar.Avatar):
+    def spawn(self, Entity, parent = None):
+        e = Entity(parent)
+        e.entity_manager = self
+        if(Entity is avatar.Avatar):
             self.avatars[e.uuid] = e
-        elif(entity is camera.Camera):
+        elif(Entity is camera.Camera):
             self.camera = e
-        elif(entity is galaxy.Galaxy):
+        elif(Entity is galaxy.Galaxy):
             self.galaxies[e.uuid] = e
-        elif(entity is hectare.Hectare):
+        elif(Entity is hectare.Hectare):
             self.hectares[e.uuid] = e
-        elif(entity is homestead.Homestead):
+        elif(Entity is homestead.Homestead):
             self.homesteads[e.uuid] = e
-        elif(entity is logistics.Logistics):
+        elif(Entity is logistics.Logistics):
             self.logistics[e.uuid] = e
-        elif(entity is kilometer.Kilometer):
+        elif(Entity is kilometer.Kilometer):
             self.kilometers[e.uuid] = e
-        elif(entity is planet.Planet):
+        elif(Entity is planet.Planet):
             self.planets[e.uuid] = e
-        elif(entity is solar_system.SolarSystem):
+        elif(Entity is solar_system.SolarSystem):
             self.solar_systems[e.uuid] = e
-        elif(entity is tile.Tile):
+        elif(Entity is tile.Tile):
             self.tiles[e.uuid] = e
-        elif(entity is power_grid.PowerGrid):
+        elif(Entity is power_grid.PowerGrid):
             self.power_grids[e.uuid] = e
-        elif(entity is universe.Universe):
+        elif(Entity is universe.Universe):
             self.universes[e.uuid] = e
         else:
             self.entities[e.uuid] = e
         e.spawn()
         return e
+
+    def despawn(self, object):
+        object.parent.disown_child(object)
+        for entity in self.entities:
+            if self.entities[entity] is object:
+                del self.entities[entity]
+                break
+        pass
 
     def get_app(self):
         return self.parent.get_app()

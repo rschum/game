@@ -38,7 +38,7 @@ class Controller(controller.Controller):
             self.on_event()
             self.on_render()
             self.on_time_event()
-            self.entity_factory.on_loop()
+            self.entity_manager.on_loop()
         pass
 
     def on_time_event(self):

@@ -23,7 +23,7 @@ class Model(model.Model):
     def populate_hectares(self):
         self.hectares = [
             [
-                self.entity_factory.spawn(hectare.Hectare, self) for x in range(self.size)
+                self.entity_manager.spawn(hectare.Hectare, self) for x in range(self.size)
             ] for y in range(self.size)
         ]
         pass
@@ -45,7 +45,7 @@ class Model(model.Model):
         x = int(math.floor(pos.x))
         y = int(math.floor(pos.y))
         if self.hectares[x][y] == None:
-            self.hectares[x][y] = self.entity_factory.spawn(hectare.Hectare, self)
+            self.hectares[x][y] = self.entity_manager.spawn(hectare.Hectare, self)
         return self.hectares[x][y]
 
     def get_kilometer(self):

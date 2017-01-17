@@ -3,7 +3,7 @@ from datetime import datetime, timedelta
 from source.library.science.math.geometry.g3d.sphere import sphere
 
 class Model(sphere.Sphere):
-    entity_factory  = None
+    entity_manager  = None
     uuid            = None
     created         = None
     factory         = None
@@ -54,7 +54,8 @@ class Model(sphere.Sphere):
         pass
 
     def disown_child(self, child):
-        self.children.remove(child)
+        if child in self.children:
+            self.children.remove(child)
         pass
 
     def set_parent(self, parent = None):
@@ -67,10 +68,20 @@ class Model(sphere.Sphere):
     def get_collisions(self, object = None):
         if object is None:
             object = self
-        
+        """
         universe_collisions = []
-        for universe in self.entity_factory.universes:
-            self.collide(self.entity_factory.universes[universe])
+        for universe in self.entity_manager.universes:
+            e = self.entity_manager.universes[universe]
+            if self.collide(e):
+                self.__add_collision(e)
+        """
+        entity_collisions = []
+        for entity in self.entity_manager.entities:
+            e = self.entity_manager.entities[entity]
+            if e is not self:
+                if self.collide(e):
+                    self.__add_collision(e)
+
         """
         if object.parent is not None:
             if self.collide(object.parent):
@@ -78,16 +89,21 @@ class Model(sphere.Sphere):
                 self.__check_collisions(object.parent.get_collisions())
         self.__check_collisions(object.children)
         """
-        self.collisions += universe_collisions
+        self.collisions += entity_collisions
+        self.__clean_collisions()
         return self.collisions
+
+    def __check_collision(self, object):
+        if object is not self:
+            if self.collide(object) == True:
+                self.__add_collision(object)
+            else:
+                self.__remove_collision(object)
+        pass
 
     def __check_collisions(self, objects):
         for object in objects:
-            if object is not self:
-                if self.collide(object) == True:
-                    self.__add_collision(object)
-                else:
-                    self.__remove_collision(object)
+            self.__check_collision(object)
         self.__clean_collisions()
         return self.collisions
 

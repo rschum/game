@@ -17,7 +17,7 @@ class Model(model.Model):
         if self.mined == False:
             from source.concrete.entities.inanimate.rock import rock
             from source.library.science.geology.rocks import bauxite
-            ore = self.entity_factory.spawn(rock.Rock, None)
+            ore = self.entity_manager.spawn(rock.Rock, None)
             ore.mass = 100
             ore.set_material(bauxite.Bauxite())
             self.mined = True

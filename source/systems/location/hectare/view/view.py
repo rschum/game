@@ -6,7 +6,7 @@ class View(view.View):
         pass
 
     def on_render(self):
-        camera = self.entity_factory.camera
+        camera = self.entity_manager.camera
         for row in self.get_near_tiles(camera):
             for t in row:
                 if t != None:

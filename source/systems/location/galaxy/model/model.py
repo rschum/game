@@ -8,5 +8,5 @@ class Model(model.Model):
 
     def spawn(self):
         model.Model.spawn(self)
-        self.entity_factory.spawn(solar_system.SolarSystem, self)
+        self.entity_manager.spawn(solar_system.SolarSystem, self)
         pass

@@ -7,7 +7,7 @@ class Controller(controller.Controller):
 
     def on_loop(self):
         controller.Controller.on_loop(self)
-        camera = self.entity_factory.camera
+        camera = self.entity_manager.camera
         for row in self.get_near_tiles(camera):
             for t in row:
                 if t != None:

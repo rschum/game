@@ -14,7 +14,7 @@ class KeyboardEvents:
 
     def on_keydown_a(self):
         self.activate()
-        print self.get_collisions()
+        #print self.get_collisions()
         pass
 
     def on_keyup_a(self):

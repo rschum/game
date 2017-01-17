@@ -8,8 +8,8 @@ class Model(model.Model):
 
     def spawn(self):
         model.Model.spawn(self)
-        self.entity_factory.spawn(galaxy.Galaxy, self)
+        self.entity_manager.spawn(galaxy.Galaxy, self)
         pass
 
     def get_app(self):
-        return self.entity_factory.get_app()
+        return self.entity_manager.get_app()

@@ -27,7 +27,7 @@ class Model(model.Model):
 
         for y in range(self.size):
             for x in range(self.size):
-                k = self.entity_factory.spawn(kilometer.Kilometer, self)
+                k = self.entity_manager.spawn(kilometer.Kilometer, self)
                 k.index = (x, y)
                 self.kilometers[x][y] = k
 

@@ -12,12 +12,13 @@ class Model(model.Model):
 
     def activate(self):
         for collidable in self.get_collisions():
-            self.refine_object(collidable)
+            if collidable is not None:
+                self.refine_object(collidable)
         pass
 
     def refine_object(self, entity):
         element_masses = entity.get_element_masses()
         for element_name in element_masses.keys():
             self.logistics.store_element(element_name, element_masses[element_name])
-        self.parent.remove_entity(entity)
+        self.entity_manager.despawn(entity)
         pass

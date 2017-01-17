@@ -47,7 +47,7 @@ class Animation:
     def on_render(self, object):
         if isinstance(self.animation_object, pyganim.PygAnimation):
             self.move_conductor.play()
-            self.parent.get_app().entity_factory.camera.render_animation(self.animation_object, object)
+            self.parent.get_app().entity_manager.camera.render_animation(self.animation_object, object)
         else:
-            self.parent.get_app().entity_factory.camera.render_frame(self.animation_object, object)
+            self.parent.get_app().entity_manager.camera.render_frame(self.animation_object, object)
         pass
