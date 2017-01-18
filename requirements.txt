@@ -3,3 +3,4 @@ pygame-sdl2
 sklearn
 numpy
 scipy
+Sphinx
