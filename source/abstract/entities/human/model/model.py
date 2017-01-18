@@ -18,28 +18,6 @@ class Model(model.Model):
             self.holding.position.y = self.position.y
             self.holding.position.z = self.position.z
 
-    def get_nearest_item(self):
-        shortest_distance = None
-        item = None
-        for entity in self.entity_manager.entities:
-            e = self.entity_manager.entities[entity]
-            distance = self.position.distance_to(e.position)
-            if distance < shortest_distance or shortest_distance == None:
-                shortest_distance = distance
-                item = e
-        return item
-
-    def get_nearest_reachable_item(self):
-        item = self.get_nearest_item() # could return None if there are no entities in homestead
-        if item != None:
-            distance = self.position.distance_to(item.position)
-            if distance < self.reach:
-                return item
-            else:
-                return None
-        else:
-            return None
-
     def activate(self):
         for collidable in self.get_collisions():
             collidable.on_activate()
@@ -55,10 +33,11 @@ class Model(model.Model):
         if item != None:
             self.holding = item
             self.holding.on_pickup()
+            self.holding.position = self.position
             return True
-        else: # item = None
+        else:
             if self.holding == None:
-                self.holding = self.get_nearest_reachable_item()
+                self.holding = self.entity_manager.find_nearest_collidable(self, self.entity_manager.entities)
                 if self.holding != None:
                     self.holding.on_pickup()
                     return True
@@ -70,18 +49,11 @@ class Model(model.Model):
         return False
 
     def mine(self):
-        ore = None
-        for tile in self.entity_manager.tiles:
-            t = self.entity_manager.tiles[tile]
-            if self.collide(t):
-                ore = t.mine_ore()
-                break
+        tile = self.entity_manager.find_nearest_collidable(self, self.entity_manager.tiles)
+        ore = tile.mine_ore()
 
-        if ore != None:
-            for homestead in self.entity_manager.homesteads:
-                h = self.entity_manager.homesteads[homestead]
-                if self.collide(h):
-                    ore.set_parent(h)
-            ore.position = self.position
+        if ore is not None:
+            homestead = self.entity_manager.find_nearest(self, self.entity_manager.homesteads)
+            ore.set_parent(homestead)
             self.pickup(ore)
         pass

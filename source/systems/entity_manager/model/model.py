@@ -96,3 +96,28 @@ class Model:
 
     def get_app(self):
         return self.parent.get_app()
+
+    def find_nearest(self, object, objects = None):
+        if objects is None:
+            objects = self.entity_manager.entities
+
+        shortest_distance = None
+        item = None
+        for obj in objects:
+            e = objects[obj]
+            distance = object.position.distance_to(e.position)
+            if distance < shortest_distance or shortest_distance == None:
+                shortest_distance = distance
+                item = e
+        return item
+
+    def find_nearest_collidable(self, object, objects = None):
+        item = self.find_nearest(object, objects)
+        if item != None:
+            if object.collide(item):
+                return item
+            else:
+                return None
+        else:
+            return None
+        return False
