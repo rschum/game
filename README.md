@@ -26,7 +26,6 @@ sudo apt-get install python-tk
 sudo apt-get install python-pip
 sudo pip install --upgrade pip
 sudo pip install -r ./requirements.txt
-pip install pygame numpy matplotlib opensimplex sklearn scipy
 git clone https://github.com/Master-Foo/game.git
 ```
 
