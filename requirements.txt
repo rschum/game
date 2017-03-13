@@ -1,5 +1,6 @@
 pygame
-pygame-sdl2
+matplotlib
+opensimplex
 sklearn
 numpy
 scipy

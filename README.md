@@ -22,9 +22,12 @@ sudo pip install -r ./requirements.txt
 
 **Installation via Python pip on Ubuntu Linux:**
 ```
+sudo apt-get install python-tk
+sudo apt-get install python-pip
+sudo pip install --upgrade pip
+sudo pip install -r ./requirements.txt
 pip install pygame numpy matplotlib opensimplex sklearn scipy
 git clone https://github.com/Master-Foo/game.git
-cd game
 ```
 
 **Installation via Python pip on Windows:**
