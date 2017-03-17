@@ -31,7 +31,6 @@ git clone https://github.com/Master-Foo/game.git
 >git clone https://github.com/Master-Foo/game.git
 >cd game
 >pip install -r requirements.txt
->cd game
 >demo\demo.py
 ```
 
