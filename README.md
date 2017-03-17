@@ -24,13 +24,14 @@ git clone https://github.com/Master-Foo/game.git
 ```
 
 **Installation via Python pip on Windows:**
+
 *using the command prompt:*
 ```
-\>git clone https://github.com/Master-Foo/game.git
-\>cd game
-\>pip install -r requirements.txt
-\>cd game
-\>demo\demo.py
+>git clone https://github.com/Master-Foo/game.git
+>cd game
+>pip install -r requirements.txt
+>cd game
+>demo\demo.py
 ```
 
 *using git bash:*
