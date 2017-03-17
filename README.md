@@ -27,6 +27,7 @@ git clone https://github.com/Master-Foo/game.git
 
 *using the command prompt:*
 ```
+>pip install --upgrade pip
 >git clone https://github.com/Master-Foo/game.git
 >cd game
 >pip install -r requirements.txt
@@ -36,6 +37,7 @@ git clone https://github.com/Master-Foo/game.git
 
 *using git bash:*
 ```
+$ pip install --upgrade pip
 $ git clone https://github.com/Master-Foo/game.git
 $ cd game
 $ pip install -r requirements.txt
