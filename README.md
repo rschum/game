@@ -40,6 +40,11 @@ $ pip install --upgrade pip
 $ git clone https://github.com/Master-Foo/game.git
 $ cd game
 $ pip install -r requirements.txt
+
+Note: in order to run demo.py in bash you'll have to change the shebang line in demo.py to match the path to your python installation
+      for example, change #! /usr/bin/python2.7 to #! /C/Python27/python.exe
+  
+
 $ /c/python27/python.exe demo/demo.py
 ```
 
