@@ -1,4 +1,4 @@
-#! /C/Python27/python.exe
+#! /C/Python27/python
 
 from os import sys, path
 sys.path.append(path.dirname(path.dirname(path.abspath(__file__))))
