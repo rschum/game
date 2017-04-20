@@ -1,10 +1,12 @@
 #! /C/Python27/python
 
-from os import sys, path
-sys.path.append(path.dirname(path.dirname(path.abspath(__file__))))
+#from os import sys, path
+#sys.path.append(path.dirname(path.dirname(path.abspath(__file__))))
 
-from source.systems.game import game
+#from source.systems.game import game
 
-if __name__ == "__main__":
-    game = game.Game()
-    game.on_loop()
+#if __name__ == "__main__":
+#    game = game.Game()
+#    game.on_loop()
+
+print 'hello world!'
